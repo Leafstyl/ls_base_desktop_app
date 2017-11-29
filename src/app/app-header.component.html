@@ -1,12 +1,7 @@
-<header class="header">
-  <div class="g-row">
-    <div class="g-col">
-      <h1 class="header__title">LEAFstyl</h1>
-      <ul class="header__links">
-        <li *ngIf="authenticated">
-          <a class="header__link" (click)="signOut.emit()" href="#">Sign out</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
+<mat-toolbar>
+  <span>LEAFstyl</span>
+  <span class="app-header-spacer"></span>
+  <span *ngIf="authenticated">
+    <a href="#" (click)="signOut.emit()">Sign out</a>
+  </span>
+</mat-toolbar>

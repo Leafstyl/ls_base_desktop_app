@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
-import {AuthService} from '../../auth.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 
 @Component({
-  selector: 'app-sign-in',
+  selector: 'ls-sign-in',
   styleUrls: ['./sign-in.component.scss'],
   templateUrl: './sign-in.component.html'
 })
@@ -38,6 +38,6 @@ export class SignInComponent {
   // }
 
   private postSignIn(): void {
-    this.router.navigate(['/recipes']);
+    this.router.navigate(['/biometrics']);
   }
 }
