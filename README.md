@@ -30,6 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Firebase deploy
 ```
 $ cd <project-root>
+$ # get on to the correct branch if needed and fetch latest...
 $ npm install -g firebase-tools # just once
 
 $ ng build
