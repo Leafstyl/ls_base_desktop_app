@@ -1,1 +1,1 @@
-export {SignInComponent} from './sign-in.component';
+export { SignInComponent } from './sign-in.component';

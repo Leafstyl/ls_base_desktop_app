@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-header',
+  selector: 'ls-header',
   styleUrls: ['./app-header.component.scss'],
   templateUrl: './app-header.component.html'
 })

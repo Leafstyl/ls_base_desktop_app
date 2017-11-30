@@ -1,13 +1,16 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 // Components
-import {AppComponent} from './app.component';
-import {AppHeaderComponent} from './app-header.component';
+import { AppComponent } from './app.component';
+import { AppHeaderComponent } from './app-header.component';
 // Modules
-import {AuthModule} from './auth';
-import {FirebaseModule} from './firebase';
-import {RecipesModule} from './recipes';
+import { AuthModule } from './auth';
+import { FirebaseModule } from './firebase';
+import { BiometricsModule } from './biometrics';
+// Material UI
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   bootstrap: [
@@ -19,13 +22,15 @@ import {RecipesModule} from './recipes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], {useHash: false}),
+    BrowserAnimationsModule,
+    RouterModule.forRoot([], { useHash: false }),
     AuthModule,
     FirebaseModule,
-    RecipesModule
+    MatToolbarModule,
+    BiometricsModule
   ],
   providers: []
 })
 
-export class AppModule {
+export class LsModule {
 }
