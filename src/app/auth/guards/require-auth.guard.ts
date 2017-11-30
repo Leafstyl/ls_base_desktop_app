@@ -1,6 +1,3 @@
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/take';
-
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
