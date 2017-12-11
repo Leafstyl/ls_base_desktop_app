@@ -10,7 +10,16 @@ import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
 // Material UI
-import { MatToolbarModule } from '@angular/material/toolbar';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MatIconModule,
+  MatCardModule
+
+} from '@angular/material';
 
 @NgModule({
   bootstrap: [
@@ -26,7 +35,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     RouterModule.forRoot([], { useHash: false }),
     AuthModule,
     FirebaseModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
     BiometricsModule
   ],
   providers: []
