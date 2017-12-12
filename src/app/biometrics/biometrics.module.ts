@@ -8,6 +8,7 @@ import { BiometricsRoutesModule } from './biometrics.routes';
 import { BiometricsService } from './biometrics.service';
 import { SharedModule } from '../shared/shared.module';
 
+
 @NgModule({
   declarations: [
     BiometricsComponent

@@ -6,8 +6,7 @@ import { SignInComponent } from './components/sign-in';
 import { RequireAuthGuard, RequireUnauthGuard } from './guards';
 import { AuthService } from './auth.service';
 // Material UI
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
 // Modules
 import { AuthRoutesModule } from './auth.routes';
 
@@ -17,7 +16,7 @@ import { AuthRoutesModule } from './auth.routes';
   ],
   imports: [
     CommonModule,
-    MatButtonModule,
+    SharedModule,
     AuthRoutesModule
   ],
   providers: [

@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatInputModule, MatSelectModule } from '@angular/material';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatCardModule
+} from '@angular/material';
 
 @NgModule({
-  imports: [
-  ],
+  imports: [],
   exports: [
     CommonModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   declarations: []
 })
-export class SharedModule { }
+export class SharedModule {
+}

@@ -9,11 +9,78 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+
+$ls-grey: (
+  50: #eceff1,
+  100: #cfd8dc,
+  200: #b0bec5,
+  300: #90a4ae,
+  400: #78909c,
+  500: #6E7D78, // ls-grey
+  600: #546e7a,
+  700: #455a64,
+  800: #37474f,
+  900: #263238,
+  A100: #cfd8dc,
+  A200: #b0bec5,
+  A400: #78909c,
+  A700: #455a64,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: white,
+    500: white,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: white,
+    A700: $white-87-opacity,
+  )
+);
+
+$ls-lime: (
+  50: #eceff1,
+  100: #cfd8dc,
+  200: #b0bec5,
+  300: #90a4ae,
+  400: #78909c,
+  500: #C9F02E, // ls-lime
+  600: #546e7a,
+  700: #455a64,
+  800: #37474f,
+  900: #263238,
+  A100: #cfd8dc,
+  A200: #b0bec5,
+  A400: #78909c,
+  A700: #455a64,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: white,
+    500: white,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: white,
+    A700: $white-87-opacity,
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 //$candy-app-primary: mat-palette($mat-blue-grey, 500);
-$candy-app-primary: mat-palette($mat-blue-grey, 500);
+$candy-app-primary: mat-palette($ls-grey, 500);
 $candy-app-accent:  mat-palette($mat-light-green, A700, A700, A700);
 
 // The warn palette is optional (defaults to red).
@@ -39,6 +106,11 @@ mat-card {
   max-width: 80%;
   margin: 2em auto;
   text-align: center;
+}
+
+.mat-toolbar.mat-primary {
+  background: #fff;
+  color: mat-color($candy-app-primary)
 }
 
 mat-toolbar-row {
