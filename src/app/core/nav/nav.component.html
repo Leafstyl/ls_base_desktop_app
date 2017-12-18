@@ -9,8 +9,20 @@
     <!--<span *ngIf="authenticated">-->
     <!--<a href="#" (click)="signOut.emit()">Sign out</a>-->
     <!--</span>-->
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link
+         *ngFor="let item of menuItems"
+         [routerLink]="item.link"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        {{item.caption}}
+      </a>
+    </nav>
 
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" style="color:#555">{{item.caption}}</a>
+
+
+
+    <!--<a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" style="color:#555">{{item.caption}}</a>-->
 
 
 
