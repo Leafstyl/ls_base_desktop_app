@@ -1,5 +1,6 @@
-<ls-header [authenticated]="auth.authenticated$ | async" (signOut)="auth.signOut()"></ls-header>
 
+<ls-header [authenticated]="auth.authenticated$ | async" (signOut)="auth.signOut()"></ls-header>
+<story-nav></story-nav>
 <main>
   <router-outlet></router-outlet>
 </main>

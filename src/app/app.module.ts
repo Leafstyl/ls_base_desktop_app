@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header.component';
+import { NavComponent } from './core/nav/nav.component';
+import { CoreModule } from './core/core.module';
+
 // Modules
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
@@ -21,12 +24,16 @@ import {
 
 } from '@angular/material';
 
+/* Feature Modules */
+
+
 @NgModule({
   bootstrap: [
     AppComponent
   ],
   declarations: [
     AppComponent,
+    NavComponent,
     AppHeaderComponent
   ],
   imports: [
@@ -42,7 +49,8 @@ import {
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    BiometricsModule
+    BiometricsModule,
+    CoreModule
   ],
   providers: []
 })
