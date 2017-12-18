@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 // import { MessageService, ModalService } from '../';
 
@@ -7,13 +8,18 @@ class MenuItem {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   moduleId: module.id,
-  selector: 'story-nav',
+  selector: 'ls-header',
   templateUrl: '/nav.component.html',
-  styleUrls: ['/nav.component.css'],
+  styleUrls: ['/nav.component.scss'],
 })
 
 export class NavComponent implements OnInit {
+
+  @Input() authenticated: boolean;
+  @Output() signOut = new EventEmitter(false);
+
   menuItems: MenuItem[];
 
   ngOnInit() {

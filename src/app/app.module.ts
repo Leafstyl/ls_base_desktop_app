@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
-import { AppHeaderComponent } from './app-header.component';
 import { NavComponent } from './core/nav/nav.component';
 import { CoreModule } from './core/core.module';
 
@@ -20,7 +19,8 @@ import {
   MatToolbarModule,
   MatMenuModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatTabsModule
 
 } from '@angular/material';
 
@@ -33,8 +33,7 @@ import {
   ],
   declarations: [
     AppComponent,
-    NavComponent,
-    AppHeaderComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +48,7 @@ import {
     MatMenuModule,
     MatIconModule,
     MatCardModule,
+    MatTabsModule,
     BiometricsModule,
     CoreModule
   ],

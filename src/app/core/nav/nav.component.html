@@ -1,10 +1,61 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row">
-    <a class="md-title-icon" href="http://angular.io" target="_blank"><i></i></a>
-    <span class="mdl-layout-title">Story Tracker</span>
-    <button id="reset-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" (click)="resetDb()">Reset Data</button>
-  </div>
-  <div class="mdl-navigation">
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="">{{item.caption}}</a>
-  </div>
-</header>
+<div>
+  <mat-toolbar color="primary">
+    <!--<span><mat-icon>mood</mat-icon></span>-->
+    <span><img src="../assets/LEAF.png" width="18%" height="auto" alt="Leafstyl Logo"></span>
+    <span>LEAFSTYL</span>
+
+
+
+    <!--<span *ngIf="authenticated">-->
+    <!--<a href="#" (click)="signOut.emit()">Sign out</a>-->
+    <!--</span>-->
+
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" label="{{item.caption}}"></mat-tab>
+
+      <!--<mat-tab label="Tab 1"> -->
+      <!--</mat-tab>-->
+      <!--<mat-tab label="Tab 2">-->
+        <!--<ng-template mat-tab-label>-->
+          <!--⭐-->
+        <!--</ng-template>-->
+      <!--</mat-tab>-->
+
+    </mat-tab-group>
+
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <a href="#" (click)="signOut.emit()">
+      <button *ngIf="authenticated" mat-raised-button color="accent">Sign out</button>
+    </a>
+
+  </mat-toolbar>
+
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+  </mat-menu>
+
+  <!--<mat-card>-->
+  <!--<button mat-button>All</button>-->
+  <!--<button mat-raised-button>Of</button>-->
+  <!--<button mat-raised-button color="primary">The</button>-->
+  <!--<button mat-raised-button color="accent">Buttons</button>-->
+  <!--</mat-card>-->
+
+  <!--<mat-card>-->
+  <!--<mat-checkbox>Check me!</mat-checkbox>-->
+
+  <!--<br>-->
+
+  <!--<mat-slide-toggle>Slide me!</mat-slide-toggle>-->
+  <!--</mat-card>-->
+
+  <span class="done">
+    <button mat-fab>
+      <mat-icon>check circle</mat-icon>
+    </button>
+  </span>
+</div>
