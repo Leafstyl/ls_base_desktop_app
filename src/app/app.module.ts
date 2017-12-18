@@ -11,6 +11,8 @@ import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
+import { DashboardModule } from './dashboard';
+
 // Material UI
 import {
   MatButtonModule,
@@ -50,6 +52,7 @@ import {
     MatCardModule,
     MatTabsModule,
     BiometricsModule,
+    DashboardModule,
     CoreModule
   ],
   providers: []

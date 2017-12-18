@@ -10,18 +10,9 @@
     <!--<a href="#" (click)="signOut.emit()">Sign out</a>-->
     <!--</span>-->
 
-    <mat-tab-group class="demo-tab-group">
-      <mat-tab *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" label="{{item.caption}}"></mat-tab>
+    <a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" style="color:#555">{{item.caption}}</a>
 
-      <!--<mat-tab label="Tab 1"> -->
-      <!--</mat-tab>-->
-      <!--<mat-tab label="Tab 2">-->
-        <!--<ng-template mat-tab-label>-->
-          <!--⭐-->
-        <!--</ng-template>-->
-      <!--</mat-tab>-->
 
-    </mat-tab-group>
 
     <button mat-icon-button [mat-menu-trigger-for]="menu">
       <mat-icon>more_vert</mat-icon>
