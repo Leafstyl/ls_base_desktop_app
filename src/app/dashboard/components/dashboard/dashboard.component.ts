@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     console.log('Initializing DashboardComponent...');
+  }
   //
   //   this.dashboardService.dashboard.subscribe(dashboard => {
   //     this.dashboard = <IDashboard>dashboard;

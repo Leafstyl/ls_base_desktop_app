@@ -1,5 +1,5 @@
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="accent">
     <!--<span><mat-icon>mood</mat-icon></span>-->
     <span><img src="../assets/LEAF.png" width="18%" height="auto" alt="Leafstyl Logo"></span>
     <span>LEAFSTYL</span>
@@ -31,7 +31,7 @@
     </button>
 
     <a href="#" (click)="signOut.emit()">
-      <button *ngIf="authenticated" mat-raised-button color="accent">Sign out</button>
+      <button *ngIf="authenticated" mat-raised-button color="primary">Sign out</button>
     </a>
 
   </mat-toolbar>
