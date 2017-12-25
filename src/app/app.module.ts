@@ -24,12 +24,16 @@ import {
   MatTabsModule
 
 } from '@angular/material';
+import { PatternLibComponent } from './_design-system/pattern-lib/pattern-lib.component';
+import { BrandIdentityComponent } from './_design-system/brand-identity/brand-identity.component';
 
 /* Feature Modules */
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    PatternLibComponent,
+    BrandIdentityComponent
   ],
   imports: [
     BrowserModule,
