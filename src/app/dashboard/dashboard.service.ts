@@ -27,9 +27,9 @@ export class DashboardService implements OnInit {
   //   });
   // }
   //
-  // ngOnInit() {
-  //   console.log('Initializing DashboardService...');
-  // }
+  ngOnInit() {
+    console.log('Initializing DashboardService...');
+  }
   //
   // saveDashboard(biometric: IDashboard): void {
   //   this._dashboardRef.set(biometric);
