@@ -12,6 +12,7 @@ import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
 import { DashboardModule } from './dashboard';
 import { MarketModule } from './market';
+import { DesignSystemModule } from './_design-system/design-system.module';
 // Material UI
 import {
   MatButtonModule,
@@ -24,16 +25,13 @@ import {
   MatTabsModule
 
 } from '@angular/material';
-import { PatternLibComponent } from './_design-system/pattern-lib/pattern-lib.component';
-import { BrandIdentityComponent } from './_design-system/brand-identity/brand-identity.component';
 
 /* Feature Modules */
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    PatternLibComponent,
-    BrandIdentityComponent
+    NavComponent
+    // DesignSystemComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +49,7 @@ import { BrandIdentityComponent } from './_design-system/brand-identity/brand-id
     MatCardModule,
     MatTabsModule,
     // Modules
+    DesignSystemModule,
     BiometricsModule,
     DashboardModule,
     MarketModule,

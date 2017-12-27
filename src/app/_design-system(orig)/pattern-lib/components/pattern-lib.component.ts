@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-pattern-lib',
+  selector: 'pattern-lib',
   templateUrl: './pattern-lib.component.html',
   styleUrls: ['./pattern-lib.component.css'],
   encapsulation: ViewEncapsulation.None

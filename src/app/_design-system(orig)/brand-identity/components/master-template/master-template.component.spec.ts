@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BrandIdentityComponent } from './brand-identity.component';
+import { MasterTemplateComponent } from './master-template.component';
 
-describe('BrandIdentityComponent', () => {
-  let component: BrandIdentityComponent;
-  let fixture: ComponentFixture<BrandIdentityComponent>;
+describe('MasterTemplateComponent', () => {
+  let component: MasterTemplateComponent;
+  let fixture: ComponentFixture<MasterTemplateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BrandIdentityComponent ]
+      declarations: [ MasterTemplateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BrandIdentityComponent);
+    fixture = TestBed.createComponent(MasterTemplateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
