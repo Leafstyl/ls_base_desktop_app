@@ -1,0 +1,22 @@
+<!--<app-header></app-header>-->
+<h1>LEAFin' It</h1>
+<app-body fxFlex></app-body>
+<div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20"
+     class="classification-container" *ngFor="let cat of items">
+
+  <h1>{{cat.name}}</h1>
+
+  <p *ngIf="cat.children.length == 0">No content to display.</p>
+
+  <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="20"
+       class="group-container" *ngFor="let group of cat.children">
+
+    <h2>{{group.name}}</h2>
+
+    <p *ngIf="group.children.length == 0"></p>
+
+    <app-component-viewer
+      *ngFor="let component of group.children"
+      [item]="component"></app-component-viewer>
+  </div>
+</div>

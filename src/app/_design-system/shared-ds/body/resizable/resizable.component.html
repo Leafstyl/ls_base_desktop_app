@@ -1,0 +1,7 @@
+<div class="resizable-container" fxLayout="row" fxLayoutAlign="center stretch">
+  <div #leftGrabber class="left-grabber grabber"><span></span></div>
+  <div #contentContainer class="content-container" [style.width.px]="width">
+    <ng-content></ng-content>
+  </div>
+  <div #rightGrabber class="right-grabber grabber"><span></span></div>
+</div>

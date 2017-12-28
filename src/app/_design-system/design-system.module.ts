@@ -1,14 +1,16 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 // Components
-import { DesignSystemComponent } from './_components/design-system.component';
+import {DesignSystemComponent} from './_components/design-system.component';
 // import {MasterTemplateComponent} from './brand-identity/components/master-template/master-template.component';
 // import {PatternLibComponent} from './pattern-lib/components/pattern-lib.component';
 // Modules
-import { DesignSystemRoutesModule } from './design-system.routes';
+import {DesignSystemRoutesModule} from './design-system.routes';
+import {CoreDsModule} from './core-ds/core-ds.module';
+import {RoutingDsModule} from './core-ds/routing-ds.module';
+
 // Services
-import { SharedModule } from '../shared/shared.module';
-
-
+import {SharedDsModule} from './shared-ds/shared.module';
+import {ContentService} from './core-ds/services/content.service';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,13 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     DesignSystemRoutesModule,
-    SharedModule
+    CoreDsModule,
+    RoutingDsModule,
+    SharedDsModule
   ],
   providers: [
     // DesignSystemService
+    ContentService
   ]
 })
 

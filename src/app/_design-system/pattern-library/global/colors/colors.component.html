@@ -1,0 +1,82 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h1>{{data?.name}}</h1></mat-card-title>
+    <mat-card-subtitle><h4>{{byline}}</h4></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-tab-group [dynamicHeight]="true">
+      <mat-tab label="Overview">
+        <div class="tab-content">
+          <p>{{description}}</p>
+          <h2>Demo</h2>
+          <section class="demo-content">
+            <h3>Basic Buttons</h3>
+            <div class="button-row">
+              <button mat-button>Basic</button>
+              <button mat-button color="primary">Primary</button>
+              <button mat-button color="accent">Accent</button>
+              <button mat-button color="warn">Warn</button>
+              <button mat-button disabled>Disabled</button>
+              <a mat-button routerLink=".">Link</a>
+            </div>
+
+            <h3>Raised Buttons</h3>
+            <div class="button-row">
+              <button mat-raised-button>Basic</button>
+              <button mat-raised-button color="primary">Primary</button>
+              <button mat-raised-button color="accent">Accent</button>
+              <button mat-raised-button color="warn">Warn</button>
+              <button mat-raised-button disabled>Disabled</button>
+              <a mat-raised-button routerLink=".">Link</a>
+            </div>
+
+            <h3>Fab Buttons</h3>
+            <div class="button-row">
+              <button mat-fab>Basic</button>
+              <button mat-fab color="primary">Primary</button>
+              <button mat-fab color="accent">Accent</button>
+              <button mat-fab color="warn">Warn</button>
+              <button mat-fab disabled>Disabled</button>
+              <a mat-fab routerLink=".">Link</a>
+            </div>
+
+            <h3>Mini Fab Buttons</h3>
+            <div class="button-row">
+              <button mat-mini-fab>Basic</button>
+              <button mat-mini-fab color="primary">Primary</button>
+              <button mat-mini-fab color="accent">Accent</button>
+              <button mat-mini-fab color="warn">Warn</button>
+              <button mat-mini-fab disabled>Disabled</button>
+              <a mat-mini-fab routerLink=".">Link</a>
+            </div>
+          </section>
+        </div>
+      </mat-tab>
+      <mat-tab label="Usage">
+        <div class="tab-content">
+          <mat-tab-group [dynamicHeight]="true">
+            <mat-tab label="HTML">
+              <div class="tab-content">
+                <app-source-viewer type="html" [data]="demoHtml"></app-source-viewer>
+              </div>
+            </mat-tab>
+            <mat-tab label="TS">
+              <div class="tab-content">
+                <app-source-viewer type="typescript" [data]="demoTs"></app-source-viewer>
+              </div>
+            </mat-tab>
+            <mat-tab label="SCSS">
+              <div class="tab-content">
+                <app-source-viewer type="css" [data]="demoScss"></app-source-viewer>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [href]="referenceUrl">VIEW SOURCE</a>
+  </mat-card-actions>
+</mat-card>

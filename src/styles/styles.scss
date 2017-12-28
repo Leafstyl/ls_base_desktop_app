@@ -99,7 +99,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 
 
 body {
-  margin: 0;
+  margin: 64px 0 0 0;
   font-family: Roboto, sans-serif;
   background: #efefef;
 }
@@ -110,7 +110,11 @@ mat-card {
   text-align: center;
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar {
+  position: fixed;
+  z-index: 900;
+  top:0;
+
   background: #fff;
   color: mat-color($candy-app-primary)
 }

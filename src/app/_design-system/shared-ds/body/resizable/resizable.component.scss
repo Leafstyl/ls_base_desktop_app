@@ -1,0 +1,57 @@
+$spacing: 12px;
+$borderRadius: 6px;
+$primaryColor: #ccc;
+$secondaryColor: #fff;
+
+.content-container {
+  transition: width 0.35s ease-out;
+  border: 1px solid rgba($primaryColor, 0.4);
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.resizable-container {
+  position: relative;
+}
+
+.grabber {
+  display: block;
+  width: $spacing; height: $spacing; line-height: $spacing;
+  position: absolute;
+  z-index: 1;
+
+  background-color: $primaryColor;
+
+  span {
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid $secondaryColor;
+  }
+}
+
+.right-grabber, .left-grabber {
+  cursor: col-resize;
+  height: 100%;
+  top: 0;
+
+  span {
+    border-width: 0 1px;
+    top: 50%;
+    margin: -10px 0 0 $spacing/4;
+    height: 20px;
+    width: $spacing/2;
+  }
+}
+
+.right-grabber   {
+  right: 0;
+  margin-right: -$spacing;
+  border-radius: 0 $borderRadius $borderRadius 0;
+}
+
+.left-grabber   {
+  left: 0;
+  margin-left: -$spacing;
+  border-radius: $borderRadius 0 0 $borderRadius;
+}

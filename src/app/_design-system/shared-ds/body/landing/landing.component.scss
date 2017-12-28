@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 26px 16px;
+}
+
+.classification-container {
+
+  & > p, & > div {
+    margin-left: 15px;
+  }
+
+  .group-container {
+    margin-bottom: 15px;
+
+    & > * {
+      margin-bottom: 25px;
+    }
+  }
+
+}
+

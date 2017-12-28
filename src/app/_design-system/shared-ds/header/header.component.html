@@ -1,0 +1,36 @@
+<!--color="primary"-->
+<mat-toolbar  class="container mat-elevation-z2" fxLayout="row"  fxLayoutAlign="center" fxFlex>
+  <mat-toolbar-row>
+    <h5>Curion Pattern Library</h5>
+
+    <nav>
+      <a mat-button routerLink="/all">
+        All
+      </a>
+      <span *ngFor="let item of navItems">
+        <span *ngIf="item.children.length > 0">
+          <button mat-button [matMenuTriggerFor]="menu.childMenu">
+            {{item.name}}
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <app-menu-item #menu [items]="item.children"></app-menu-item>
+        </span>
+      </span>
+    </nav>
+
+    <div fxFlex></div>
+
+    <div class="sizing">
+      <span>SIZE</span>
+      <input #sizeInput matInput type="number"
+             [value]="width" pattern="^(\d)+$"
+             (keyup)="onWidthChange(sizeInput.value)">
+      <a mat-button (click)="onSizeClick('s')">S</a>
+      <a mat-button (click)="onSizeClick('m')">M</a>
+      <a mat-button (click)="onSizeClick('l')">L</a>
+      <a mat-button (click)="onSizeClick('f')">F</a>
+
+      <mat-checkbox [(ngModel)]="resizeService.randomRange">Random</mat-checkbox>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
