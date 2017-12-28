@@ -18,7 +18,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'design-system/:key',
+    path: 'component/:key',
     component: DetailsComponent,
     resolve: {
       item: DetailsResolve

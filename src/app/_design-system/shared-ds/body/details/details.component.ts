@@ -16,7 +16,6 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    debugger;
     this.route.data.subscribe(data => this.item = data.item);
   }
 

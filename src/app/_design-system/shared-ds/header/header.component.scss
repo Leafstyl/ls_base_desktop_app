@@ -1,11 +1,12 @@
 mat-toolbar {
   font-size: 16px !important;
   line-height: 30px !important;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin:65px 0  0 0;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  box-shadow: none !important;
 
   z-index: 200;
 
