@@ -22,7 +22,8 @@ import {
   MatMenuModule,
   MatIconModule,
   MatCardModule,
-  MatTabsModule
+  MatTabsModule,
+  MatStepperModule
 
 } from '@angular/material';
 
@@ -58,7 +59,9 @@ import {
   bootstrap: [
     AppComponent
   ],
-  providers: []
+  providers: [
+    // {provide: MatStepperIntl, useClass: MyIntl}
+  ]
 })
 
 export class LsModule {}

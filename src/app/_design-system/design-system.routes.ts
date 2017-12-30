@@ -7,11 +7,11 @@ import { RequireAuthGuard } from '../auth';
 // import {MasterTemplateComponent} from "./brand-identity/components/master-template/master-template.component";
 
 export const DesignSystemRoutesModule: ModuleWithProviders = RouterModule.forChild([
-  {
-    path: 'design-system',
-    component: DesignSystemComponent,
-    canActivate: [RequireAuthGuard]
-  }
+  // {
+  //   path: 'design-system',
+  //   component: DesignSystemComponent,
+  //   canActivate: [RequireAuthGuard]
+  // }
   // {
   //   path: 'design-system/master-template',
   //   component: MasterTemplateComponent,
