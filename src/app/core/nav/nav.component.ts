@@ -1,6 +1,5 @@
 // import { Component, OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-
 // import { MessageService, ModalService } from '../';
 
 class MenuItem {
