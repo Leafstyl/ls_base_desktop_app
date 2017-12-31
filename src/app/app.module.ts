@@ -12,7 +12,6 @@ import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
 import { DashboardModule } from './dashboard';
 import { MarketModule } from './market';
-import { DesignSystemModule } from './_design-system/design-system.module';
 // Material UI
 import {
   MatButtonModule,
@@ -31,7 +30,6 @@ import {
   declarations: [
     AppComponent,
     NavComponent
-    // DesignSystemComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +47,6 @@ import {
     MatCardModule,
     MatTabsModule,
     // Modules
-    DesignSystemModule,
     BiometricsModule,
     DashboardModule,
     MarketModule,
