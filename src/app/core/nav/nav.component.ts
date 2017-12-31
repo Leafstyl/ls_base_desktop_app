@@ -25,10 +25,10 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.menuItems = [
       { caption: 'Dashboard', link: ['/dashboard'] },
-      { caption: 'Market', link: ['/market'] },
-      { caption: 'Grocery', link: ['/vehicles'] },
-      { caption: 'Kitchen', link: ['/vehicles'] },
-      { caption: 'Assistant', link: ['/admin'] },
+      { caption: 'Lifestyle', link: ['/market'] },
+      { caption: 'Environment', link: ['/vehicles'] },
+      { caption: 'Animal', link: ['/vehicles'] },
+      { caption: 'Food', link: ['/admin'] },
       // { caption: 'Metrics', link: ['/biometrics'] },
     ];
   }
