@@ -97,6 +97,12 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @include angular-material-theme($candy-app-theme);
 
 
+// LS Colors
+$ls-red: #AD0202;
+$ls-green: #83A340;
+$ls-brown: #A86839;
+$ls-purple: #9956B2;
+
 
 body {
   margin: 0;
@@ -125,8 +131,4 @@ mat-toolbar-row {
   right: 20px;
   color: white;
 }
-html, body {
-  height: 100% !important;
-  margin: 0;
-  border:greenyellow 2px solid;
-}
+

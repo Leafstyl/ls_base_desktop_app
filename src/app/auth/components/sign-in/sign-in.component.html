@@ -1,75 +1,53 @@
-<!--<mat-card>-->
-<!--<div>-->
-<!--<h1>Sign in</h1>-->
-<!--<button mat-button class="ls-sign-in-button" (click)="signInWithGoogle()">Google</button>-->
-<!--<button mat-button class="ls-sign-in-button" (click)="signInWithFacebook()">Facebook</button>-->
-<!--&lt;!&ndash; <button mat-button class="ls-sign-in-button" (click)="signInWithTwitter()">Twitter</button>-->
-<!--<button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>-->
-<!--<button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> &ndash;&gt;-->
-<!--</div>-->
-<!--</mat-card>-->
+<header
+  fxLayout="column"
+  fxLayoutAlign="start space-around center"
+  class="fixVertical">
 
+  <nav class="flex-container" fxLayoutAlign="space-around center" fxFlex fxFlexFill>
+    <article class="blocks" fxLayout="column">
+      <mat-card>
 
-<!--<md-toolbar color="primary">-->
-<!--<span>Flex Layout Example</span>-->
-<!--</md-toolbar>-->
+        <header>
+          <img alt="Leafstyl Logo" height="auto" src="../assets/logo.svg" width="40%">
+        </header>
 
+        <h1> Sign In </h1>
+        <section class="social" fxLayout="column" fxLayoutAlign="space-evenly">
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithGoogle()">
+            <img src="../assets/signin-google-icon.svg" alt="Sign in with Google"> Sign in with Google
+          </button>
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithFacebook()">
+            <img src="../assets/signin-facebook-icon.svg" alt="Sign in with Facebook"> Sign in with Facebook
+          </button>
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithTwitter()">
+            <img src="../assets/signin-twitter-icon.svg" alt="Sign in with Twitter"> Sign in with Twitter
+          </button>
+          <!--<button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>-->
+          <!--<button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> -->
+        </section>
+        <p> - or - </p>
+        <p> Sign In Personally</p>
+        <section fxLayout="column" fxLayoutAlign="space-around">
+          <mat-form-field>
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password">
+          </mat-form-field>
+          <button mat-button class="mat-button"> Submit </button>
+         </section>
 
+      </mat-card>
+    </article>
+  </nav>
 
-
-
-
-
-
-
-<div class="container">
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="content">
-    <mat-card>
-      <div>
-        <h1>Sign in</h1>
-        <button mat-button class="ls-sign-in-button" (click)="signInWithGoogle()">Google</button>
-        <button mat-button class="ls-sign-in-button" (click)="signInWithFacebook()">Facebook</button>
-        <!-- <button mat-button class="ls-sign-in-button" (click)="signInWithTwitter()">Twitter</button>
-        <button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>
-        <button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> -->
-      </div>
-    </mat-card>
-  </div>
-</div>
-
-
-
-<!-- WORKS (http://www.dzurico.com/angular-flex-layout/)-->
-<div class="container">
-  <div fxLayout="row" fxLayoutAlign="start center" class="content">
-    <div class="blocks" fxFlex = "20%">1</div>
-    <div class="blocks" fxFlex = "60%">2</div>
-    <div class="blocks" fxFlex>3</div>
-  </div>
-</div>
-<div class="container">
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="content">
-    <div class="blocks">1</div>
-    <div class="blocks">2</div>
-    <div class="blocks">3</div>
-  </div>
-</div>
-<div class="container">
-  <div fxLayout="row" fxLayoutAlign="begin center" class="content">
-    <div class="blocks">1</div>
-    <div class="blocks">2</div>
-    <div class="blocks">3</div>
-  </div>
-</div>
-<div class="container">
-  <div fxLayout="row"
-       fxLayout.xs="column"
-       fxLayout.sm="column"
-       fxFlex class="contentResp">
-    <div class="blocks" fxFlex> I'm above on mobile, and to the left on larger devices.   </div>
-    <div class="blocks" fxFlex> I'm below on mobile, and to the right on larger devices.  </div>
-  </div>
-</div>
+  <footer
+    class="flex-container"
+    fxLayout="row"
+    fxLayoutAlign="center center">
+    this footer should always stick to the bottom of the page
+  </footer>
+</header>
 
 
 

@@ -1,13 +1,41 @@
+@import "../../../../styles/styles";
+
 .ls-sign-in-button {
   display: block;
 }
 
-div {
-  border: red solid 1px;
-  min-height: 100px;
+.blocks {
+  //min-height: 2vh !important;
+}
+
+.mat-card {
+  width: 28rem;
+  padding: 20px 30px;
+
+  header {
+    height: 5rem;
+    border:red solid 0px;
+  }
+  .social {
+
+    height: 14rem;
+
+    button {
+      background: #fff;
+      height: 3.4rem;
+    }
+  }
 
 }
 
-.blocks {
-  min-height: 2vh !important;
+.fixVertical  {
+  flex: 1 1 100%;
+  min-height:100vh;
+}
+
+
+
+
+footer {
+  padding: 20px;
 }
