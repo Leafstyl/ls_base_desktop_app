@@ -8,34 +8,49 @@
   //min-height: 2vh !important;
 }
 
-.mat-card {
-  width: 28rem;
-  padding: 20px 30px;
+header {
+  overflow: auto;
+}
 
-  header {
-    height: 5rem;
-    border:red solid 0px;
-  }
-  .social {
+section.signin-wrappper {
+  //background: url(https://firebase.google.com/images/backslant-home-top.svg);
+  background: url("https://firebase.google.com/images/backslant-home-top.svg") no-repeat 50% 0;
+  background-size: 100vw;
 
-    height: 14rem;
+  nav {
+    overflow: auto;
+    min-height:700px;
 
-    button {
-      background: #fff;
-      height: 3.4rem;
+    .mat-card {
+      width: 28rem;
+      padding: 20px 30px;
+
+      header {
+        height: 5rem;
+        border: red solid 0px;
+      }
+      .social {
+
+        height: 14rem;
+
+        button {
+          background: #fff;
+          height: 3.4rem;
+        }
+      }
+
     }
   }
 
 }
 
-.fixVertical  {
+.fixVertical {
   flex: 1 1 100%;
-  min-height:100vh;
+  min-height: 100vh;
 }
-
-
-
 
 footer {
   padding: 20px;
 }
+
+
