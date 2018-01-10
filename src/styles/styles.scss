@@ -105,15 +105,21 @@ $ls-purple: #9956B2;
 
 
 body {
-  margin: 0;
+  margin: 0 !important;
   font-family: Roboto, sans-serif;
-  background: #efefef;
+  background: #f7f5ed;
+}
+
+main {
+  padding:0;
+
 }
 
 mat-card {
-  max-width: 80%;
-  margin: 2em auto;
+  max-width: 38rem;
+  margin: 0em auto;
   text-align: center;
+  min-height: 300px;
 }
 
 .mat-toolbar.mat-primary {
@@ -132,6 +138,11 @@ mat-toolbar-row {
   color: white;
 }
 
+/* This must be in styles.scss */
+.mat-horizontal-stepper-header-container {
+  max-width: 38rem;
+  margin: 100px auto;
+}
 
 
 

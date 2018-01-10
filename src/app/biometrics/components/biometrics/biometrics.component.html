@@ -1,4 +1,5 @@
-<!--
+<section class="biometrics-wrappper">
+  <!--
 <mat-card>
   <h1>Biometrics</h1>
   <form class="biometrics-form" *ngIf="biometrics">
@@ -42,11 +43,115 @@
 </mat-card>
 -->
 
-<mat-vertical-stepper>
-  <mat-step label="Step 1">
-    Content 1
-  </mat-step>
-  <mat-step label="Step 1">
-    Content 2
-  </mat-step>
-</mat-vertical-stepper>
+  <div class="ls-stepper">
+
+    <mat-horizontal-stepper [linear]="isLinear">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup"   class="__biometrics-form" *ngIf="biometrics">
+          <ng-template matStepLabel>Lifestyle</ng-template>
+          <mat-card class="mat-elevation-z16" style="background:#E15927">
+            <h2>Lifestyle</h2>
+            <mat-form-field>
+            <input matInput placeholder="Address" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <!-- Biometrics -->
+            <div class="biometrics-form mat-elevation-z4">
+              <fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">
+                <!--<mat-form-field class="biometrics-form-field">-->
+                  <!--<input matInput placeholder="Age" formControlName="firstCtrl" type="number" autocomplete="off" [(ngModel)]="biometrics.age" autofocus required>-->
+                <!--</mat-form-field>-->
+                <!--<mat-form-field class="biometrics-form-field">-->
+                  <!--<mat-select formControlName="firstCtrl" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">-->
+                    <!--<mat-option>None</mat-option>-->
+                    <!--<mat-option value="male">Male</mat-option>-->
+                    <!--<mat-option value="female">Female</mat-option>-->
+                    <!--<mat-option value="other">Other</mat-option>-->
+                  <!--</mat-select>-->
+                <!--</mat-form-field>-->
+                <!--<mat-form-field class="biometrics-form-field">-->
+                <!--<input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="biometrics.height">-->
+                <!--</mat-form-field>-->
+                <!--<mat-form-field class="biometrics-form-field">-->
+                <!--<input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="biometrics.weight">-->
+                <!--</mat-form-field>-->
+                <!--<mat-form-field class="biometrics-form-field">-->
+                <!--<input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="biometrics.cholesterol">-->
+                <!--</mat-form-field>-->
+                <!--<mat-form-field class="biometrics-form-field">-->
+                <!--<input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="biometrics.bloodPressure">-->
+                <!--</mat-form-field>-->
+              </fieldset>
+            </div>
+            <div class="biometrics-button-bar">
+              <button title="Edit" (click)="editBiometrics()" *ngIf="!editing">
+                <span class="material-icons">edit</span>
+              </button>
+              <button title="Save" (click)="saveBiometrics()" *ngIf="editing">
+                <span class="material-icons">done</span>
+              </button>
+              <button title="Cancel" (click)="cancelEdit()" *ngIf="editing">
+                <span class="material-icons">&#xe14c;</span>
+              </button>
+            </div>
+
+
+            <!--/. end-->
+            <!--</mat-form-field>-->
+          </mat-card>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Enviornment</ng-template>
+          <mat-card class="mat-elevation-z16" style="background: #91BD35">
+            <h2>Environment</h2>
+            <mat-form-field>
+              <input matInput placeholder="Address" formControlName="secondCtrl" required>
+            </mat-form-field>
+          </mat-card>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>Animal</ng-template>
+          <mat-card class="mat-elevation-z16" style="background: #BD7C1A">
+            <h2>Animals</h2>
+            <mat-form-field>
+              <input matInput placeholder="Address2" formControlName="thirdCtrl" required>
+            </mat-form-field>
+          </mat-card>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+          <ng-template matStepLabel>Food</ng-template>
+          <mat-card class="mat-elevation-z16" style="background: #913983">
+            <h2>Foods</h2>
+            <mat-form-field>
+              <input matInput placeholder="Address" formControlName="fourthCtrl" required>
+            </mat-form-field>
+          </mat-card>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+
+  </div>
+
+</section>

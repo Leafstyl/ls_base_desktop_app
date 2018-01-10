@@ -3,10 +3,6 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 // Flex Layout
 import { FlexLayoutModule } from '@angular/flex-layout';
-// Stepper
-import {ReactiveFormsModule} from '@angular/forms';
-// import {HttpModule} from '@angular/http';
-// import {CdkTableModule} from '@angular/cdk/table';
 
 import {
   MatFormFieldModule,
@@ -48,11 +44,18 @@ import {
   MatStepperModule,
 } from '@angular/material';
 // import {StepperOverviewExample} from './app/stepper-overview-example';
-import {HttpModule} from '@angular/http';
+// Stepper
+import {ReactiveFormsModule} from '@angular/forms';
+// import {HttpModule} from '@angular/http';
 import {CdkTableModule} from '@angular/cdk/table';
 
 @NgModule({
-  imports: [],
+  imports: [
+    FormsModule,
+    // HttpModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+  ],
   exports: [
     CommonModule,
     FormsModule,
@@ -104,8 +107,6 @@ import {CdkTableModule} from '@angular/cdk/table';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule
-
-
   ],
   declarations: []
 })
