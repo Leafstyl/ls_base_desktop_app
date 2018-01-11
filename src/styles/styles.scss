@@ -107,7 +107,10 @@ $ls-purple: #9956B2;
 body {
   margin: 0 !important;
   font-family: Roboto, sans-serif;
-  background: #f7f5ed;
+  //background: #f7f5ed;
+  background: #e0ddce url("./../assets/background-angle-01.jpg") no-repeat 50% 0;
+  background-size: 100vw !important;
+  background-attachment: fixed;
 }
 
 main {
