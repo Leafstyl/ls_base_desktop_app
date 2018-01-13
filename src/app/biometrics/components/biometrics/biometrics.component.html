@@ -1,98 +1,179 @@
-   <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
-  <mat-horizontal-stepper [linear]="isLinear">
+<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+<mat-horizontal-stepper [linear]="isLinear">
 
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup" class="lf-stepper mat-elevation-z20" style="background:#E15927;margin:3rem 2rem;">
+  <mat-step [stepControl]="firstFormGroup">
+    <section class="lf-stepper lifestyle mat-elevation-z20">
+      <h2>Lifestyle</h2>
+      <form [formGroup]="firstFormGroup" class="lf-stepper mat-elevation-z4">
         <ng-template matStepLabel>Lifestyle</ng-template>
         <mat-form-field>
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
         </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+
+        <mat-checkbox>Hide required marker</mat-checkbox>
+        <div>
+          <label>Float label: </label>
+          <mat-radio-group>
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+            <mat-radio-button value="never">Never</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
-    </mat-step>
+    </section>
+  </mat-step>
 
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup" class="lf-stepper mat-elevation-z20"  style="background:#91BD35;margin:3rem 2rem;">
+
+  <mat-step [stepControl]="secondFormGroup">
+    <section class="lf-stepper environment mat-elevation-z20">
+      <h2>Environment</h2>
+      <form [formGroup]="secondFormGroup" class="lf-stepper mat-elevation-z4">
         <ng-template matStepLabel>Environment</ng-template>
         <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
         </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
+        </mat-form-field>
+
+        <mat-checkbox>Hide required marker</mat-checkbox>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
+          <label>Float label: </label>
+          <mat-radio-group>
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+            <mat-radio-button value="never">Never</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
-    </mat-step>
+    </section>
+  </mat-step>
 
-    <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup" class="lf-stepper mat-elevation-z20"  style="background:#BD7C1A;margin:3rem 2rem;">
+
+  <mat-step [stepControl]="thirdFormGroup">
+    <section class="lf-stepper animal mat-elevation-z20">
+      <h2>Animal</h2>
+      <form [formGroup]="thirdFormGroup" class="lf-stepper mat-elevation-z4">
         <ng-template matStepLabel>Animal</ng-template>
         <mat-form-field>
-          <input matInput placeholder="Address" formControlName="thirdCtrl" required>
+          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
         </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+        </mat-form-field>
+
+        <mat-checkbox>Hide required marker</mat-checkbox>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
+          <label>Float label: </label>
+          <mat-radio-group>
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+            <mat-radio-button value="never">Never</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
-    </mat-step>
+    </section>
+  </mat-step>
 
-    <mat-step [stepControl]="fourthFormGroup">
-      <form [formGroup]="fourthFormGroup" class="lf-stepper mat-elevation-z20"  style="background:#913983;margin:3rem 2rem;">
+
+  <mat-step [stepControl]="fourthFormGroup">
+    <section class="lf-stepper food mat-elevation-z20">
+      <h2>Food</h2>
+      <form [formGroup]="fourthFormGroup" class="lf-stepper mat-elevation-z4">
         <ng-template matStepLabel>Food</ng-template>
         <mat-form-field>
-          <input matInput placeholder="Address" formControlName="fourthCtrl" required>
+          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
         </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
+        </mat-form-field>
+
+        <mat-checkbox>Hide required marker</mat-checkbox>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
+          <label>Float label: </label>
+          <mat-radio-group>
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+            <mat-radio-button value="never">Never</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
-    </mat-step>
+    </section>
+  </mat-step>
 
-  </mat-horizontal-stepper>
+
+</mat-horizontal-stepper>
 
 
-  <mat-card>
-    <h1>Biometrics</h1>
-    <form class="biometrics-form" *ngIf="biometrics">
-      <fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">
-        <mat-form-field class="biometrics-form-field">
-          <input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="biometrics.age" autofocus>
-        </mat-form-field>
-        <mat-form-field class="biometrics-form-field">
-          <mat-select name="gender" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">
-            <mat-option>None</mat-option>
-            <mat-option value="male">Male</mat-option>
-            <mat-option value="female">Female</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field class="biometrics-form-field">
-          <input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="biometrics.height">
-        </mat-form-field>
-        <mat-form-field class="biometrics-form-field">
-          <input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="biometrics.weight">
-        </mat-form-field>
-        <mat-form-field class="biometrics-form-field">
-          <input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="biometrics.cholesterol">
-        </mat-form-field>
-        <mat-form-field class="biometrics-form-field">
-          <input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="biometrics.bloodPressure">
-        </mat-form-field>
-      </fieldset>
-    </form>
-    <div class="biometrics-button-bar">
-      <button title="Edit" (click)="editBiometrics()" *ngIf="!editing">
-        <span class="material-icons">edit</span>
-      </button>
-      <button title="Save" (click)="saveBiometrics()" *ngIf="editing">
-        <span class="material-icons">done</span>
-      </button>
-      <button title="Cancel" (click)="cancelEdit()" *ngIf="editing">
-        <span class="material-icons">&#xe14c;</span>
-      </button>
-    </div>
-  </mat-card>
+<mat-card>
+  <h1>Biometrics</h1>
+  <form class="biometrics-form" *ngIf="biometrics">
+    <fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">
+      <mat-form-field class="biometrics-form-field">
+        <input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="biometrics.age" autofocus>
+      </mat-form-field>
+      <mat-form-field class="biometrics-form-field">
+        <mat-select name="gender" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">
+          <mat-option>None</mat-option>
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+          <mat-option value="other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="biometrics-form-field">
+        <input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="biometrics.height">
+      </mat-form-field>
+      <mat-form-field class="biometrics-form-field">
+        <input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="biometrics.weight">
+      </mat-form-field>
+      <mat-form-field class="biometrics-form-field">
+        <input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="biometrics.cholesterol">
+      </mat-form-field>
+      <mat-form-field class="biometrics-form-field">
+        <input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="biometrics.bloodPressure">
+      </mat-form-field>
+    </fieldset>
+  </form>
+  <div class="biometrics-button-bar">
+    <button title="Edit" (click)="editBiometrics()" *ngIf="!editing">
+      <span class="material-icons">edit</span>
+    </button>
+    <button title="Save" (click)="saveBiometrics()" *ngIf="editing">
+      <span class="material-icons">done</span>
+    </button>
+    <button title="Cancel" (click)="cancelEdit()" *ngIf="editing">
+      <span class="material-icons">&#xe14c;</span>
+    </button>
+  </div>
+</mat-card>
