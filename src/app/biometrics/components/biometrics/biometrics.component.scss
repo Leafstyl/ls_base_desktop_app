@@ -1,235 +1,184 @@
 
-section.biometrics-wrappper {
-  background: #fafafa url("../../../../assets/background-angle-01.svg") repeat-y 50% 0;
-  background-size: 100vw !important;
-}
+// Stepper
+mat-horizontal-stepper {
 
-mat-card:after {
-  //content: '';
-  //position: absolute;
-  //top: 20px;
-  //right: 30px;
-  //z-index: 9000;
-  //height: 140px;
-  //width: 140px;
-  //background: url(../../../../assets/graphic--carrot.png) no-repeat;
-
-}
-
-.biometrics-form {
-  //min-width: 10rem;
-  //max-width: 100%;
-  /* width: 100%; */
-  margin: 7rem 4rem;
-  padding: 3rem;
-  background: #fff;
-}
-
-.biometrics-fieldset {
-
-}
-
-.biometrics-form-field {
-  width: 100%;
-}
-
-.biometrics-button-bar {
-  margin-left: 15px;
-}
-
-.mat-stepper-horizontal {
-
-  max-width: 38rem;
   max-width: 100%;
-  margin: 4.7rem auto 0 auto;
-  background: none;
+  margin: .3rem auto 0 auto;
 
+  &.mat-stepper-horizontal {
 
-
-  section {
-
-    position: relative;
-    background: #fafafa;
-    border: 1rem solid #fafafa;
-    border-radius: 10px;
-
-    &:after {
-      //content: '';
-      //position: absolute;
-      //top: 20px;
-      //right: -24px;
-      //z-index: 9000;
-      //height: 140px;
-      //width: 140px;
-      //background: url(../../../../assets/graphic--carrot.png) no-repeat;
-      //background-size: 61%;
-    }
-
-    &.lf-stepper {
-      width: 68%;
-      max-width: 55rem;
-      margin: 2rem auto 3rem auto;
-      padding: 0;
-
-      h2 {
-        padding: 1.4rem 5rem 3rem 1.4rem;
-        margin: 0;
-        color: #AD0202;
-        font-size: 3vw;
-        font-family: 'Open Sans', sans-serif;
-        border-radius: 10px;
-        text-align: left;
-      }
-
-      //& > * {
-      //  width: 100%;
-      //}
-
-      form {
-
-        //margin:3rem 2rem;
-
-
-        & > * {
-          margin: 5px 0;
-        }
-      }
-
-      aside {
-
-        mat-icon {
-          //min-width: 9rem;
-          //min-height: 7rem;
-          //padding-top: calc(50% - 3rem);
-          height: auto;
-          width: auto;
-          font-size: 8vw;
-          color: #a7a498;
-          //text-align: center;
-
-        }
-      }
-
-      .mat-radio-button {
-        margin: 0 5px;
-      }
-
-
-
-      mat-form-field {
-        width: 100%;
-      }
-
-    }
-
-    &.lifestyle {
-
-      h2 {
-        //color: #e07829;
-        //background: #fff;
-      }
-
-    }
-
-    &.environment {
-
-      h2 {
-        color: #91BD35;
-        //background: #fff;
-      }
-
-    }
-
-    &.animal {
-
-      h2 {
-        color: #A86839;
-        //background: #fff;
-
-      }
-    }
-
-    &.food {
-
-      h2 {
-        color: #A85686;
-        //background: #fff;
-      }
-    }
+    background: none;
 
   }
 
-}
+  form {
 
-.mat-input-container {
+    max-width: 70vw;
+    margin: 0 auto;
 
-}
+    section.lf-stepper-wrap {
 
-.mat-horizontal-content-container {
-  margin: 80px 0 0 0;
-  padding: 0 !important;
-}
-
-.lf-stepper {
-
-  //max-width: 33rem;
-  //margin: 3rem auto !important;
-  //min-height: 28rem;
-
-}
-
-
-
-
-
-
-
-
-.bounds {
-  // background-color:#ddd;
-  height :800px;
-}
-
-
-.content {
-  min-width: 300px;
-  /*height: 400px;*/
-}
-
-section.wireframe {
-
-  background:#f3f3f3;
-
-  header {
-
-    background: #999;
-    min-height: 3rem;
-
-  }
-
-  section {
-
-    background: #bdbfc1;
-    min-height: 3rem;
-    padding: 1rem;
-
-    aside {
-      background: red;
-      min-height: 3rem;
-      padding: 1rem;
-    }
-
-    article {
-
-      background: #333333;
-      min-height: 3rem;
+      position: relative;
 
       div {
-        background: orange;
+
+        min-height: 3rem;
+        background: #ccc;
+        border-radius: 10px;
+
+      }
+
+      article {
+
+        header {
+
+          background: #FFB630;
+
+          h1 {
+
+            margin: .7rem 1.3rem;
+            color: #fff !important;
+
+            &:first-child {
+
+              color: #FFB630;
+
+            }
+
+            &:nth-child(2) {
+
+              color: #83A340;
+
+            }
+
+          }
+
+        }
+
+        mat-card {
+
+          &.mat-card { padding: 0; }
+
+          &.lifestyle__card {
+
+            // border-top: 2.9rem solid #FFB630;
+
+          }
+
+          &.environment__card {
+
+            border-top: 2.9rem solid #83A340;
+
+          }
+
+          aside {
+
+            // background: #90c8be;
+            // border-right: 1px solid #999;
+            background: url(../../../../assets/graphic__bike.png) 50% 90%;
+            background-size: 70%;
+            background-repeat: no-repeat;
+
+            i {
+
+              font-size: 5rem;
+              color: #8fc23e;
+
+            }
+
+          }
+
+          .lifestyle__form {
+
+            padding: 1rem 0;
+
+            section {
+
+              min-height: 2rem;
+              text-align: left;
+
+
+              &.form--gender {
+
+                span {
+
+                  //min-height: 3rem;
+
+                }
+
+              }
+
+              &.form--health {
+
+                span {
+
+                  min-height: 3rem;
+
+                }
+
+              }
+
+              mat-radio-button {
+
+                padding: .5rem;
+
+              }
+
+              mat-checkbox {
+
+                padding: .2rem 0.5rem;
+                float: left;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      footer {
+
+        margin: 2.7rem 1rem;
+        background: #fff;
+
+        button {
+
+          &.stepper-next {
+
+
+          }
+
+          &.stepper-back {
+
+            //@extend .stepper-next;
+
+
+          }
+
+        }
+
       }
 
     }
+
   }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

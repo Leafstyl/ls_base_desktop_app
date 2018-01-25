@@ -18,6 +18,7 @@ export class BiometricsComponent implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   fourthFormGroup: FormGroup;
+  fifthFormGroup: FormGroup;
 
   private lastBiometrics: IBiometrics;
 
@@ -43,6 +44,9 @@ export class BiometricsComponent implements OnInit {
     });
     this.fourthFormGroup = this._formBuilder.group({
       fourthCtrl: ['', Validators.required]
+    });
+    this.fifthFormGroup = this._formBuilder.group({
+      fifthCtrl: ['', Validators.required]
     });
     // Biometrics
     this.biometricsService.biometrics.subscribe(biometrics => {

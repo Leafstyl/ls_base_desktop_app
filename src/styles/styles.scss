@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 @import '~@angular/material/theming';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -10,7 +9,6 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
-
 
 $ls-grey: (
   50: #eceff1,
@@ -85,10 +83,10 @@ $ls-lime: (
 // $candy-app-primary: mat-palette($ls-grey, 500);
 $candy-app-primary: mat-palette($mat-light-green, 50, 50, 50);
 //$candy-app-accent:  mat-palette($mat-light-green, A700, A700, A700);
-$candy-app-accent:  mat-palette($mat-light-green, 500, 500, 500);
+$candy-app-accent: mat-palette($mat-light-green, 500, 500, 500);
 
 // The warn palette is optional (defaults to red).
-$candy-app-warn:    mat-palette($mat-red);
+$candy-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
@@ -98,25 +96,25 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 // that you are using.
 @include angular-material-theme($candy-app-theme);
 
-
 // LS Colors
 $ls-red: #AD0202;
 $ls-green: #83A340;
 $ls-brown: #A86839;
 $ls-purple: #9956B2;
 
-
 body {
   margin: 0 !important;
   font-family: Roboto, sans-serif;
-  //background: #f7f5ed;
-  background: #fff url("./../assets/background-angle-01.jpg") no-repeat 50% 0;
+  background: #e5e8cd; // Option 1
+  background: #f3f4eb; // Option 1 - lighter
+  background: #F9FAF5;
+  //background: #F9FAF5 url("./../assets/background-angle-01.jpg") no-repeat 50% 0;
   background-size: 100vw !important;
   background-attachment: fixed;
 }
 
 main {
-  padding:0;
+  padding: 0;
 
 }
 
@@ -128,8 +126,20 @@ mat-card {
 }
 
 .mat-toolbar.mat-primary {
-  background: #fff;
-  color: mat-color($candy-app-primary)
+  // background: #fff;
+  color: mat-color($candy-app-primary);
+  background-color: none;
+  box-shadow: none;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 1px !important;
+}
+
+.mat-toolbar {
+
+  background: none !important;
+  box-shadow: none;
 }
 
 mat-toolbar-row {
@@ -145,17 +155,139 @@ mat-toolbar-row {
 
 /* This must be in styles.scss */
 .mat-horizontal-stepper-header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  width: 72%;
+
+  width: 50%;
   margin: 0px auto;
-  background: #fafafa;
-  background: rgba(255,255,255,.9);
-  padding: 0 14%;
-  // mat-elevation-7
-  box-shadow:  0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+  .mat-step-icon {
+
+    span {
+      visibility: hidden;
+    }
+
+    color: #ffffff;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+  }
+
+  mat-step-header {
+
+    .mat-step-icon-not-touched {
+
+      span {
+        visibility: hidden;
+      }
+
+    }
+
+    &#cdk-step-label-0-0 {
+
+      .mat-step-icon,
+      .mat-step-icon-not-touched {
+        &:after {
+          content: 'L';
+          color: #fff;
+          position: absolute;
+
+        }
+      }
+
+      .mat-step-icon {
+
+        background-color: #FFB630;
+
+      }
+
+      .mat-step-icon-not-touched {
+
+        background-color: #999;
+
+      }
+    }
+
+    &#cdk-step-label-0-1 {
+
+      .mat-step-icon,
+      .mat-step-icon-not-touched {
+        &:after {
+          content: 'E';
+          color: #fff;
+          position: absolute;
+
+        }
+      }
+
+      .mat-step-icon {
+
+        background-color: #83A340;
+
+      }
+
+      .mat-step-icon-not-touched {
+
+        background-color: #999;
+
+      }
+    }
+
+    &#cdk-step-label-0-2 {
+
+      .mat-step-icon,
+      .mat-step-icon-not-touched {
+        &:after {
+          content: 'A';
+          color: #fff;
+          position: absolute;
+
+        }
+      }
+
+      .mat-step-icon {
+
+        background-color: #A86839;
+
+      }
+
+      .mat-step-icon-not-touched {
+
+        background-color: #999;
+
+      }
+    }
+
+    &#cdk-step-label-0-3 {
+
+      .mat-step-icon,
+      .mat-step-icon-not-touched {
+        &:after {
+          content: 'F';
+          color: #fff;
+          position: absolute;
+
+        }
+      }
+
+      .mat-step-icon {
+
+        background-color: #9956B2;
+
+      }
+
+      .mat-step-icon-not-touched {
+
+        background-color: #999;
+
+      }
+    }
+
+
+  }
+
 
 }
 

@@ -10,283 +10,708 @@
 <mat-horizontal-stepper [linear]="isLinear">
 
   <mat-step [stepControl]="firstFormGroup">
-    <section class="lf-stepper lifestyle mat-elevation-z7 wireframe">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Lifestyle</ng-template>
+      <section class="lf-stepper-wrap lifestyle wireframe">
 
-      <!-- SAVE FOR LATER
-      <div class="bounds">
-        <header>
-          <h2>Lifestyle</h2>
-        </header>
+        <article fxLayout="row"
+                 fxLayoutAlign="space-around stretch"
+                 fxLayoutWrap
+                 fxFlexFill>
 
-        <div class="content"
-             fxLayout="row"
-             fxLayout.xs="column"
-             fxFlexFill>
+          <!-- member -->
+          <mat-card class="lifestyle__card"
+                    fxFlex="100">
 
-          <aside fxFlex="30" fxLayout="column" class="sec1" fxFlex.sm="55">
-            <span fxFlex="25">
-              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">account_circle</mat-icon>
-            </span>
-            <span>
-              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">group_add</mat-icon>
-            </span>
-          </aside>
+            <header fxLayoutAlign="start center">
+              <h1>Lifestyle</h1>
+            </header>
 
-          <section fxLayout="column" fxFlex="70">
+            <article fxLayout="row"
+                     fxLayoutAlign="space-around stretch">
 
-            <article fxLayout="row" class="sec3" fxFlex.xs="15">
-              <mat-form-field>
-                <mat-select placeholder="Age">
-                  <mat-option value="one">1 to 20</mat-option>
-                  <mat-option value="two">21 to 30</mat-option>
-                  <mat-option value="three">31 to 40</mat-option>
-                  <mat-option value="four">41 to 50</mat-option>
-                  <mat-option value="five">51 to 60</mat-option>
-                  <mat-option value="six">61 to 100</mat-option>
-                </mat-select>
-                <mat-hint align="end">Pick an age ^</mat-hint>
-              </mat-form-field>
+              <aside fxFlex="18">
 
-              <mat-form-field>
-                <mat-select placeholder="Gender">
-                  <mat-option value="one">Male</mat-option>
-                  <mat-option value="two">Female</mat-option>
-                  <mat-option value="three">Non-binary/ third gender</mat-option>
-                  <mat-option value="three">Prefer to self-describe</mat-option>
-                  <mat-option value="three">Prefer not to say</mat-option>
-                </mat-select>
-                <mat-hint align="end">Pick a gender ^</mat-hint>
-              </mat-form-field>
+                <!--<i class="material-icons">account_circle</i>-->
+                <!--<h3>John Doe</h3>-->
+
+              </aside>
+
+              <section class="lifestyle__form"
+                       fxFlex="72">
+
+                <!-- Gender -->
+                <section class="form--gender"
+                         fxLayout="column"
+                         fxLayoutAlign="space-around">
+
+                  <span fxFlex="100">
+                    <label>Gender: </label>
+                  </span>
+
+                  <span fxFlex="100">
+                    <!-- Inclusion link: http://itspronouncedmetrosexual.com/2012/06/how-can-i-make-the-gender-question-on-an-application-form-more-inclusive/ -->
+                    <!-- TODO: confirm options -->
+                    <mat-radio-group>
+                      <mat-radio-button value="male">Male</mat-radio-button>
+                      <mat-radio-button value="female">Female</mat-radio-button>
+                      <mat-radio-button value="trans">Trans*</mat-radio-button>
+                      <!-- TODO: put in input (fill in blank) -->
+                      <mat-radio-button value="other">Other</mat-radio-button>
+                      <mat-radio-button value="na">Perfer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+
+                </section>
+
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <span fxFlex="100">
+                    <label>Biometrics: </label>
+                  </span>
+                </section>
+
+                <!-- Age/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Age">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Pick an age ^</mat-hint>-->
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Weight">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Pick an age ^</mat-hint>-->
+                  </mat-form-field>
+
+                </section>
+
+                <!-- TODO: Should we include race? -->
+                <!-- Race
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <span fxFlex="100">
+                    <label>Race: </label>
+                    <mat-radio-group>
+                      <mat-radio-button value="auto">Auto</mat-radio-button>
+                      <mat-radio-button value="always">Always</mat-radio-button>
+                      <mat-radio-button value="never">Never</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+                </section> -->
+
+
+                <!-- Height/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Feet">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Height ^</mat-hint>-->
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Inches">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Inches ^</mat-hint>-->
+                  </mat-form-field>
+                </section>
+
+                <!-- Blood Pressure/Cholesterol -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Blood Pressure (mmHg)">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Blood Pressure ^</mat-hint>-->
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Cholesterol (mg/dL)">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <!--<mat-hint align="end">Cholesterol ^</mat-hint>-->
+                  </mat-form-field>
+                </section>
+
+                <!-- Gender -->
+                <section class="form--health"
+                         fxLayout="column">
+
+                  <!--<span fxFlex="100"-->
+                  <!--fxLayoutAlign="start center">-->
+                  <!--<label style="color: #ffb70e;">Incorporating a plant based diet can help and/or cure the following. What are you interested in? </label>-->
+                  <!--</span>-->
+
+                  <span fxFlex="100"
+                        fxLayoutAlign="start center">
+                    <label>Health Concerns: </label>
+                  </span>
+
+                  <span fxFlex="100">
+
+                    <mat-checkbox value="male">Alzheimer's disease</mat-checkbox>
+                    <mat-checkbox value="trans">Blood pressure</mat-checkbox>
+                    <mat-checkbox value="female">Cancer</mat-checkbox>
+                    <mat-checkbox value="trans">Diabetes</mat-checkbox>
+                    <mat-checkbox value="trans">Heart Disease</mat-checkbox>
+                    <mat-checkbox value="male">Life Expectancy</mat-checkbox>
+                    <mat-checkbox value="male">Parkinson disease</mat-checkbox>
+                    <mat-checkbox value="female">Obesity</mat-checkbox>
+                    <mat-checkbox value="male">Weight Loss</mat-checkbox>
+                    <mat-checkbox value="other">Depression</mat-checkbox>
+                    <mat-checkbox value="other">Anxiety</mat-checkbox>
+                    <mat-checkbox value="other">Fatigue</mat-checkbox>
+                    <mat-checkbox value="other">General Emotional State</mat-checkbox>
+                  </span>
+
+                </section>
+
+              </section>
             </article>
 
-            <article fxLayout="row" class="sec3" fxFlex.xs="15">
-              <mat-form-field>
-                <mat-select placeholder="Feet">
-                  <mat-option value="one">2'</mat-option>
-                  <mat-option value="two">3'</mat-option>
-                  <mat-option value="three">4'</mat-option>
-                  <mat-option value="four">5'</mat-option>
-                  <mat-option value="five">6'</mat-option>
-                  <mat-option value="six">7'</mat-option>
-                </mat-select>
-                <mat-hint align="end">Height ^</mat-hint>
-              </mat-form-field>
+          </mat-card>
 
-              <mat-form-field>
-                <mat-select placeholder="Inches">
-                  <mat-option value="one">1'</mat-option>
-                  <mat-option value="two">2'</mat-option>
-                  <mat-option value="three">3'</mat-option>
-                  <mat-option value="four">4'</mat-option>
-                  <mat-option value="five">5'</mat-option>
-                  <mat-option value="six">6'</mat-option>
-                </mat-select>
-                <mat-hint align="end">Inches ^</mat-hint>
-              </mat-form-field>
-            </article>
-
-          </section>
-
-        </div>
-
-      </div>
-      -->
-
-
-      <header>
-
-      </header>
-
-      <section fxLayout="row"
-               fxLayout.xs="column">
-
-        <aside fxLayout="column"
-               fxFlex="30">
-            <span fxFlex="25">
-              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">account_circle</mat-icon>
-            </span>
-          <span>
-              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">group_add</mat-icon>
-            </span>
-        </aside>
-
-        <article fxLayout.xs="column"
-                 fxFlex="70"
-                 fxFlexFill
-                 fxLayoutWrap>
-
-          <div fxFlex="50" fxFlex.xs="55">
-            Age
-          </div>
-          <div fxFlex="50">
-            Gender
-          </div>
-
-
-          <div fxFlex="50" fxFlex.xs="55">
-            Weight
-          </div>
-          <div fxFlex="50">
-            Height
-          </div>
         </article>
 
+        <footer fxLayout="row" class="mat-elevation-z1">
+          <button mat-button class="placeholder"
+                  fxFlex="50">
+
+          </button>
+          <button mat-button matStepperNext class="stepper-next"
+                  fxFlex="50">
+            Next
+          </button>
+        </footer>
 
       </section>
-
-
-      <button mat-button matStepperNext>Next</button>
-
-    </section>
+    </form>
   </mat-step>
 
-
   <mat-step [stepControl]="secondFormGroup">
-    <section class="lf-stepper environment mat-elevation-z20">
-      <h2>Environment</h2>
-      <form [formGroup]="secondFormGroup" class="lf-stepper ">
-        <ng-template matStepLabel>Environment</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
-        </mat-form-field>
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Environment</ng-template>
+      <section class="lf-stepper-wrap environment wireframe">
 
-        <mat-checkbox>Hide required marker</mat-checkbox>
-        <div>
-          <label>Float label: </label>
-          <mat-radio-group>
-            <mat-radio-button value="auto">Auto</mat-radio-button>
-            <mat-radio-button value="always">Always</mat-radio-button>
-            <mat-radio-button value="never">Never</mat-radio-button>
-          </mat-radio-group>
-        </div>
+        <article fxLayout="row"
+                 fxLayoutAlign="space-around stretch"
+                 fxLayoutWrap
+                 fxFlexFill>
 
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </section>
+          <header fxFlex="100">
+            <h1>Environment</h1>
+          </header>
+
+          <!-- member -->
+          <mat-card class="environment__card"
+                    fxFlex="100">
+
+
+            <article fxLayout="row"
+                     fxLayoutAlign="space-around stretch">
+
+              <aside fxFlex="24">
+
+                <!--<i class="material-icons">account_circle</i>-->
+                <!--<h3>John Doe</h3>-->
+
+              </aside>
+
+              <section class="lifestyle__form"
+                       fxFlex="66">
+
+                <!-- Gender -->
+                <section class="form--gender"
+                         fxLayout="column"
+                         fxLayoutAlign="space-around">
+
+                  <span fxFlex="100">
+                    <label>Gender: </label>
+                  </span>
+
+                  <span fxFlex="100">
+                    <!-- Inclusion link: http://itspronouncedmetrosexual.com/2012/06/how-can-i-make-the-gender-question-on-an-application-form-more-inclusive/ -->
+                    <!-- TODO: confirm options -->
+                    <mat-radio-group>
+                      <mat-radio-button value="male">Male</mat-radio-button>
+                      <mat-radio-button value="female">Female</mat-radio-button>
+                      <mat-radio-button value="trans">Trans*</mat-radio-button>
+                      <!-- TODO: put in input (fill in blank) -->
+                      <mat-radio-button value="other">Other</mat-radio-button>
+                      <mat-radio-button value="na">Perfer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+
+                </section>
+
+                <!-- Age/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Age">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Pick an age ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Weight">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Pick an age ^</mat-hint>
+                  </mat-form-field>
+
+                </section>
+
+                <!-- TODO: Should we include race? -->
+                <!-- Race
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <span fxFlex="100">
+                    <label>Race: </label>
+                    <mat-radio-group>
+                      <mat-radio-button value="auto">Auto</mat-radio-button>
+                      <mat-radio-button value="always">Always</mat-radio-button>
+                      <mat-radio-button value="never">Never</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+                </section> -->
+
+
+                <!-- Height/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Feet">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Height ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Inches">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Inches ^</mat-hint>
+                  </mat-form-field>
+                </section>
+
+                <!-- Blood Pressure/Cholesterol -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Blood Pressure (mmHg)">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Blood Pressure ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Cholesterol (mg/dL)">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Cholesterol ^</mat-hint>
+                  </mat-form-field>
+                </section>
+              </section>
+            </article>
+
+          </mat-card>
+
+        </article>
+
+        <footer fxLayout="row" class="mat-elevation-z1">
+          <button mat-button matStepperPrevious class="stepper-back"
+                  fxFlex="50">
+            Back
+          </button>
+          <button mat-button matStepperNext class="stepper-next"
+                  fxFlex="50">
+            Next
+          </button>
+        </footer>
+
+      </section>
+    </form>
   </mat-step>
 
 
   <mat-step [stepControl]="thirdFormGroup">
-    <section class="lf-stepper animal mat-elevation-z20">
-      <h2>Animal</h2>
-      <form [formGroup]="thirdFormGroup" class="lf-stepper ">
-        <ng-template matStepLabel>Animal</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
-        </mat-form-field>
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Animal</ng-template>
+      <section class="lf-stepper-wrap lifestyle wireframe">
 
-        <mat-checkbox>Hide required marker</mat-checkbox>
-        <div>
-          <label>Float label: </label>
-          <mat-radio-group>
-            <mat-radio-button value="auto">Auto</mat-radio-button>
-            <mat-radio-button value="always">Always</mat-radio-button>
-            <mat-radio-button value="never">Never</mat-radio-button>
-          </mat-radio-group>
-        </div>
+        <article fxLayout="row"
+                 fxLayoutAlign="space-around stretch"
+                 fxLayoutWrap
+                 fxFlexFill>
 
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </section>
+          <header fxFlex="100">
+            <h1>Environment</h1>
+          </header>
+
+          <!-- member -->
+          <mat-card class="environment__card"
+                    fxFlex="45">
+
+
+            <article fxLayout="row"
+                     fxLayoutAlign="space-around stretch">
+
+              <aside fxFlex="24">
+
+                <i class="material-icons">account_circle</i>
+                <h3>John Doe</h3>
+
+              </aside>
+
+              <section class="lifestyle__form"
+                       fxFlex="66">
+
+                <!-- Gender -->
+                <section class="form--gender"
+                         fxLayout="column"
+                         fxLayoutAlign="space-around">
+
+                  <span fxFlex="100">
+                    <label>Gender: </label>
+                  </span>
+
+                  <span fxFlex="100">
+                    <!-- Inclusion link: http://itspronouncedmetrosexual.com/2012/06/how-can-i-make-the-gender-question-on-an-application-form-more-inclusive/ -->
+                    <!-- TODO: confirm options -->
+                    <mat-radio-group>
+                      <mat-radio-button value="male">Male</mat-radio-button>
+                      <mat-radio-button value="female">Female</mat-radio-button>
+                      <mat-radio-button value="trans">Trans*</mat-radio-button>
+                      <!-- TODO: put in input (fill in blank) -->
+                      <mat-radio-button value="other">Other</mat-radio-button>
+                      <mat-radio-button value="na">Perfer not to disclose</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+
+                </section>
+
+                <!-- Age/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Age">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Pick an age ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Weight">
+                      <mat-option value="one">1 to 20</mat-option>
+                      <mat-option value="two">21 to 30</mat-option>
+                      <mat-option value="three">31 to 40</mat-option>
+                      <mat-option value="four">41 to 50</mat-option>
+                      <mat-option value="five">51 to 60</mat-option>
+                      <mat-option value="six">61 to 100</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Pick an age ^</mat-hint>
+                  </mat-form-field>
+
+                </section>
+
+                <!-- TODO: Should we include race? -->
+                <!-- Race
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <span fxFlex="100">
+                    <label>Race: </label>
+                    <mat-radio-group>
+                      <mat-radio-button value="auto">Auto</mat-radio-button>
+                      <mat-radio-button value="always">Always</mat-radio-button>
+                      <mat-radio-button value="never">Never</mat-radio-button>
+                    </mat-radio-group>
+                  </span>
+                </section> -->
+
+
+                <!-- Height/Weight -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Feet">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Height ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Inches">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Inches ^</mat-hint>
+                  </mat-form-field>
+                </section>
+
+                <!-- Blood Pressure/Cholesterol -->
+                <section fxLayout="row"
+                         fxLayoutAlign="space-around center">
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Blood Pressure (mmHg)">
+                      <mat-option value="one">2'</mat-option>
+                      <mat-option value="two">3'</mat-option>
+                      <mat-option value="three">4'</mat-option>
+                      <mat-option value="four">5'</mat-option>
+                      <mat-option value="five">6'</mat-option>
+                      <mat-option value="six">7'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Blood Pressure ^</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="45">
+                    <mat-select placeholder="Cholesterol (mg/dL)">
+                      <mat-option value="one">1'</mat-option>
+                      <mat-option value="two">2'</mat-option>
+                      <mat-option value="three">3'</mat-option>
+                      <mat-option value="four">4'</mat-option>
+                      <mat-option value="five">5'</mat-option>
+                      <mat-option value="six">6'</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Cholesterol ^</mat-hint>
+                  </mat-form-field>
+                </section>
+              </section>
+            </article>
+
+          </mat-card>
+
+          <!-- Add Member -->
+          <mat-card class="lifestyle__card--member"
+                    fxFlex="45">
+
+
+            <article fxLayout="row"
+                     fxLayoutAlign="space-around stretch">
+
+
+              <section class="lifestyle__form"
+                       fxFlex="100">
+
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <i class="material-icons" style="font-size: 4rem; color:#644356;">add_circle_outline</i>
+                <p></p>
+                <h4>Add family/friend to your network</h4>
+              </section>
+            </article>
+
+          </mat-card>
+
+        </article>
+
+        <footer fxLayout="row">
+          <button mat-button matStepperNext
+                  fxFlex="40">
+            Next
+          </button>
+        </footer>
+
+      </section>
+
+    </form>
   </mat-step>
 
 
   <mat-step [stepControl]="fourthFormGroup">
-    <section class="lf-stepper food mat-elevation-z20">
-      <h2>Food</h2>
-      <form [formGroup]="fourthFormGroup" class="lf-stepper ">
-        <ng-template matStepLabel>Food</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="fourthCtrl" required>
-        </mat-form-field>
+    <form [formGroup]="fourthFormGroup">
+      <section class="lf-stepper food">
+        <h2>Food</h2>
+        <form [formGroup]="thirdFormGroup" class="lf-stepper ">
+          <ng-template matStepLabel>Food</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+          </mat-form-field>
 
-        <mat-checkbox>Hide required marker</mat-checkbox>
-        <div>
-          <label>Float label: </label>
-          <mat-radio-group>
-            <mat-radio-button value="auto">Auto</mat-radio-button>
-            <mat-radio-button value="always">Always</mat-radio-button>
-            <mat-radio-button value="never">Never</mat-radio-button>
-          </mat-radio-group>
-        </div>
+          <mat-checkbox>Hide required marker</mat-checkbox>
+          <div>
+            <label>Float label: </label>
+            <mat-radio-group>
+              <mat-radio-button value="auto">Auto</mat-radio-button>
+              <mat-radio-button value="always">Always</mat-radio-button>
+              <mat-radio-button value="never">Never</mat-radio-button>
+            </mat-radio-group>
+          </div>
 
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </section>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </section>
+    </form>
   </mat-step>
 
 
 </mat-horizontal-stepper>
 
-<!--
-<mat-card>
-  <h1>Biometrics</h1>
-  <form class="biometrics-form" *ngIf="biometrics">
-    <fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">
-      <mat-form-field class="biometrics-form-field">
-        <input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="biometrics.age"
-               autofocus>
-      </mat-form-field>
-      <mat-form-field class="biometrics-form-field">
-        <mat-select name="gender" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">
-          <mat-option>None</mat-option>
-          <mat-option value="male">Male</mat-option>
-          <mat-option value="female">Female</mat-option>
-          <mat-option value="other">Other</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="biometrics-form-field">
-        <input matInput name="height" placeholder="Height" autocomplete="off" type="text"
-               [(ngModel)]="biometrics.height">
-      </mat-form-field>
-      <mat-form-field class="biometrics-form-field">
-        <input matInput name="weight" placeholder="Weight" autocomplete="off" type="number"
-               [(ngModel)]="biometrics.weight">
-      </mat-form-field>
-      <mat-form-field class="biometrics-form-field">
-        <input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number"
-               [(ngModel)]="biometrics.cholesterol">
-      </mat-form-field>
-      <mat-form-field class="biometrics-form-field">
-        <input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off"
-               [(ngModel)]="biometrics.bloodPressure">
-      </mat-form-field>
-    </fieldset>
-  </form>
-  <div class="biometrics-button-bar">
-    <button title="Edit" (click)="editBiometrics()" *ngIf="!editing">
-      <span class="material-icons">edit</span>
-    </button>
-    <button title="Save" (click)="saveBiometrics()" *ngIf="editing">
-      <span class="material-icons">done</span>
-    </button>
-    <button title="Cancel" (click)="cancelEdit()" *ngIf="editing">
-      <span class="material-icons">&#xe14c;</span>
-    </button>
-  </div>
-</mat-card>
--->
+
+<!-- SAVE FOR LATER
+ <div class="bounds">
+   <header>
+     <h2>Lifestyle</h2>
+   </header>
+
+   <div class="content"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxFlexFill>
+
+     <aside fxFlex="30" fxLayout="column" class="sec1" fxFlex.sm="55">
+       <span fxFlex="25">
+         <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">account_circle</mat-icon>
+       </span>
+       <span>
+         <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">group_add</mat-icon>
+       </span>
+     </aside>
+
+     <section fxLayout="column" fxFlex="70">
+
+       <article fxLayout="row" class="sec3" fxFlex.xs="15">
+         <mat-form-field>
+           <mat-select placeholder="Age">
+             <mat-option value="one">1 to 20</mat-option>
+             <mat-option value="two">21 to 30</mat-option>
+             <mat-option value="three">31 to 40</mat-option>
+             <mat-option value="four">41 to 50</mat-option>
+             <mat-option value="five">51 to 60</mat-option>
+             <mat-option value="six">61 to 100</mat-option>
+           </mat-select>
+           <mat-hint align="end">Pick an age ^</mat-hint>
+         </mat-form-field>
+
+         <mat-form-field>
+           <mat-select placeholder="Gender">
+             <mat-option value="one">Male</mat-option>
+             <mat-option value="two">Female</mat-option>
+             <mat-option value="three">Non-binary/ third gender</mat-option>
+             <mat-option value="three">Prefer to self-describe</mat-option>
+             <mat-option value="three">Prefer not to say</mat-option>
+           </mat-select>
+           <mat-hint align="end">Pick a gender ^</mat-hint>
+         </mat-form-field>
+       </article>
+
+       <article fxLayout="row" class="sec3" fxFlex.xs="15">
+         <mat-form-field>
+           <mat-select placeholder="Feet">
+             <mat-option value="one">2'</mat-option>
+             <mat-option value="two">3'</mat-option>
+             <mat-option value="three">4'</mat-option>
+             <mat-option value="four">5'</mat-option>
+             <mat-option value="five">6'</mat-option>
+             <mat-option value="six">7'</mat-option>
+           </mat-select>
+           <mat-hint align="end">Height ^</mat-hint>
+         </mat-form-field>
+
+         <mat-form-field>
+           <mat-select placeholder="Inches">
+             <mat-option value="one">1'</mat-option>
+             <mat-option value="two">2'</mat-option>
+             <mat-option value="three">3'</mat-option>
+             <mat-option value="four">4'</mat-option>
+             <mat-option value="five">5'</mat-option>
+             <mat-option value="six">6'</mat-option>
+           </mat-select>
+           <mat-hint align="end">Inches ^</mat-hint>
+         </mat-form-field>
+       </article>
+
+     </section>
+
+   </div>
+
+ </div>
+ -->
