@@ -23,20 +23,65 @@ mat-horizontal-stepper {
       div {
 
         min-height: 3rem;
-        background: #ccc;
-        border-radius: 10px;
+        //background: #ccc;
+        //border-radius: 10px;
 
       }
 
       article {
 
+        padding-top: 1rem;
+
+        .environment__card {
+
+
+          header {
+
+            background: #889E49;
+
+          }
+
+        }
+
+        .animal__card {
+
+
+          header {
+
+            background: #965C26;
+
+          }
+
+        }
+
+        .food__card {
+
+
+          header {
+
+            background: #CC4E4E;
+
+          }
+
+        }
+
         header {
 
-          background: #FFB630;
+          background: #4eb2bf;
+
+          span {
+
+            &.logo__L--small {
+
+              margin: .6rem 0rem .6rem 1.3rem;
+
+            }
+
+          }
 
           h1 {
 
-            margin: .7rem 1.3rem;
+            margin: .7rem 1.2rem;
             color: #fff !important;
 
             &:first-child {
@@ -61,13 +106,11 @@ mat-horizontal-stepper {
 
           &.lifestyle__card {
 
-            // border-top: 2.9rem solid #FFB630;
 
           }
 
           &.environment__card {
 
-            border-top: 2.9rem solid #83A340;
 
           }
 
@@ -75,7 +118,7 @@ mat-horizontal-stepper {
 
             // background: #90c8be;
             // border-right: 1px solid #999;
-            background: url(../../../../assets/graphic__bike.png) 50% 90%;
+            // background: url(../../../../assets/graphic__bike.png) 50% 90%;
             background-size: 70%;
             background-repeat: no-repeat;
 
