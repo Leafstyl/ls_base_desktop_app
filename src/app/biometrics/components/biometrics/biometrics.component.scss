@@ -22,15 +22,14 @@ mat-horizontal-stepper {
 
       div {
 
-        min-height: 3rem;
+        //min-height: 3rem;
+        //border: red solid 1px;
         //background: #ccc;
         //border-radius: 10px;
 
       }
 
       article {
-
-        padding-top: 1rem;
 
         .environment__card {
 
@@ -118,7 +117,7 @@ mat-horizontal-stepper {
 
             // background: #90c8be;
             // border-right: 1px solid #999;
-            // background: url(../../../../assets/graphic__bike.png) 50% 90%;
+            background: url(../../../../assets/graphic__bike.png) 50% 90%;
             background-size: 70%;
             background-repeat: no-repeat;
 
@@ -133,7 +132,26 @@ mat-horizontal-stepper {
 
           .lifestyle__form {
 
-            padding: 1rem 0;
+            padding: 0;
+
+            .mat-checkbox {
+
+              label.mat-checkbox-layout {
+                border:red solid 1px !important;
+              }
+               .mat-checkbox-label {
+                  flex: 1 1;
+                  box-sizing: border-box;
+                  place-content: center flex-start;
+                  align-items: center;
+                  flex-direction: row;
+                  display: flex;
+                  min-height: 3rem;
+                }
+
+
+
+            }
 
             section {
 

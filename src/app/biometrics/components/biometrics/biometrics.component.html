@@ -45,36 +45,34 @@
                        fxFlex="72"
                        fxLayout="column">
 
+
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Alzheimer's Disease </div>
-                  <div syle="border: #999 solid 1px"> Anxiety </div>
-                  <div syle="border: #999 solid 1px"> Blood Pressure </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Alzheimers</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Anxiety</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Blood Pressure</mat-checkbox>
+                </div>
+
+
+                <div fxFlex="100"
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Cancer</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Depression</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Emotional State</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Cancer </div>
-                  <div syle="border: #999 solid 1px"> Depression </div>
-                  <div syle="border: #999 solid 1px"> Emotional State </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Diabetes</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Fatigue</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Heart Disease</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Diabetes </div>
-                  <div syle="border: #999 solid 1px"> Fatigue </div>
-                  <div syle="border: #999 solid 1px"> Heart Disease </div>
-                </div>
-
-                <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Life Expectancy </div>
-                  <div syle="border: #999 solid 1px"> Parkinson Disease </div>
-                  <div syle="border: #999 solid 1px"> Obesity / Weight Loss </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Life Expectancy</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Parkinson Disease</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Obesity / Weight Loss</mat-checkbox>
                 </div>
 
               </section>
@@ -208,7 +206,6 @@
     </form>
   </mat-step>
 
-
   <mat-step [stepControl]="thirdFormGroup">
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Animal</ng-template>
@@ -225,7 +222,7 @@
 
             <header fxLayoutAlign="start center">
               <!--<span class="logo__L&#45;&#45;small">-->
-                <!--<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">-->
+              <!--<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">-->
               <!--</span>-->
               <h1>Animal</h1>
             </header>
@@ -291,7 +288,6 @@
     </form>
   </mat-step>
 
-
   <mat-step [stepControl]="fourthFormGroup">
     <form [formGroup]="fourthFormGroup">
       <ng-template matStepLabel>Food</ng-template>
@@ -306,17 +302,26 @@
           <mat-card class="food__card"
                     fxFlex="100">
 
-            <header fxLayoutAlign="start center">
-              <!--<span class="logo__L&#45;&#45;small">-->
-                <!--<img src="../../../../assets/logo-F.png" alt="Leafstyl Logo - Environment">-->
-              <!--</span>-->
-              <h1>Food</h1>
-            </header>
+            <!--<header fxLayoutAlign="start center">-->
+              <!--&lt;!&ndash;<span class="logo__L&#45;&#45;small">&ndash;&gt;-->
+              <!--&lt;!&ndash;<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">&ndash;&gt;-->
+              <!--&lt;!&ndash;</span>&ndash;&gt;-->
+              <!--<h1>Food</h1>-->
+            <!--</header>-->
 
             <article fxLayout="row"
-                     fxLayoutAlign="space-around stretch">
+                     fxLayoutAlign="stretch"
 
-              <aside fxFlex="18">
+                     style="padding:0; margin:0;">
+
+              <aside fxFlex="18" style="background: #CC4E4E;">
+
+                <header fxLayoutAlign="start center">
+                  <!--<span class="logo__L&#45;&#45;small">-->
+                  <!--<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">-->
+                  <!--</span>-->
+                  <h1>Food</h1>
+                </header>
 
                 <!--<i class="material-icons">account_circle</i>-->
                 <!--<h3>John Doe</h3>-->
@@ -324,172 +329,43 @@
               </aside>
 
               <section class="lifestyle__form"
-                       fxFlex="72">
+                       fxFlex="72"
+                       fxLayout="column">
 
-                <!-- Gender -->
-                <section class="form--gender"
-                         fxLayout="column"
-                         fxLayoutAlign="space-around">
+                <div fxFlex="100"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                  <div syle="border: #999 solid 1px"> Burger </div>
+                  <div syle="border: #999 solid 1px"> Steak </div>
+                  <div syle="border: #999 solid 1px"> Chicken </div>
+                </div>
 
-                  <span fxFlex="100">
-                    <label>Gender: </label>
-                  </span>
+                <div fxFlex="100"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                  <div syle="border: #999 solid 1px"> Pizza </div>
+                  <div syle="border: #999 solid 1px"> Spaghetti </div>
+                  <div syle="border: #999 solid 1px"> Fettuccine </div>
+                </div>
 
-                  <span fxFlex="100">
-                    <!-- Inclusion link: http://itspronouncedmetrosexual.com/2012/06/how-can-i-make-the-gender-question-on-an-application-form-more-inclusive/ -->
-                    <!-- TODO: confirm options -->
-                    <mat-radio-group>
-                      <mat-radio-button value="male">Male</mat-radio-button>
-                      <mat-radio-button value="female">Female</mat-radio-button>
-                      <mat-radio-button value="trans">Trans*</mat-radio-button>
-                      <!-- TODO: put in input (fill in blank) -->
-                      <mat-radio-button value="other">Other</mat-radio-button>
-                      <mat-radio-button value="na">Perfer not to disclose</mat-radio-button>
-                    </mat-radio-group>
-                  </span>
+                <div fxFlex="100"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                  <div syle="border: #999 solid 1px"> Japanese/Sushi </div>
+                  <div syle="border: #999 solid 1px"> Chinese </div>
+                  <div syle="border: #999 solid 1px"> Indian </div>
+                </div>
 
-                </section>
-
-                <section fxLayout="row"
-                         fxLayoutAlign="space-around center">
-                  <span fxFlex="100">
-                    <label>Biometrics: </label>
-                  </span>
-                </section>
-
-                <!-- Age/Weight -->
-                <section fxLayout="row"
-                         fxLayoutAlign="space-around center">
-
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Age">
-                      <mat-option value="one">1 to 20</mat-option>
-                      <mat-option value="two">21 to 30</mat-option>
-                      <mat-option value="three">31 to 40</mat-option>
-                      <mat-option value="four">41 to 50</mat-option>
-                      <mat-option value="five">51 to 60</mat-option>
-                      <mat-option value="six">61 to 100</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Pick an age ^</mat-hint>-->
-                  </mat-form-field>
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Weight">
-                      <mat-option value="one">1 to 20</mat-option>
-                      <mat-option value="two">21 to 30</mat-option>
-                      <mat-option value="three">31 to 40</mat-option>
-                      <mat-option value="four">41 to 50</mat-option>
-                      <mat-option value="five">51 to 60</mat-option>
-                      <mat-option value="six">61 to 100</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Pick an age ^</mat-hint>-->
-                  </mat-form-field>
-
-                </section>
-
-                <!-- TODO: Should we include race? -->
-                <!-- Race
-                <section fxLayout="row"
-                         fxLayoutAlign="space-around center">
-                  <span fxFlex="100">
-                    <label>Race: </label>
-                    <mat-radio-group>
-                      <mat-radio-button value="auto">Auto</mat-radio-button>
-                      <mat-radio-button value="always">Always</mat-radio-button>
-                      <mat-radio-button value="never">Never</mat-radio-button>
-                    </mat-radio-group>
-                  </span>
-                </section> -->
-
-
-                <!-- Height/Weight -->
-                <section fxLayout="row"
-                         fxLayoutAlign="space-around center">
-
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Feet">
-                      <mat-option value="one">2'</mat-option>
-                      <mat-option value="two">3'</mat-option>
-                      <mat-option value="three">4'</mat-option>
-                      <mat-option value="four">5'</mat-option>
-                      <mat-option value="five">6'</mat-option>
-                      <mat-option value="six">7'</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Height ^</mat-hint>-->
-                  </mat-form-field>
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Inches">
-                      <mat-option value="one">1'</mat-option>
-                      <mat-option value="two">2'</mat-option>
-                      <mat-option value="three">3'</mat-option>
-                      <mat-option value="four">4'</mat-option>
-                      <mat-option value="five">5'</mat-option>
-                      <mat-option value="six">6'</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Inches ^</mat-hint>-->
-                  </mat-form-field>
-                </section>
-
-                <!-- Blood Pressure/Cholesterol -->
-                <section fxLayout="row"
-                         fxLayoutAlign="space-around center">
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Blood Pressure (mmHg)">
-                      <mat-option value="one">2'</mat-option>
-                      <mat-option value="two">3'</mat-option>
-                      <mat-option value="three">4'</mat-option>
-                      <mat-option value="four">5'</mat-option>
-                      <mat-option value="five">6'</mat-option>
-                      <mat-option value="six">7'</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Blood Pressure ^</mat-hint>-->
-                  </mat-form-field>
-                  <mat-form-field fxFlex="45">
-                    <mat-select placeholder="Cholesterol (mg/dL)">
-                      <mat-option value="one">1'</mat-option>
-                      <mat-option value="two">2'</mat-option>
-                      <mat-option value="three">3'</mat-option>
-                      <mat-option value="four">4'</mat-option>
-                      <mat-option value="five">5'</mat-option>
-                      <mat-option value="six">6'</mat-option>
-                    </mat-select>
-                    <!--<mat-hint align="end">Cholesterol ^</mat-hint>-->
-                  </mat-form-field>
-                </section>
-
-                <!-- Gender -->
-                <section class="form--health"
-                         fxLayout="column">
-
-                  <!--<span fxFlex="100"-->
-                  <!--fxLayoutAlign="start center">-->
-                  <!--<label style="color: #ffb70e;">Incorporating a plant based diet can help and/or cure the following. What are you interested in? </label>-->
-                  <!--</span>-->
-
-                  <span fxFlex="100"
-                        fxLayoutAlign="start center">
-                    <label>Health Concerns: </label>
-                  </span>
-
-                  <span fxFlex="100">
-
-                    <mat-checkbox value="male">Alzheimer's disease</mat-checkbox>
-                    <mat-checkbox value="trans">Blood pressure</mat-checkbox>
-                    <mat-checkbox value="female">Cancer</mat-checkbox>
-                    <mat-checkbox value="trans">Diabetes</mat-checkbox>
-                    <mat-checkbox value="trans">Heart Disease</mat-checkbox>
-                    <mat-checkbox value="male">Life Expectancy</mat-checkbox>
-                    <mat-checkbox value="male">Parkinson disease</mat-checkbox>
-                    <mat-checkbox value="female">Obesity</mat-checkbox>
-                    <mat-checkbox value="male">Weight Loss</mat-checkbox>
-                    <mat-checkbox value="other">Depression</mat-checkbox>
-                    <mat-checkbox value="other">Anxiety</mat-checkbox>
-                    <mat-checkbox value="other">Fatigue</mat-checkbox>
-                    <mat-checkbox value="other">General Emotional State</mat-checkbox>
-                  </span>
-
-                </section>
+                <div fxFlex="100"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center">
+                  <div syle="border: #999 solid 1px"> Greek </div>
+                  <div syle="border: #999 solid 1px"> Italian </div>
+                  <div syle="border: #999 solid 1px"> French </div>
+                </div>
 
               </section>
+
             </article>
 
           </mat-card>
@@ -510,6 +386,16 @@
       </section>
     </form>
   </mat-step>
+
+
+
+
+
+
+
+
+
+
 
 
 </mat-horizontal-stepper>

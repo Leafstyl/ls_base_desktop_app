@@ -296,6 +296,40 @@ mat-toolbar-row {
 
   }
 
+
+}
+
+
+mat-checkbox {
+
+  .mat-checkbox-label {
+    flex: 1 1;
+    flex-grow: 1;
+    box-sizing: border-box;
+    place-content: center flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    min-height: 4rem;
+  }
+
+  label {
+    flex-grow: 1;
+    border: solid 1px #abe0f3;
+    padding-left: 1rem;
+    -webkit-transition: background-color .4s ease-out;
+    -moz-transition: background-color .4s ease-out;
+    -o-transition: background-color .4s ease-out;
+    transition: background-color .4s ease-out;
+
+
+    &:hover {
+      background: #ABE0F3;
+    }
+  }
+
+
+
 }
 
 
