@@ -11,6 +11,7 @@ import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
 import { DashboardModule } from './dashboard';
+import { RecipesModule } from './recipes';
 import { MarketModule } from './market';
 
 // Material UI
@@ -50,6 +51,7 @@ import {
     // Modules
     BiometricsModule,
     DashboardModule,
+    RecipesModule,
     MarketModule,
     CoreModule,
 
