@@ -1,3 +1,59 @@
+
 .ls-sign-in-button {
   display: block;
 }
+
+.blocks {
+  //min-height: 2vh !important;
+}
+
+header {
+  overflow: auto;
+}
+
+section.signin-wrappper {
+  //background: url(https://firebase.google.com/images/backslant-home-top.svg);
+  //background: url("https://firebase.google.com/images/backslant-home-top.svg") no-repeat 50% 0;
+  //background: #fafafa url("../../../../assets/background-angle-01.svg") repeat-y 50% 0;
+
+  background-size: 100vw;
+
+  nav {
+    overflow: auto;
+    min-height:700px;
+
+    .mat-card {
+      width: 22rem;
+      padding: 20px 64px;
+      border-radius: 10px;
+      background: #fff;
+
+      header {
+        height: 6rem;
+      }
+
+      .social {
+
+        height: 14rem;
+
+        button {
+          background: #fff;
+          height: 3.4rem;
+        }
+      }
+
+    }
+  }
+
+}
+
+.fixVertical {
+  flex: 1 1 100%;
+  min-height: 100vh;
+}
+
+footer {
+  padding: 20px;
+}
+
+

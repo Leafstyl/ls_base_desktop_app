@@ -1,24 +1,36 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
-import { AppHeaderComponent } from './app-header.component';
+import { NavComponent } from './core/nav/nav.component';
+import { CoreModule } from './core/core.module';
 // Modules
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
-// Material UI
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { DashboardModule } from './dashboard';
+import { RecipesModule } from './recipes';
 
+// Material UI
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MatIconModule,
+  MatCardModule,
+  MatTabsModule
+
+} from '@angular/material';
+
+/* Feature Modules */
 @NgModule({
-  bootstrap: [
-    AppComponent
-  ],
   declarations: [
     AppComponent,
-    AppHeaderComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +38,28 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     RouterModule.forRoot([], { useHash: false }),
     AuthModule,
     FirebaseModule,
+    // Material
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
     MatToolbarModule,
-    BiometricsModule
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
+    MatTabsModule,
+    // Modules
+    BiometricsModule,
+    DashboardModule,
+    RecipesModule,
+    CoreModule,
+
+  ],
+  bootstrap: [
+    AppComponent
   ],
   providers: []
 })
 
-export class LsModule {
-}
+export class LsModule {}
+
+

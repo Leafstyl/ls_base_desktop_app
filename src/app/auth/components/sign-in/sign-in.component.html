@@ -1,10 +1,57 @@
-<div>
-  <div>
-    <h1>Sign in</h1>
-    <button mat-button class="ls-sign-in-button" (click)="signInWithGoogle()">Google</button>
-    <button mat-button class="ls-sign-in-button" (click)="signInWithFacebook()">Facebook</button>
-    <!-- <button mat-button class="ls-sign-in-button" (click)="signInWithTwitter()">Twitter</button>
-    <button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>
-    <button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> -->
-  </div>
-</div>
+<section class="signin-wrappper">
+
+  <header
+    fxLayout="column"
+    fxLayoutAlign="start space-around center"
+    class="fixVertical">
+
+    <nav class="flex-container" fxLayoutAlign="space-around center" fxFlex fxFlexFill>
+      <article class="blocks" fxLayout="column">
+        <mat-card>
+
+          <header>
+            <p></p>
+            <p></p>
+            <img alt="Leafstyl Logo" height="auto" src="../assets/logo.svg" width="70%">
+          </header>
+
+          <h1> Sign In </h1>
+          <section class="social" fxLayout="column" fxLayoutAlign="space-evenly">
+            <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithGoogle()">
+              <img src="../assets/signin-google-icon.svg" alt="Sign in with Google"> Sign in with Google
+            </button>
+            <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithFacebook()">
+              <img src="../assets/signin-facebook-icon.svg" alt="Sign in with Facebook"> Sign in with Facebook
+            </button>
+            <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithTwitter()">
+              <img src="../assets/signin-twitter-icon.svg" alt="Sign in with Twi  asdf asdftter"> Sign in with Twitter
+            </button>
+            <!--<button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>-->
+            <!--<button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> -->
+          </section>
+          <p> - or - </p>
+          <p> Sign In Personally</p>
+          <section fxLayout="column" fxLayoutAlign="space-around">
+            <mat-form-field>
+              <input matInput placeholder="Email">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Password">
+            </mat-form-field>
+            <button mat-button class="mat-button"> Submit </button>
+          </section>
+
+        </mat-card>
+      </article>
+    </nav>
+
+    <footer
+      class="flex-container"
+      fxLayout="row"
+      fxLayoutAlign="center center">
+      this footer should always stick to the bottom of the page
+    </footer>
+  </header>
+
+
+</section>

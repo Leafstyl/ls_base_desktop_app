@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BiometricsService } from '../../biometrics.service';
 import { IBiometrics, Biometrics } from '../../models/biometrics';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'ls-biometrics',
@@ -12,14 +13,42 @@ export class BiometricsComponent implements OnInit {
   biometrics: IBiometrics;
   editing: boolean = false;
 
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+  fourthFormGroup: FormGroup;
+  fifthFormGroup: FormGroup;
+
   private lastBiometrics: IBiometrics;
 
-  constructor(public route: ActivatedRoute, public biometricsService: BiometricsService) {
+  constructor(
+    public route: ActivatedRoute,
+    public biometricsService: BiometricsService,
+    private _formBuilder: FormBuilder
+  ) {
   }
 
   ngOnInit() {
     console.log('Initializing BiometricsComponent...');
 
+    // Stepper
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+    this.thirdFormGroup = this._formBuilder.group({
+      thirdCtrl: ['', Validators.required]
+    });
+    this.fourthFormGroup = this._formBuilder.group({
+      fourthCtrl: ['', Validators.required]
+    });
+    this.fifthFormGroup = this._formBuilder.group({
+      fifthCtrl: ['', Validators.required]
+    });
+    // Biometrics
     this.biometricsService.biometrics.subscribe(biometrics => {
       this.biometrics = <IBiometrics>biometrics;
       if (!this.biometrics) {

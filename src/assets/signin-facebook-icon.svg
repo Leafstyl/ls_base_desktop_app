@@ -1,0 +1,18 @@
+<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>signin-facebook-icon</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(2671 9511)">
+<g id="signin-facebook-icon">
+<g id="Blue">
+<use xlink:href="#path0_fill" transform="translate(-2671 -9511)" fill="#3C5A99"/>
+</g>
+<g id="f">
+<use xlink:href="#path1_fill" transform="translate(-2662.92 -9507.98)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 18.8962 0L 1.10383 0C 0.494199 0 0 0.49418 0 1.10378L 0 18.8954C 0 19.505 0.494199 19.9992 1.10383 19.9992L 18.8962 19.9992C 19.5058 19.9992 20 19.505 20 18.8954L 20 1.10378C 20 0.49418 19.5058 0 18.8962 0Z"/>
+<path id="path1_fill" d="M 5.72296 16.9765L 5.72296 9.23129L 8.32328 9.23129L 8.7122 6.21293L 5.72296 6.21293L 5.72296 4.28637C 5.72296 3.41264 5.96575 2.81691 7.2217 2.81691L 8.81786 2.81691L 8.81786 0.119272C 8.04426 0.0372319 7.26676 -0.00254329 6.48882 0.000125398C 4.1845 0.000125398 2.60632 1.40664 2.60632 3.98963L 2.60632 6.21593L 1.37214e-07 6.21593L 1.37214e-07 9.23429L 2.60632 9.23429L 2.60632 16.9765L 5.72296 16.9765Z"/>
+</defs>
+</svg>

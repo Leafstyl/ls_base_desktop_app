@@ -1,18 +1,326 @@
 
-.biometrics-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+// Stepper
+mat-horizontal-stepper {
+
+  max-width: 100%;
+  margin: .3rem auto 0 auto;
+
+  &.mat-stepper-horizontal {
+
+    background: none;
+    margin: 100px 0 0 0;
+
+  }
+
+  form {
+
+    max-width: 70vw;
+    margin: 0 auto;
+    min-width: 990px;
+
+    section.lf-stepper-wrap {
+
+      position: relative;
+
+      div {
+
+        //min-height: 3rem;
+        //border: red solid 1px;
+        //background: #ccc;
+        //border-radius: 10px;
+
+      }
+
+      article {
+
+        mat-card {
+
+          &.mat-card {
+            padding: 0;
+            margin: 0 0 3rem 0;
+            border: solid 1px #c9c9c9;
+          }
+
+
+          &.lifestyle__card {
+
+
+            aside {
+
+              background: #4eb2bf;
+              background: #889E49;
+              //background: #8BC34A;
+
+              //background: #4eb2bf url(../../../../assets/graphic__bike.png) 50% 90%;
+              //background-size: 70%;
+              //background-repeat: no-repeat;
+
+            }
+
+          }
+
+          &.environment__card {
+
+
+            aside {
+
+              background: #889E49;
+              //background: #4eb2bf;
+
+            }
+
+          }
+
+          &.animal__card {
+
+
+            aside {
+
+              background: #e39a2e;
+              background: #889E49;
+
+            }
+
+          }
+
+          &.food__card {
+
+
+            aside {
+
+              background: #B62E86;
+              background: #889E49;
+
+            }
+
+            footer {
+
+              button {
+
+                &:nth-child(2) {
+
+                    padding: 0;
+
+                  a {
+
+                    text-decoration: none;
+
+                  }
+                }
+              }
+
+            }
+
+          }
+
+
+
+          aside {
+
+            padding: 0 1.4rem;
+            text-align: left;
+            color: #fff;
+            font-size: 1.1rem;
+            border-bottom: solid 67px rgba(0,0,0,.3);
+
+            header {
+
+              //background: #4eb2bf;
+
+              span {
+
+                &.logo__L--small {
+
+                  margin: .6rem 0rem .6rem 1.3rem;
+
+                }
+
+              }
+
+              h1 {
+
+                margin: 1rem 0 0 0;
+                font-size: 1.4rem;
+
+                &:first-child {
+
+                  color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                  color: #83A340;
+
+                }
+
+              }
+
+            }
+
+            i {
+
+              font-size: 5rem;
+              color: #8fc23e;
+
+            }
+
+          }
+
+          section {
+
+            header {
+
+              min-height: 6rem;
+              margin: 0 1rem;
+
+              p {
+                min-height: 2.4rem;
+                //border: blue solid;
+                margin: 0;
+              }
+
+              .mat-radio-group {
+                min-height: 3rem;
+                //border: red solid;
+
+                .mat-radio-button {
+
+                  padding: .5rem;
+
+                }
+
+              }
+
+            }
+
+            li {
+
+              border: blue solid 1px;
+
+              span {
+
+                border: red solid 1px;
+
+              }
+
+            }
+            &.lifestyle__form {
+
+              margin: 1rem;
+
+              .mat-checkbox {
+
+                // border:#f3f3f3 solid 1px !important;
+
+                label.mat-checkbox-layout {
+
+                }
+
+                .mat-checkbox-label {
+                  flex: 1 1;
+                  box-sizing: border-box;
+                  place-content: center flex-start;
+                  align-items: center;
+                  flex-direction: row;
+                  display: flex;
+                  min-height: 3rem;
+                }
+
+
+
+              }
+
+              section {
+
+                min-height: 2rem;
+                text-align: left;
+
+
+                &.form--gender {
+
+                  span {
+
+                    //min-height: 3rem;
+
+                  }
+
+                }
+
+                &.form--health {
+
+                  span {
+
+                    min-height: 3rem;
+
+                  }
+
+                }
+
+                mat-radio-button {
+
+                  padding: .5rem;
+
+                }
+
+                mat-checkbox {
+
+                  padding: .2rem 0.5rem;
+                  float: left;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      footer {
+
+        padding: .1rem;
+        margin: 1rem 0 0 0;
+        background: #fff;
+
+        button {
+
+          &.stepper-next {
+
+
+          }
+
+          &.stepper-back {
+
+            //@extend .stepper-next;
+
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
-.biometrics-fieldset {
-  border: 0;
-}
 
-.biometrics-form-field {
-  width: 100%;
-}
 
-.biometrics-button-bar {
-  margin-left:15px;
-}
+
+
+
+
+
+
+
+
+
+
+
+

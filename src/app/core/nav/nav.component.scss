@@ -1,0 +1,11 @@
+.mat-tab-link {
+  height: 64px;
+}
+
+mat-toolbar {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 900;
+  background: #fff;
+}
