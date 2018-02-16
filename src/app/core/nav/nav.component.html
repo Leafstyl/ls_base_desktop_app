@@ -4,7 +4,7 @@
   <!--<span><img src="../assets/LEAF.png" width="18%" height="auto" alt="Leafstyl Logo"></span>-->
   <span>
     <a href="/">
-      <img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo" style="margin:7px 0 0 12px;">
+      <img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo" style="margin:7px 0 0 12px;min-width: 180px;">
     </a>
   </span>
 
@@ -12,15 +12,15 @@
   <!--<span *ngIf="authenticated">-->
   <!--<a href="#" (click)="signOut.emit()">Sign out</a>-->
   <!--</span>-->
-  <!--<nav mat-tab-nav-bar>-->
-    <!--<a mat-tab-link-->
-       <!--*ngFor="let item of menuItems"-->
-       <!--[routerLink]="item.link"-->
-       <!--routerLinkActive #rla="routerLinkActive"-->
-       <!--[active]="rla.isActive">-->
-      <!--{{item.caption}}-->
-    <!--</a>-->
-  <!--</nav>-->
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link
+       *ngFor="let item of menuItems"
+       [routerLink]="item.link"
+       routerLinkActive #rla="routerLinkActive"
+       [active]="rla.isActive">
+      {{item.caption}}
+    </a>
+  </nav>
 
 
   <!--<a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="" style="color:#555">{{item.caption}}</a>-->
