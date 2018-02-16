@@ -1,12 +1,12 @@
 <mat-toolbar class="mat-elevation-z4" *ngIf="authenticated">
-  <a href="#" (click)="signOut.emit()" style="position: fixed;bottom: 0px;left: 5px;">0</a>
+  <!--<a href="#" (click)="signOut.emit()" style="position: fixed;bottom: 0px;left: 5px;">0</a>-->
   <!--<span><mat-icon>mood</mat-icon></span>-->
   <!--<span><img src="../assets/LEAF.png" width="18%" height="auto" alt="Leafstyl Logo"></span>-->
-  <!--<span>-->
-    <!--<a href="/">-->
-      <!--<img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo" style="margin:7px 0 0 12px;">-->
-    <!--</a>-->
-  <!--</span>-->
+  <span>
+    <a href="/">
+      <img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo" style="margin:7px 0 0 12px;">
+    </a>
+  </span>
 
 
   <!--<span *ngIf="authenticated">-->
@@ -30,14 +30,14 @@
     <!--<mat-icon>more_vert</mat-icon>-->
   <!--</button>-->
 
-  <!--<a href="#" (click)="signOut.emit()">-->
-    <!--<button mat-raised-button color="primary">Sign out</button>-->
-  <!--</a>-->
+  <a href="#" (click)="signOut.emit()">
+    <button mat-raised-button color="primary">Sign out</button>
+  </a>
 
 
-  <!--<mat-menu x-position="before" #menu="matMenu">-->
-    <!--<button mat-menu-item>Option 1</button>-->
-    <!--<button mat-menu-item>Option 2</button>-->
-  <!--</mat-menu>-->
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+  </mat-menu>
 
 </mat-toolbar>

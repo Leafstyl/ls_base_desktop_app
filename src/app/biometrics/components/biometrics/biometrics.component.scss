@@ -15,6 +15,7 @@ mat-horizontal-stepper {
 
     max-width: 70vw;
     margin: 0 auto;
+    min-width: 990px;
 
     section.lf-stepper-wrap {
 
@@ -31,95 +32,130 @@ mat-horizontal-stepper {
 
       article {
 
-        .environment__card {
-
-
-          header {
-
-            background: #889E49;
-
-          }
-
-        }
-
-        .animal__card {
-
-
-          header {
-
-            background: #965C26;
-
-          }
-
-        }
-
-        .food__card {
-
-
-          header {
-
-            background: #CC4E4E;
-
-          }
-
-        }
-
-        header {
-
-          background: #4eb2bf;
-
-          span {
-
-            &.logo__L--small {
-
-              margin: .6rem 0rem .6rem 1.3rem;
-
-            }
-
-          }
-
-          h1 {
-
-            margin: .7rem 1.2rem;
-            color: #fff !important;
-
-            &:first-child {
-
-              color: #FFB630;
-
-            }
-
-            &:nth-child(2) {
-
-              color: #83A340;
-
-            }
-
-          }
-
-        }
-
         mat-card {
 
-          &.mat-card { padding: 0; }
+          &.mat-card {
+            padding: 0;
+            margin: 0 0 3rem 0;
+            border: solid 1px #c9c9c9;
+          }
+
 
           &.lifestyle__card {
 
+
+            aside {
+
+              background: #4eb2bf;
+              background: #889E49;
+              //background: #8BC34A;
+
+              //background: #4eb2bf url(../../../../assets/graphic__bike.png) 50% 90%;
+              //background-size: 70%;
+              //background-repeat: no-repeat;
+
+            }
 
           }
 
           &.environment__card {
 
 
+            aside {
+
+              background: #889E49;
+              //background: #4eb2bf;
+
+            }
+
           }
+
+          &.animal__card {
+
+
+            aside {
+
+              background: #e39a2e;
+              background: #889E49;
+
+            }
+
+          }
+
+          &.food__card {
+
+
+            aside {
+
+              background: #B62E86;
+              background: #889E49;
+
+            }
+
+            footer {
+
+              button {
+
+                &:nth-child(2) {
+
+                    padding: 0;
+
+                  a {
+
+                    text-decoration: none;
+
+                  }
+                }
+              }
+
+            }
+
+          }
+
+
 
           aside {
 
-            // background: #90c8be;
-            // border-right: 1px solid #999;
-            background: url(../../../../assets/graphic__bike.png) 50% 90%;
-            background-size: 70%;
-            background-repeat: no-repeat;
+            padding: 0 1.4rem;
+            text-align: left;
+            color: #fff;
+            font-size: 1.1rem;
+            border-bottom: solid 67px rgba(0,0,0,.3);
+
+            header {
+
+              //background: #4eb2bf;
+
+              span {
+
+                &.logo__L--small {
+
+                  margin: .6rem 0rem .6rem 1.3rem;
+
+                }
+
+              }
+
+              h1 {
+
+                margin: 1rem 0 0 0;
+                font-size: 1.4rem;
+
+                &:first-child {
+
+                  color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                  color: #83A340;
+
+                }
+
+              }
+
+            }
 
             i {
 
@@ -130,16 +166,57 @@ mat-horizontal-stepper {
 
           }
 
-          .lifestyle__form {
+          section {
 
-            padding: 0;
+            header {
 
-            .mat-checkbox {
+              min-height: 6rem;
+              margin: 0 1rem;
 
-              label.mat-checkbox-layout {
-                border:red solid 1px !important;
+              p {
+                min-height: 2.4rem;
+                //border: blue solid;
+                margin: 0;
               }
-               .mat-checkbox-label {
+
+              .mat-radio-group {
+                min-height: 3rem;
+                //border: red solid;
+
+                .mat-radio-button {
+
+                  padding: .5rem;
+
+                }
+
+              }
+
+            }
+
+            li {
+
+              border: blue solid 1px;
+
+              span {
+
+                border: red solid 1px;
+
+              }
+
+            }
+            &.lifestyle__form {
+
+              margin: 1rem;
+
+              .mat-checkbox {
+
+                // border:#f3f3f3 solid 1px !important;
+
+                label.mat-checkbox-layout {
+
+                }
+
+                .mat-checkbox-label {
                   flex: 1 1;
                   box-sizing: border-box;
                   place-content: center flex-start;
@@ -151,44 +228,46 @@ mat-horizontal-stepper {
 
 
 
-            }
+              }
 
-            section {
+              section {
 
-              min-height: 2rem;
-              text-align: left;
+                min-height: 2rem;
+                text-align: left;
 
 
-              &.form--gender {
+                &.form--gender {
 
-                span {
+                  span {
 
-                  //min-height: 3rem;
+                    //min-height: 3rem;
+
+                  }
 
                 }
 
-              }
+                &.form--health {
 
-              &.form--health {
+                  span {
 
-                span {
+                    min-height: 3rem;
 
-                  min-height: 3rem;
+                  }
 
                 }
 
-              }
+                mat-radio-button {
 
-              mat-radio-button {
+                  padding: .5rem;
 
-                padding: .5rem;
+                }
 
-              }
+                mat-checkbox {
 
-              mat-checkbox {
+                  padding: .2rem 0.5rem;
+                  float: left;
 
-                padding: .2rem 0.5rem;
-                float: left;
+                }
 
               }
 
@@ -202,7 +281,8 @@ mat-horizontal-stepper {
 
       footer {
 
-        margin: 2.7rem 1rem;
+        padding: .1rem;
+        margin: 1rem 0 0 0;
         background: #fff;
 
         button {

@@ -23,77 +23,89 @@
           <mat-card class="lifestyle__card"
                     fxFlex="100">
 
-            <header fxLayoutAlign="start center">
-
-              <!--<span class="logo__L&#45;&#45;small">-->
-              <!--<img src="../../../../assets/logo-L.png" alt="Leafstyl Logo - Lifestyle">-->
-              <!--</span>-->
-              <h1>Lifestyle</h1>
-            </header>
-
             <article fxLayout="row"
-                     fxLayoutAlign="space-around stretch">
+                     fxLayoutAlign="stretch">
 
-              <aside fxFlex="18">
+              <aside fxFlex="25">
+                <div fxLayoutAlign="none"
+                     fxLayoutWrap
+                     fxlayout="column">
 
-                <!--<i class="material-icons">account_circle</i>-->
-                <!--<h3>John Doe</h3>-->
+                  <header>
+                    <h1 fxFlex="100">Lifestyle</h1>
+                  </header>
+
+                  <div fxFlex="100">
+                    <p>Take charge of your body. Prevent, reverse and cure the worlds top killers.</p>
+                  </div>
+                </div>
 
               </aside>
 
               <section class="lifestyle__form"
-                       fxFlex="72"
+                       fxFlex="75"
                        fxLayout="column">
 
+                <header fxFlex="100"
+                        fxLayout="row">
+                  <p>Select the conditions that you are interested in learning more about:</p>
+                </header>
 
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Alzheimers</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Anxiety</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Blood Pressure</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Asthma</mat-checkbox>
                 </div>
 
 
                 <div fxFlex="100"
                      fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Blood Pressure</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Cancer</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Depression</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Emotional State</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Emotional State</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Diabetes</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Fatigue</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Heart Disease</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Heart Disease</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Life Expectancy</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Parkinson Disease</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Obesity / Weight Loss</mat-checkbox>
                 </div>
+
+                <div fxFlex="100"
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Obesity</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Weight Loss</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Well Being</mat-checkbox>
+                </div>
+
+                <footer fxFlex="100">
+                  <!--<button mat-button class="placeholder"-->
+                  <!--fxFlex="50">-->
+
+                  <!--</button>-->
+                  <button mat-button matStepperNext class="stepper-next"
+                          fxFlex="50"
+                          fxFlexOffset="80">
+                    Next
+                  </button>
+                </footer>
 
               </section>
 
             </article>
 
-
           </mat-card>
 
         </article>
-
-        <footer fxLayout="row" class="mat-elevation-z1">
-          <button mat-button class="placeholder"
-                  fxFlex="50">
-
-          </button>
-          <button mat-button matStepperNext class="stepper-next"
-                  fxFlex="50">
-            Next
-          </button>
-        </footer>
 
       </section>
     </form>
@@ -114,66 +126,114 @@
           <mat-card class="environment__card"
                     fxFlex="100">
 
-            <header fxLayoutAlign="start center">
-              <!--<span class="logo__L&#45;&#45;small">-->
-                <!--<img src="../../../../assets/logo-E.png" alt="Leafstyl Logo - Environment">-->
-              <!--</span>-->
-              <h1>Environment</h1>
-            </header>
-
             <article fxLayout="row"
-                     fxLayoutAlign="space-around stretch">
+                     fxLayoutAlign="stretch">
 
-              <aside fxFlex="18">
+              <aside fxFlex="25">
+                <div fxLayoutAlign="none"
+                     fxLayoutWrap
+                     fxlayout="column">
 
-                <!--<i class="material-icons">account_circle</i>-->
-                <!--<h3>John Doe</h3>-->
+                  <header>
+                    <h1 fxFlex="100">Environment</h1>
+                  </header>
+
+                  <div fxFlex="100">
+                    <p>Track metrics on the environmental difference you can make.</p>
+                  </div>
+                </div>
 
               </aside>
 
               <section class="lifestyle__form"
-                       fxFlex="72"
-                        fxLayout="column">
+                       fxFlex="75"
+                       fxLayout="column">
+
+                <header fxFlex="100"
+                        fxLayout="row"
+                        fxLayoutWrap>
+
+                  <p fxFlex="100"
+                     fxLayoutAlign="start center">How many days a week do you want to eat a plant-based diet?</p>
+
+                  <mat-radio-group fxFlex="100"
+                                   fxLayoutAlign="start center">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                    <mat-radio-button value="6">6</mat-radio-button>
+                    <mat-radio-button value="7">7</mat-radio-button>
+                    |
+                    <mat-radio-button value="8">Already Vegan</mat-radio-button>
+
+                  </mat-radio-group>
+
+                </header>
+
 
                 <!--
                   Source:
                   https://www.globalcitizen.org/en/content/9-reasons-why-veganism-can-save-the-world/
                   https://www.theguardian.com/lifeandstyle/2010/jul/18/vegetarianism-save-planet-environment
                 -->
+                <!-- WIP
+                <ul fxFlex="100"
+                    fxLayout="row">
+                  <li fxLayoutAlign="start center" fxFlex><span>9,990 Gallons</span> Water Footprint</li>
+                  <li fxLayoutAlign="start center" fxFlex><span>180 lbs</span> C02</li>
+                  <li fxLayoutAlign="start center" fxFlex>Carbon Emissions</li>
+                </ul>
+                -->
+
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Water Footprint</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">C02 Footprint </mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Climate Change Emissions</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">C02 Footprint</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Emissions</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">World Hunger</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Energy Consumption </mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Soil Degradation </mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Energy Consumption</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Soil Degradation</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Water Footprint</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Air Purification </mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Land Consumption </mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Air Purification</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Land Consumption</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Deforestation</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Earth Posioning</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Dead Zoning </mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Dead Zoning</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
                      fxLayout="row">
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Greenhouse Gasses</mat-checkbox>
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Human Disease</mat-checkbox>
-                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Oil Consumption </mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Oil Consumption</mat-checkbox>
                 </div>
+
+                <footer fxFlex="60">
+                  <button mat-button matStepperPrevious class="placeholder"
+                          fxFlex="20"
+                          fxFlexOffset="60">
+                    Back
+                  </button>
+                  <button mat-button matStepperNext class="stepper-next"
+                          fxFlex="20">
+                    Next
+                  </button>
+                </footer>
+
               </section>
 
             </article>
@@ -181,17 +241,6 @@
           </mat-card>
 
         </article>
-
-        <footer fxLayout="row" class="mat-elevation-z1">
-          <button mat-button class="placeholder"
-                  fxFlex="50">
-
-          </button>
-          <button mat-button matStepperNext class="stepper-next"
-                  fxFlex="50">
-            Next
-          </button>
-        </footer>
 
       </section>
     </form>
@@ -211,27 +260,33 @@
           <mat-card class="animal__card"
                     fxFlex="100">
 
-            <header fxLayoutAlign="start center">
-              <!--<span class="logo__L&#45;&#45;small">-->
-              <!--<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">-->
-              <!--</span>-->
-              <h1>Animal</h1>
-            </header>
-
             <article fxLayout="row"
-                     fxLayoutAlign="space-around stretch">
+                     fxLayoutAlign="stretch">
 
-              <aside fxFlex="18">
+              <aside fxFlex="25">
+                <div fxLayoutAlign="none"
+                     fxLayoutWrap
+                     fxlayout="column">
 
-                <!--<i class="material-icons">account_circle</i>-->
-                <!--<h3>John Doe</h3>-->
+                  <header>
+                    <h1 fxFlex="100">Animal</h1>
+                  </header>
+
+                  <div fxFlex="100">
+                    <p>How many animals does your commitment save?</p>
+                  </div>
+                </div>
 
               </aside>
 
               <section class="lifestyle__form"
-                       fxFlex="72"
+                       fxFlex="75"
                        fxLayout="column">
 
+                <header fxFlex="100"
+                        fxLayout="row">
+                  <p>Base on your commitment you have saved and average of:</p>
+                </header>
 
                 <div fxFlex="100"
                      fxLayout="row">
@@ -247,6 +302,18 @@
                   <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Fish/Shell-Fish</mat-checkbox>
                 </div>
 
+
+                <footer fxFlex="60">
+                  <button mat-button matStepperPrevious class="placeholder"
+                          fxFlex="20"
+                          fxFlexOffset="60">
+                    Back
+                  </button>
+                  <button mat-button matStepperNext class="stepper-next"
+                          fxFlex="20">
+                    Next
+                  </button>
+                </footer>
               </section>
 
             </article>
@@ -254,17 +321,6 @@
           </mat-card>
 
         </article>
-
-        <footer fxLayout="row" class="mat-elevation-z1">
-          <button mat-button class="placeholder"
-                  fxFlex="50">
-
-          </button>
-          <button mat-button matStepperNext class="stepper-next"
-                  fxFlex="50">
-            Next
-          </button>
-        </footer>
 
       </section>
     </form>
@@ -284,67 +340,69 @@
           <mat-card class="food__card"
                     fxFlex="100">
 
-            <!--<header fxLayoutAlign="start center">-->
-              <!--&lt;!&ndash;<span class="logo__L&#45;&#45;small">&ndash;&gt;-->
-              <!--&lt;!&ndash;<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">&ndash;&gt;-->
-              <!--&lt;!&ndash;</span>&ndash;&gt;-->
-              <!--<h1>Food</h1>-->
-            <!--</header>-->
-
             <article fxLayout="row"
-                     fxLayoutAlign="stretch"
+                     fxLayoutAlign="stretch">
 
-                     style="padding:0; margin:0;">
+              <aside fxFlex="25">
+                <div fxLayoutAlign="none"
+                     fxLayoutWrap
+                     fxlayout="column">
 
-              <aside fxFlex="18" style="background: #CC4E4E;">
+                  <header>
+                    <h1 fxFlex="100">Food</h1>
+                  </header>
 
-                <header fxLayoutAlign="start center">
-                  <!--<span class="logo__L&#45;&#45;small">-->
-                  <!--<img src="../../../../assets/logo-A.png" alt="Leafstyl Logo - Animal">-->
-                  <!--</span>-->
-                  <h1>Food</h1>
-                </header>
-
-                <!--<i class="material-icons">account_circle</i>-->
-                <!--<h3>John Doe</h3>-->
+                  <div fxFlex="100">
+                    <p>How many animals does your commitment save?</p>
+                  </div>
+                </div>
 
               </aside>
 
-              <section class="lifestyle__form"
-                       fxFlex="72"
+              <section class="food__form"
+                       fxFlex="75"
                        fxLayout="column">
 
+                <header fxFlex="100"
+                        fxLayout="row">
+                  <p>Pick what types of foods you enjoy eating:</p>
+                </header>
+
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Burger </div>
-                  <div syle="border: #999 solid 1px"> Steak </div>
-                  <div syle="border: #999 solid 1px"> Chicken </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Pizza</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Spaghetti</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Fettuccine</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Pizza </div>
-                  <div syle="border: #999 solid 1px"> Spaghetti </div>
-                  <div syle="border: #999 solid 1px"> Fettuccine </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Japanese/Sushi</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Chinese</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Indian</mat-checkbox>
                 </div>
 
                 <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Japanese/Sushi </div>
-                  <div syle="border: #999 solid 1px"> Chinese </div>
-                  <div syle="border: #999 solid 1px"> Indian </div>
+                     fxLayout="row">
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Greek</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">Italian</mat-checkbox>
+                  <mat-checkbox fxLayoutAlign="start center" fxFlex value="male">French</mat-checkbox>
                 </div>
 
-                <div fxFlex="100"
-                     fxLayout="row"
-                     fxLayoutAlign="space-around center">
-                  <div syle="border: #999 solid 1px"> Greek </div>
-                  <div syle="border: #999 solid 1px"> Italian </div>
-                  <div syle="border: #999 solid 1px"> French </div>
-                </div>
+
+                <footer fxFlex="60">
+                  <button mat-button matStepperPrevious class="placeholder"
+                          fxFlex="20"
+                          fxFlexOffset="60">
+                    Back
+                  </button>
+
+                  <button mat-button matStepperNext completed class="stepper-next"
+                          fxFlex="20">
+                    <a href="/dashboard"
+                       fxFlex="100">Next</a>
+                  </button>
+                </footer>
 
               </section>
 
@@ -354,35 +412,11 @@
 
         </article>
 
-        <footer fxLayout="row" class="mat-elevation-z1">
-          <button mat-button class="placeholder"
-                  fxFlex="50">
-
-          </button>
-          <button mat-button matStepperNext class="stepper-next"
-                  fxFlex="50">
-            Next
-          </button>
-        </footer>
-
       </section>
     </form>
   </mat-step>
 
-
-
-
-
-
-
-
-
-
-
-
 </mat-horizontal-stepper>
-
-
 
 
 <!-- KEEP THIS! Original Form -->
