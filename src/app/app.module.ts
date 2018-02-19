@@ -12,6 +12,7 @@ import { FirebaseModule } from './firebase';
 import { BiometricsModule } from './biometrics';
 import { DashboardModule } from './dashboard';
 import { RecipesModule } from './recipes';
+import { LibModule } from './library';
 
 // Material UI
 import {
@@ -51,6 +52,7 @@ import {
     BiometricsModule,
     DashboardModule,
     RecipesModule,
+    LibModule,
     CoreModule,
 
   ],
