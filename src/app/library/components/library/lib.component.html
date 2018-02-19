@@ -9,23 +9,63 @@
 
      <!--Flex 2-->
     <div fxFlex="100" class="sec2">
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <div style="
-    border-radius: 6px;
-    overflow: hidden;
-    height: 400px;
-    width: 400px;
-    margin: 80px 80px 10px 80px;
-    float:left;
-" class="mat-elevation-z24">
-        <h1>Library</h1>
-        <p></p>
-        <img src="http://ghk.h-cdn.co/assets/17/45/480x719/gallery-1510170649-vegan-buffalo-cauliflower-tacos.jpg">
 
+
+
+
+
+
+
+      <div style="margin-top:200px;">
+        <h1>Biometrics</h1>
+        <!--<form class="biometrics-form" *ngIf="biometrics">-->
+        <form>
+          <!--<fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">-->
+            <fieldset class="biometrics-fieldset">
+            <mat-form-field class="biometrics-form-field">
+              <!--<input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="biometrics.age" autofocus>-->
+              <input matInput name="age" placeholder="Age" autocomplete="off" type="number">
+            </mat-form-field>
+            <mat-form-field class="biometrics-form-field">
+              <!--<mat-select name="gender" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">-->
+                <mat-select name="gender" placeholder="Gender" >
+                <mat-option>None</mat-option>
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+                <mat-option value="other">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <!--<mat-form-field class="biometrics-form-field">-->
+              <!--<input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="biometrics.height">-->
+            <!--</mat-form-field>-->
+            <!--<mat-form-field class="biometrics-form-field">-->
+              <!--<input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="biometrics.weight">-->
+            <!--</mat-form-field>-->
+            <!--<mat-form-field class="biometrics-form-field">-->
+              <!--<input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="biometrics.cholesterol">-->
+            <!--</mat-form-field>-->
+            <!--<mat-form-field class="biometrics-form-field">-->
+              <!--<input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="biometrics.bloodPressure">-->
+            <!--</mat-form-field>-->
+          </fieldset>
+        </form>
+        <div class="biometrics-button-bar">
+          <!--<button title="Edit" (click)="editBiometrics()" *ngIf="!editing">-->
+            <!--<span class="material-icons">edit</span>-->
+          <!--</button>-->
+          <!--<button title="Save" (click)="saveBiometrics()" *ngIf="editing">-->
+            <!--<span class="material-icons">done</span>-->
+          <!--</button>-->
+          <!--<button title="Cancel" (click)="cancelEdit()" *ngIf="editing">-->
+            <!--<span class="material-icons">&#xe14c;</span>-->
+          <!--</button>-->
+        </div>
       </div>
+
+
+
+
+
 
     </div>
 
