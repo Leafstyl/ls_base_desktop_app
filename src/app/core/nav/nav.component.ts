@@ -25,6 +25,7 @@ export class NavComponent implements OnInit {
     this.menuItems = [
       { caption: 'Dashboard', link: ['/dashboard'] },
       { caption: 'Recipes', link: ['/recipes'] },
+      { caption: 'Library', link: ['/library'] },
     ];
   }
 
