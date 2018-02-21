@@ -2,7 +2,7 @@
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~@angular/material/theming';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Syncopate');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
 
 // Plus imports for other components in your app.
 
@@ -121,13 +121,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p,
+a,
 span,
 .mat-card {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.mat-tab-label,
+.mat-tab-link {
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #4E4E4E;
 }
 
 main {

@@ -23,9 +23,9 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.menuItems = [
-      { caption: 'Dashboard', link: ['/dashboard'] },
-      { caption: 'Recipes', link: ['/recipes'] },
-      { caption: 'Library', link: ['/library'] },
+      { caption: 'MEALS', link: ['/recipes'] },
+      { caption: 'PLANNING', link: ['/planning'] },
+      { caption: 'LIBRARY', link: ['/library'] },
     ];
   }
 

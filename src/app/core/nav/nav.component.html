@@ -4,7 +4,8 @@
   <!--<span><img src="../assets/LEAF.png" width="18%" height="auto" alt="Leafstyl Logo"></span>-->
   <span>
     <a href="/">
-      <img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo" style="margin:7px 0 0 12px;min-width: 180px;">
+      <img src="../assets/logo.svg" width="30%" height="auto" alt="Leafstyl Logo"
+           style="margin:7px 0 0 12px;min-width: 180px;">
     </a>
   </span>
 
@@ -20,6 +21,9 @@
        [active]="rla.isActive">
       {{item.caption}}
     </a>
+    <a mat-tab-link>
+      <mat-icon>person_outline</mat-icon>
+    </a>
   </nav>
 
 
@@ -27,7 +31,7 @@
 
 
   <!--<button mat-icon-button [mat-menu-trigger-for]="menu">-->
-    <!--<mat-icon>more_vert</mat-icon>-->
+  <!--<mat-icon>more_vert</mat-icon>-->
   <!--</button>-->
 
   <a href="#" (click)="signOut.emit()">
