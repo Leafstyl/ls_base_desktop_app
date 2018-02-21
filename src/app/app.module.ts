@@ -9,7 +9,7 @@ import { CoreModule } from './core/core.module';
 // Modules
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
-import { BiometricsModule } from './biometrics';
+import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
 import { RecipesModule } from './recipes';
 import { LibModule } from './library';
@@ -49,7 +49,7 @@ import {
     MatCardModule,
     MatTabsModule,
     // Modules
-    BiometricsModule,
+    SetupModule,
     DashboardModule,
     RecipesModule,
     LibModule,

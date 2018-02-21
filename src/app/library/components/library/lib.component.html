@@ -33,17 +33,17 @@
 
 
       <div style="margin-top:200px;">
-        <h1>Biometrics</h1>
-        <!--<form class="biometrics-form" *ngIf="biometrics">-->
+        <h1>Setup</h1>
+        <!--<form class="setup-form" *ngIf="setup">-->
         <form>
-          <!--<fieldset class="biometrics-fieldset" [attr.disabled]="!editing?'':null">-->
-            <fieldset class="biometrics-fieldset">
-            <mat-form-field class="biometrics-form-field">
-              <!--<input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="biometrics.age" autofocus>-->
+          <!--<fieldset class="setup-fieldset" [attr.disabled]="!editing?'':null">-->
+            <fieldset class="setup-fieldset">
+            <mat-form-field class="setup-form-field">
+              <!--<input matInput name="age" placeholder="Age" autocomplete="off" type="number" [(ngModel)]="setup.age" autofocus>-->
               <input matInput name="age" placeholder="Age" autocomplete="off" type="number">
             </mat-form-field>
-            <mat-form-field class="biometrics-form-field">
-              <!--<mat-select name="gender" placeholder="Gender" [(ngModel)]="biometrics.gender" [disabled]="!editing?'':null">-->
+            <mat-form-field class="setup-form-field">
+              <!--<mat-select name="gender" placeholder="Gender" [(ngModel)]="setup.gender" [disabled]="!editing?'':null">-->
                 <mat-select name="gender" placeholder="Gender" >
                 <mat-option>None</mat-option>
                 <mat-option value="male">Male</mat-option>
@@ -51,25 +51,25 @@
                 <mat-option value="other">Other</mat-option>
               </mat-select>
             </mat-form-field>
-            <!--<mat-form-field class="biometrics-form-field">-->
-              <!--<input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="biometrics.height">-->
+            <!--<mat-form-field class="setup-form-field">-->
+              <!--<input matInput name="height" placeholder="Height" autocomplete="off" type="text" [(ngModel)]="setup.height">-->
             <!--</mat-form-field>-->
-            <!--<mat-form-field class="biometrics-form-field">-->
-              <!--<input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="biometrics.weight">-->
+            <!--<mat-form-field class="setup-form-field">-->
+              <!--<input matInput name="weight" placeholder="Weight" autocomplete="off" type="number" [(ngModel)]="setup.weight">-->
             <!--</mat-form-field>-->
-            <!--<mat-form-field class="biometrics-form-field">-->
-              <!--<input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="biometrics.cholesterol">-->
+            <!--<mat-form-field class="setup-form-field">-->
+              <!--<input matInput name="cholesterol" placeholder="Cholesterol" autocomplete="off" type="number" [(ngModel)]="setup.cholesterol">-->
             <!--</mat-form-field>-->
-            <!--<mat-form-field class="biometrics-form-field">-->
-              <!--<input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="biometrics.bloodPressure">-->
+            <!--<mat-form-field class="setup-form-field">-->
+              <!--<input matInput name="bloodPressure" placeholder="Blood Pressure" autocomplete="off" [(ngModel)]="setup.bloodPressure">-->
             <!--</mat-form-field>-->
           </fieldset>
         </form>
-        <div class="biometrics-button-bar">
-          <!--<button title="Edit" (click)="editBiometrics()" *ngIf="!editing">-->
+        <div class="setup-button-bar">
+          <!--<button title="Edit" (click)="editSetup()" *ngIf="!editing">-->
             <!--<span class="material-icons">edit</span>-->
           <!--</button>-->
-          <!--<button title="Save" (click)="saveBiometrics()" *ngIf="editing">-->
+          <!--<button title="Save" (click)="saveSetup()" *ngIf="editing">-->
             <!--<span class="material-icons">done</span>-->
           <!--</button>-->
           <!--<button title="Cancel" (click)="cancelEdit()" *ngIf="editing">-->

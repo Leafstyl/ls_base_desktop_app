@@ -16,7 +16,7 @@ export class RequireUnauthGuard implements CanActivate {
       .take(1)
       .do(authenticated => {
         if (authenticated) {
-          this.router.navigate(['/biometrics']);
+          this.router.navigate(['/setup']);
         }
       })
       .map(authenticated => !authenticated);

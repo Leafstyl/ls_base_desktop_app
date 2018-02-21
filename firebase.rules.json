@@ -1,6 +1,6 @@
 {
   "rules": {
-    "biometrics": {
+    "setup": {
       "$uid": {
         ".read": "$uid === auth.uid",
         ".write": "$uid === auth.uid"

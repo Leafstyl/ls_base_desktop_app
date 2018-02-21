@@ -38,6 +38,6 @@ export class SignInComponent {
   // }
 
   private postSignIn(): void {
-    this.router.navigate(['/biometrics']);
+    this.router.navigate(['/setup']);
   }
 }
