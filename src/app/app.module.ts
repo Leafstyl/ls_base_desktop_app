@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
+import { DialogOverviewExample } from './core/modal/dialog-overview-example';
+import { DialogOverviewExampleDialog } from './core/modal/dialog-overview-example';
 import { CoreModule } from './core/core.module';
 // Modules
 import { AuthModule } from './auth';
@@ -14,6 +16,7 @@ import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
 import { RecipesModule } from './recipes';
 import { LibModule } from './library';
+// import {DialogOverviewExampleDialog} from './core/modal/d'; // TODO: Move me
 
 // Material UI
 import {
@@ -30,9 +33,12 @@ import {
 
 /* Feature Modules */
 @NgModule({
+  entryComponents: [DialogOverviewExample, DialogOverviewExampleDialog],
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    DialogOverviewExample,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -49,6 +55,8 @@ import {
     MatIconModule,
     MatCardModule,
     MatTabsModule,
+    // Modal
+    // DialogOverviewExampleDialog,
     // Modules
     BiometricsModule,
     SetupModule,
@@ -58,6 +66,7 @@ import {
     CoreModule,
 
   ],
+
   bootstrap: [
     AppComponent
   ],

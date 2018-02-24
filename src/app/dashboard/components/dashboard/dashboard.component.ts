@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DashboardService } from '../../dashboard.service';
-// import { IDashboard, Dashboard } from '../../models/dashboard';
+
+// Biometrics Form
+import { BiometricsService } from '../../../biometrics/biometrics.service';
+import { IBiometrics, Biometrics } from '../../../biometrics/models/biometrics';
 
 @Component({
   selector: 'ls-dashboard',
@@ -9,48 +12,48 @@ import { DashboardService } from '../../dashboard.service';
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
-  // dashboard: IDashboard;
+  biometrics: IBiometrics;
   editing: boolean = false;
 
-  // private lastDashboard: IDashboard;
+  private lastBiometrics: IBiometrics;
 
-  constructor(public route: ActivatedRoute, public dashboardService: DashboardService) {
+  constructor(public route: ActivatedRoute, public biometricsService: BiometricsService) {
   }
 
   ngOnInit() {
     console.log('Initializing DashboardComponent...');
+
+    this.biometricsService.biometrics.subscribe(biometrics => {
+      this.biometrics = <IBiometrics>biometrics;
+      if(!this.biometrics) {
+        this.saveBiometrics(new Biometrics());
+      } else {
+        this.lastBiometrics = Object.assign({}, this.biometrics);
+      }
+      console.log(`this.biometrics: ${this.biometrics}`)
+    });
   }
-  //
-  //   this.dashboardService.dashboard.subscribe(dashboard => {
-  //     this.dashboard = <IDashboard>dashboard;
-  //     if (!this.dashboard) {
-  //       this.saveDashboard(new Dashboard());
-  //     } else {
-  //       this.lastDashboard = Object.assign({}, this.dashboard);
-  //     }
-  //     console.log(`this.dashboard: ${this.dashboard}`)
-  //   });
-  // }
-  //
-  // saveDashboard(dashboard?: IDashboard): void {
-  //   if (dashboard) {
-  //     this.dashboardService.saveDashboard(dashboard);
-  //   } else {
-  //     this.dashboardService.saveDashboard(this.dashboard);
-  //   }
-  //   this.stopEditing();
-  // }
-  //
-  // editDashboard(): void {
-  //   this.editing = true;
-  // }
-  //
-  // cancelEdit(): void {
-  //   Object.assign(this.dashboard, this.lastDashboard);
-  //   this.stopEditing();
-  // }
-  //
-  // stopEditing(): void {
-  //   this.editing = false;
-  // }
+
+  saveBiometrics(biometrics?: IBiometrics): void {
+    if (biometrics) {
+      this.biometricsService.saveBiometrics(biometrics);
+    } else {
+      this.biometricsService.saveBiometrics(this.biometrics);
+    }
+    this.stopEditing();
+  }
+
+  editBiometrics(): void {
+    this.editing = true;
+  }
+
+  cancelEdit(): void {
+    Object.assign(this.biometrics, this.lastBiometrics);
+    this.stopEditing();
+  }
+
+  stopEditing(): void {
+    this.editing = false;
+  }
+
 }

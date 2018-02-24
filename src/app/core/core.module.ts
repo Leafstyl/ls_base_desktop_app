@@ -1,7 +1,9 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { RouterModule } from '@angular/router';
+
 
 // import { EntityService } from './entity.service';
 // import { ExceptionService } from './exception.service';
@@ -19,7 +21,7 @@ import { RouterModule } from '@angular/router';
 // exports: exports modules AND components/directives/pipes that other modules may want to use
 @NgModule({
   imports: [
-    CommonModule, FormsModule, RouterModule,
+    CommonModule, FormsModule, RouterModule
     // ModalModule, SpinnerModule, ToastModule
   ],
   exports: [
