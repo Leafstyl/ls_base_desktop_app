@@ -42,7 +42,9 @@ export class DialogOverviewExample {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog-overview-example-dialog.html',
+  // templateUrl: 'dialog-overview-example-dialog.html',
+  // template: '<ls-biometrics></ls-biometrics>',
+  template: '<h1> Morning Grant </h1>'
 })
 export class DialogOverviewExampleDialog {
 

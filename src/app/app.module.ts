@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+
 // Components
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
 import { DialogOverviewExample } from './core/modal/dialog-overview-example';
 import { DialogOverviewExampleDialog } from './core/modal/dialog-overview-example';
 import { CoreModule } from './core/core.module';
+import {SharedModule} from './shared/shared.module';
 // Modules
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
@@ -19,17 +22,7 @@ import { LibModule } from './library';
 // import {DialogOverviewExampleDialog} from './core/modal/d'; // TODO: Move me
 
 // Material UI
-import {
-  MatButtonModule,
-  MatCheckboxModule,
-  MatSlideToggleModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatIconModule,
-  MatCardModule,
-  MatTabsModule
-
-} from '@angular/material';
+// Imported from shared
 
 /* Feature Modules */
 @NgModule({
@@ -46,15 +39,8 @@ import {
     RouterModule.forRoot([], { useHash: false }),
     AuthModule,
     FirebaseModule,
-    // Material
-    MatButtonModule,
-    MatCheckboxModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatIconModule,
-    MatCardModule,
-    MatTabsModule,
+    FormsModule,
+    SharedModule,
     // Modal
     // DialogOverviewExampleDialog,
     // Modules
