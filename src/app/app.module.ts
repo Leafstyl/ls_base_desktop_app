@@ -19,7 +19,7 @@ import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
 import { RecipesModule } from './recipes';
 import { LibModule } from './library';
-// import {DialogOverviewExampleDialog} from './core/modal/d'; // TODO: Move me
+//import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
 // Imported from shared

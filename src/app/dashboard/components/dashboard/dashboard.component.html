@@ -5,21 +5,48 @@
        fxLayout.xs="column"
        fxFlexFill>
 
+    <!--<section>-->
+      <!--<img src="https://cdn.pixabay.com/photo/2017/10/15/16/21/iphone-2854327_960_720.png" alt="">-->
+    <!--</section>-->
+
+
+    <div fxFlex="100">
+      <mat-card class="example-card" style="margin: 40px 120px;">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Mike Bowlin</mat-card-title>
+          <mat-card-subtitle>UI/UX Dev</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./../../../../assets/avatar-sample.png" alt="Avatar Image">
+        <mat-card-content>
+          <p>
+            Welcome, Mike.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
      <!--Flex 1 -->
     <div fxFlex="100" class="sec2">
-
-      <div style="
-border-radius: 6px;
-overflow: hidden;
-height: 200px;
-width: 200px;
-margin: 200px;
-box-shadow: 7px 7px 16px 1px rgba(0,0,0,.3);
-float:left;
-">
-        <img
-          src="https://blog.hubspot.com/hs-fs/hubfs/Fancy_Crave.jpg?t=1513625148314&amp;width=671&amp;height=518&amp;name=Fancy_Crave.jpg">
-      </div>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+      <p></p>
+      <p></p>
+      <!--<div style="-->
+<!--border-radius: 6px;-->
+<!--overflow: hidden;-->
+<!--height: 200px;-->
+<!--width: 200px;-->
+<!--margin: 200px;-->
+<!--box-shadow: 7px 7px 16px 1px rgba(0,0,0,.3);-->
+<!--float:left;-->
+<!--">-->
+        <!--<img-->
+          <!--src="https://blog.hubspot.com/hs-fs/hubfs/Fancy_Crave.jpg?t=1513625148314&amp;width=671&amp;height=518&amp;name=Fancy_Crave.jpg">-->
+      <!--</div>-->
     </div>
 
 

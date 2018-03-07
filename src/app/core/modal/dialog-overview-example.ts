@@ -44,7 +44,7 @@ export class DialogOverviewExample {
   selector: 'dialog-overview-example-dialog',
   // templateUrl: 'dialog-overview-example-dialog.html',
   // template: '<ls-biometrics></ls-biometrics>',
-  template: '<h1> Morning Grant </h1>'
+  template: '<h1> Morning Grant </h1><br><h2>Ready for your Monday mealplan?</h2>'
 })
 export class DialogOverviewExampleDialog {
 
