@@ -14,7 +14,6 @@ import {SharedModule} from './shared/shared.module';
 // Modules
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
-import { BiometricsModule } from './biometrics';
 import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
 import { RecipesModule } from './recipes';
@@ -44,7 +43,6 @@ import { LibModule } from './library';
     // Modal
     // DialogOverviewExampleDialog,
     // Modules
-    BiometricsModule,
     SetupModule,
     DashboardModule,
     RecipesModule,
