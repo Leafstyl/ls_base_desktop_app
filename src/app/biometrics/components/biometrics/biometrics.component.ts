@@ -8,26 +8,32 @@ import { IBiometrics, Biometrics } from '../../models/biometrics';
   styleUrls: ['./biometrics.component.scss'],
   templateUrl: './biometrics.component.html'
 })
+
+
 export class BiometricsComponent implements OnInit {
   biometrics: IBiometrics;
   editing: boolean = false;
 
   private lastBiometrics: IBiometrics;
 
-  constructor(public route: ActivatedRoute, public biometricsService: BiometricsService) {
+  constructor(
+    public route: ActivatedRoute,
+    public biometricsService: BiometricsService) {
   }
 
   ngOnInit() {
-    console.log('Initializing BiometricsComponent...');
+    console.log('Initializing BiometricsComponent..................');
+    debugger;
 
     this.biometricsService.biometrics.subscribe(biometrics => {
+
       this.biometrics = <IBiometrics>biometrics;
       if (!this.biometrics) {
         this.saveBiometrics(new Biometrics());
       } else {
         this.lastBiometrics = Object.assign({}, this.biometrics);
       }
-      console.log(`this.biometrics: ${this.biometrics}`)
+      console.log(`this.biometrics: ${this.biometrics}`);
     });
   }
 
@@ -52,4 +58,6 @@ export class BiometricsComponent implements OnInit {
   stopEditing(): void {
     this.editing = false;
   }
+
+
 }

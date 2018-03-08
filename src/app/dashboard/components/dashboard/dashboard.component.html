@@ -1,3 +1,10 @@
+<input type="checkbox" id="menu-toggle"/>
+<label id="trigger" for="menu-toggle"></label>
+<label id="burger" for="menu-toggle"></label>
+<ul id="menu"></ul>
+
+
+
 <div class="bounds">
 
   <div class="content"
@@ -22,17 +29,24 @@
           <p>
             Welcome, Mike.
           </p>
+          <ul style="border: red solid;"  *ngIf="biometrics">
+            <li>{{biometrics.age}}</li>
+            <li>{{biometrics.gender}}</li>
+            <li>{{biometrics.height}}</li>
+            <li>{{biometrics.weight}}</li>
+            <li>{{biometrics.cholesterol}}</li>
+            <li>{{biometrics.bloodPressure}}</li>
+          </ul>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
+          <button mat-button (click)="openDialog()">Biometrics</button>
+          <button mat-button>Profile</button>
         </mat-card-actions>
       </mat-card>
     </div>
 
      <!--Flex 1 -->
     <div fxFlex="100" class="sec2">
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
       <p></p>
       <p></p>
       <!--<div style="-->
