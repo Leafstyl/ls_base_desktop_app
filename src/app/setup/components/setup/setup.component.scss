@@ -8,8 +8,6 @@ mat-horizontal-stepper {
   &.mat-stepper-horizontal {
 
     background: none;
-    margin: 100px 0 0 0;
-
   }
 
   form {
@@ -38,7 +36,8 @@ mat-horizontal-stepper {
           &.mat-card {
             padding: 0;
             margin: 0 0 3rem 0;
-            border: solid 1px #c9c9c9;
+            background: none;
+            //border: solid 1px #c9c9c9;
           }
 
 
@@ -47,8 +46,8 @@ mat-horizontal-stepper {
 
             aside {
 
-              background: #4eb2bf;
-              background: #889E49;
+              //background: #4eb2bf;
+              //background: #889E49;
               //background: #8BC34A;
 
               //background: #4eb2bf url(../../../../assets/graphic__bike.png) 50% 90%;
@@ -121,7 +120,7 @@ mat-horizontal-stepper {
             text-align: left;
             color: #fff;
             font-size: 1.1rem;
-            border-bottom: solid 67px rgba(0,0,0,.3);
+            //border-bottom: solid 67px rgba(0,0,0,.3);
 
             header {
 
@@ -196,11 +195,11 @@ mat-horizontal-stepper {
 
             li {
 
-              border: blue solid 1px;
+              //border: blue solid 1px;
 
               span {
 
-                border: red solid 1px;
+                //border: red solid 1px;
 
               }
 

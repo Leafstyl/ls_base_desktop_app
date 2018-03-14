@@ -120,6 +120,17 @@ body {
 
   background: #F9FAF5 url("./../assets/background-angle-gradient-01.jpg") no-repeat 50% 0;
 
+
+  //// Little Leaf
+  //background: #76b852;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to top, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to top, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // Back to Earth
+  background: #00C9FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1,
@@ -354,7 +365,7 @@ mat-toolbar-row {
 
   mat-checkbox {
 
-    border: solid 1px #e9e9e9;
+    //border: solid 1px #e9e9e9;
 
     .mat-checkbox-label {
       flex: 1 1;
