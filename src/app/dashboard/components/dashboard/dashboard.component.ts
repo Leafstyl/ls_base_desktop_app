@@ -7,7 +7,6 @@ import { DashboardService } from '../../dashboard.service';
 // Biometrics Form
 import { BiometricsService } from '../../../biometrics/biometrics.service';
 import { IBiometrics, Biometrics } from '../../../biometrics/models/biometrics';
-import { BiometricsComponent } from '../../../biometrics/components/biometrics/biometrics.component';
 
 
 @Component({
@@ -15,11 +14,11 @@ import { BiometricsComponent } from '../../../biometrics/components/biometrics/b
   styleUrls: ['./dashboard.component.scss'],
   templateUrl: './dashboard.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
   biometrics: IBiometrics;
-  //editing: boolean = false;
+  editing: boolean = false;
 
-  //private lastBiometrics: IBiometrics;
+  private lastBiometrics: IBiometrics;
 
   constructor(public route: ActivatedRoute,
               public biometricsService: BiometricsService,
@@ -27,18 +26,40 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Initializing DashboardComponent..');
+    console.log('Initializing DashboardComponent...');
 
     this.biometricsService.biometrics.subscribe(biometrics => {
-
       this.biometrics = <IBiometrics>biometrics;
-      if (!this.biometrics) {
-        //this.saveBiometrics(new Biometrics());
+      if(!this.biometrics) {
+        this.saveBiometrics(new Biometrics());
       } else {
-        //this.lastBiometrics = Object.assign({}, this.biometrics);
+        this.lastBiometrics = Object.assign({}, this.biometrics);
       }
-      console.log(`this.biometrics: ${this.biometrics}`);
+      console.log(`this.biometrics: ${this.biometrics}`)
     });
+  }
+
+  // Biometrics
+  saveBiometrics(biometrics?: IBiometrics): void {
+    if (biometrics) {
+      this.biometricsService.saveBiometrics(biometrics);
+    } else {
+      this.biometricsService.saveBiometrics(this.biometrics);
+    }
+    this.stopEditing();
+  }
+
+  editBiometrics(): void {
+    this.editing = true;
+  }
+
+  cancelEdit(): void {
+    Object.assign(this.biometrics, this.lastBiometrics);
+    this.stopEditing();
+  }
+
+  stopEditing(): void {
+    this.editing = false;
   }
 
 
