@@ -5,19 +5,29 @@ import {RecipesService} from './recipes.service';
 // Components
 import { RecipesComponent } from './components/recipes';
 // Modules
-import { RecipesRoutesModule } from './recipes.routes';
+
+
+
+
+// Modules
 import { SharedModule } from '../shared/shared.module';
+import {DialogRecipesComponent} from './components/dialog/dialog-recipes.component';
+import {RecipesRoutesModule} from './recipes.routes';
 
 @NgModule({
   declarations: [
-    RecipesComponent
+    RecipesComponent,
+    DialogRecipesComponent
   ],
   imports: [
-    RecipesRoutesModule,
-    SharedModule
+    SharedModule,
+    RecipesRoutesModule
   ],
   providers: [
     RecipesService
+  ],
+  entryComponents: [
+    DialogRecipesComponent
   ]
 })
 

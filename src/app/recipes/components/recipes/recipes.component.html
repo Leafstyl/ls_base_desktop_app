@@ -1,16 +1,20 @@
 <div class="bounds">
   <br><br><br>
   <h1>Recipes</h1>
+  <h3>Connecting Real Food with Real People</h3>
+
 
   <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+
+  <button mat-raised-button (click)="openDialog()">Add</button>
 
   <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
     <!-- Standard Cards -->
     <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
               *ngFor="let recipe of recipes"
-              id="{{recipe.id}}"
-              [ngClass]="{'active': id === recipe.id }"
-              (click)="addClass(id=recipe.id)">
+              id="{{recipe.id}}">
+              <!--[ngClass]="{'active': id === recipe.id }"-->
+              <!--(click)="addClass(id=recipe.id)"-->
 
       <div class="card--image feature-1">
         <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">

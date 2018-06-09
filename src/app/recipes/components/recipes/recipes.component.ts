@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../recipes.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
 // import { IDashboard, Dashboard } from '../../models/dashboard';
 
 @Component({
@@ -13,32 +15,16 @@ export class RecipesComponent implements OnInit {
   editing: boolean = false;
 
   //menuItems: MenuItem[];
+
   recipes = [
     {
       id: 1,
       name: 'Tortilla Soup',
-      // Reviews (comments)
-      rating: [
-        'lifestyle': 8,
-        'environment': 8,
-        'animal': 8,
-        'food': 8, // Redefining what "Food" is
-      ],
       ingredients: [
         'Pinto Beans',
         'Vegitable Broth',
         'Onion'
       ],
-      calories: 240,
-      minutes: 10,
-      // us/metric
-      // servings
-      // Nutrition: calories, sodium 11%DV, fat 11%DV, Protein 12%DV, Carbs 5% DV, Fiber 24% DV
-      // Tags: Quick and easy, Browing, Side Dishes, Quick, Easy, Low Sugar, Low Calorie, High Fiber, Roasting
-      // Related
-      // More recipes from: SkinnyTaste
-      // external link to website
-      // yums (likes) 2k
       website: 'https://namelymarly.com/vegan-one-pot-chili-mac-cheese/',
       image: 'https://mywholefoodlife.com/wp-content/uploads/2017/01/Slow-Cooker-Tortilla-Soup-My-Whole-Food-Life.jpg',
       prepTime: 15,
@@ -83,16 +69,31 @@ export class RecipesComponent implements OnInit {
 
   // private lastDashboard: IDashboard;
 
-  constructor(public route: ActivatedRoute, public recipesService: RecipesService) {
+  constructor(
+    public dialog: MatDialog,
+    public route: ActivatedRoute,
+    public recipesService: RecipesService) {
   }
 
   ngOnInit() {
     console.log('Initializing Recipes Component...');
   }
 
-  addClass(id: any): void {
-    this.id = id;
-  };
+  // addClass(id: any): void {
+  //   this.id = id;
+  // };
+
+  openDialog(): void {
+    console.log('==============>');
+    const dialogRef = this.dialog.open(DialogRecipesComponent, {
+      width: '250px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.getRecipes();
+    });
+  }
 
   //
   //   this.dashboardService.dashboard.subscribe(dashboard => {

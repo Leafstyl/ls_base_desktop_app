@@ -27,8 +27,8 @@ import {RecipesModule} from './recipes/recipes.module';
 /* Feature Modules */
 @NgModule({
   entryComponents: [
-    DialogOverviewExample,
-    DialogOverviewExampleDialog
+    // DialogOverviewExample,
+    // DialogOverviewExampleDialog
   ],
   declarations: [
     AppComponent,
