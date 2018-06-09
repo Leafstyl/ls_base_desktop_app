@@ -90,6 +90,10 @@ export class RecipesComponent implements OnInit {
     console.log('Initializing Recipes Component...');
   }
 
+  addClass(id: any): void {
+    this.id = id;
+  };
+
   //
   //   this.dashboardService.dashboard.subscribe(dashboard => {
   //     this.dashboard = <IDashboard>dashboard;

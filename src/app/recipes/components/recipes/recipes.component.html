@@ -4,41 +4,44 @@
 
   <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
 
-
-
   <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
     <!-- Standard Cards -->
-    <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%" *ngFor="let recipe of recipes">
+    <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
+              *ngFor="let recipe of recipes"
+              id="{{recipe.id}}"
+              [ngClass]="{'active': id === recipe.id }"
+              (click)="addClass(id=recipe.id)">
 
       <div class="card--image feature-1">
         <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
+        <div class="card--bg-color"></div>
       </div>
 
       <mat-card-header>
-        <h3 fxFlexOffset="43%">{{recipe.name}}</h3>
+        <h3>{{recipe.name}}</h3>
       </mat-card-header>
 
 
       <mat-card-content>
         <!--<img src="{{recipe.image}}">-->
-        <div fxFlexOffset="43%">
-          {{recipe.ingredients}}
-        </div>
+        <!--<div fxFlexOffset="43%">-->
+          <!--{{recipe.ingredients}}-->
+        <!--</div>-->
       </mat-card-content>
 
       <mat-card-actions>
-        <a fxLayout  fxFlexOffset="43%"
-           href="{{recipe.website}}"
-           target="_blank">
-          <button mat-raised-button color="accent">WEBSITE</button>
-        </a>
+        <!--<a fxLayout  fxFlexOffset="43%"-->
+           <!--href="{{recipe.website}}"-->
+           <!--target="_blank">-->
+          <!--<button mat-raised-button color="accent">WEBSITE</button>-->
+        <!--</a>-->
       </mat-card-actions>
 
       <mat-chip-list>
         <div fxFlexOffset="43%">
-          <mat-chip>{{recipe.prepTime}}</mat-chip>
-          <mat-chip>{{recipe.cookTime}}</mat-chip>
-          <mat-chip>{{recipe.difficulty}}</mat-chip>
+          <!--<mat-chip>{{recipe.prepTime}}</mat-chip>-->
+          <!--<mat-chip>{{recipe.cookTime}}</mat-chip>-->
+          <!--<mat-chip>{{recipe.difficulty}}</mat-chip>-->
         </div>
       </mat-chip-list>
 

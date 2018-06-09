@@ -7,6 +7,146 @@
   background: none;
   overflow: hidden;
   border-radius: 2rem;
+  -webkit-transition: ease-in .04s;
+  -moz-transition: ease-in .04s;
+  -ms-transition: ease-in .04s;
+  -o-transition: ease-in .04s;
+  transition: ease-in .04s;
+
+  cursor: pointer;
+
+  -webkit-animation-name: miniCard;
+  animation-name: miniCard;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  &:hover {
+
+  }
+
+  &.active {
+
+
+    @-webkit-keyframes miniCard {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @keyframes miniCard {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    position: fixed;
+    z-index: 999;
+    overflow: visible;
+    top: 8em;
+    left: 1em;
+
+
+    &:before {
+      content: '';
+      height: 5000px;
+      width: 5000px;
+      position: fixed;
+      top: -1000px;
+      left: -100px;
+      z-index: -5;
+      /* Lush */
+      //background: #56ab2f;
+      //background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+      //background: linear-gradient(to right, #a8e063, #56ab2f);
+      background: #f3f3f3;
+    }
+
+    &:after {
+      display: none;
+      content: '';
+      height: 5000px;
+      width: 5000px;
+      position: fixed;
+      top: -1000px;
+      left: 110px;
+      background: #fff;
+      z-index: -5;
+    }
+
+    .card--image {
+
+
+      -webkit-animation-name: miniCard;
+      animation-name: miniCard;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+
+      img {
+
+        height: 500px;
+        width: auto;
+
+      }
+    }
+
+    .feature-1 {
+      height: auto;
+      width: 100%;
+      margin: -132px 0 0 0;
+      height: auto;
+      width: auto;
+      margin: -132px 0 0 0;
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      border-radius: 3em;
+
+    }
+
+    .mat-card-header {
+
+      h3 {
+
+        margin: -3em 0 0 .2em;
+
+
+        -webkit-animation-name: miniCard;
+        animation-name: miniCard;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+      }
+
+    }
+  }
 
   .card--image {
 
@@ -18,7 +158,7 @@
     background: #fff;
 
     img {
-      transition: .2s;
+      transition: .04s;
       max-height: 1000px;
       height: auto;
       width: 100%;
@@ -27,15 +167,28 @@
 
   }
 
+  .card--bg-color {
+    //position: absolute;
+    //height: 305px;
+    //width: 223px;
+    //z-index: 1;
+    //top: 0;
+    //left: 41%;
+    //background: rgba(255, 255, 255, 0.1);
+    //transform: rotate(0deg);
+    //box-shadow: -73px 31px 97px 59px rgba(255, 255, 255, 0.9) inset;
+
+  }
+
   .feature-1 {
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 100%;
+    margin: -132px 0 0 0;
   }
 
   &:hover {
     img {
 
-      transform: scale(1.01);
     }
   }
 
@@ -48,14 +201,16 @@
   .mat-card-header {
 
     h3 {
-      padding:.4em 0 0 0;
-      margin: 0;
-      color: #fff;
-      font-size: 2rem;
-      font-weight: bolder;
-      text-shadow: 0 1px 0 #ccc, 0 1px 0 #111, 0 1px 0 #333, 0 1px 0 #333, 0 1px 0 #333, 0 4px 1px #333;
+      margin: .45em 0 0 .2em;
+      font-weight: bold;
       text-align: left;
+      font-size: 2.2rem;
+      text-shadow: 0px 3px 0px rgba(155,155,155,.4), 0px 2px 0px rgba(155,155,155,0.4), 0px -1px 4px rgba(155,155,155,0.9);
+      color: #fefefe;
     }
+
+
+
   }
 
   .mat-card-content {
@@ -85,6 +240,7 @@
 
 /** Featured Card */
 .mat-card.feature {
+  display: none;
   position: relative;
   z-index: -2px;
   height: 13rem;
@@ -124,7 +280,7 @@
     background: #fff;
 
     img {
-      transition: .2s;
+      transition: .04s;
       max-height: 1000px;
       height: auto;
       width: 100%;
@@ -143,7 +299,6 @@
   &:hover {
     img {
 
-      transform: scale(1.01);
     }
   }
 
