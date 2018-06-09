@@ -5,11 +5,6 @@ import {RecipesService} from './recipes.service';
 // Components
 import { RecipesComponent } from './components/recipes';
 // Modules
-
-
-
-
-// Modules
 import { SharedModule } from '../shared/shared.module';
 import {DialogRecipesComponent} from './components/dialog/dialog-recipes.component';
 import {RecipesRoutesModule} from './recipes.routes';

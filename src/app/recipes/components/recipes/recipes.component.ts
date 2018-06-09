@@ -79,9 +79,9 @@ export class RecipesComponent implements OnInit {
     console.log('Initializing Recipes Component...');
   }
 
-  // addClass(id: any): void {
-  //   this.id = id;
-  // };
+  addClass(id: any): void {
+    this.id = id;
+  };
 
   openDialog(): void {
     console.log('==============>');
