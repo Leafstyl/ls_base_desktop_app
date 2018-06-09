@@ -19,14 +19,11 @@ export class NavComponent implements OnInit {
   @Input() authenticated: boolean;
   @Output() signOut = new EventEmitter(false);
 
-  menuItems: MenuItem[];
-
   ngOnInit() {
-    this.menuItems = [
-      { caption: 'MEALS', link: ['/recipes'] },
-      { caption: 'PLANNING', link: ['/planning'] },
-      { caption: 'LIBRARY', link: ['/library'] },
-    ];
+    // this.menuItems = [
+    //   { caption: 'Recipes', link: ['/recipes'] },
+    //   { caption: 'Library', link: ['/library'] },
+    // ];
   }
 
   // constructor(

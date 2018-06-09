@@ -2,7 +2,7 @@
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~@angular/material/theming';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:700');
 
 // Plus imports for other components in your app.
 
@@ -103,34 +103,16 @@ $ls-green: #83A340;
 $ls-brown: #A86839;
 $ls-purple: #9956B2;
 
+// LB Colors
+$lb-green: #8BC34A;
+
 body {
   margin: 0 !important;
   font-family: 'Open Sans', sans-serif;
-  background: #e5e8cd; // Option 1
-  background: #f3f4eb; // Option 1 - lighter
-  background: #F9FAF5;
-  background: #fff;
-  // background: #F9FAF5 url("./../assets/background-angle-01.jpg") no-repeat 50% 0;
+  //background: #fff;
   background-size: 100vw !important;
   background-attachment: fixed;
-  // Test gradient -- https://uigradients.com/#Ohhappiness
-  //background: #00b09b;  /* fallback for old browsers */
-  //background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
-  //background: linear-gradient(to right, #96c93d, #97b036); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: #FAFAFA url("./../assets/background-angle-gradient-01.jpg") no-repeat 50% 0;
-
-
-  //// Little Leaf
-  //background: #76b852;  /* fallback for old browsers */
-  //background: -webkit-linear-gradient(to top, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
-  //background: linear-gradient(to top, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // Back to Earth !!!!!!
-  //background: #00C9FF;  /* fallback for old browsers */
-  //background: -webkit-linear-gradient(to top, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
-  //background: linear-gradient(to top, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  //background: #FAFAFA url("./../assets/background-angle-gradient-01.jpg") no-repeat 50% 0;
 }
 
 h1,
@@ -140,6 +122,22 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+h1 {
+  font-size: 5em;
+  color: #1fd947;
+  font-family: 'Poppins', sans-serif;
+  /* Rainbow Blue */
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00b09b 3%, #00F260 30%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00b09b 3%, #00F260 30%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 p,
@@ -172,7 +170,6 @@ mat-card {
   max-width: 38rem;
   margin: 0em auto;
   text-align: center;
-  min-height: 300px;
 }
 
 .mat-toolbar.mat-primary {
@@ -189,7 +186,7 @@ mat-card {
 
 .mat-toolbar {
 
-  background: none !important;
+
   box-shadow: none;
   // background: #8a9d42 !important;
   // background: #8BC34A !important;
@@ -214,8 +211,13 @@ mat-toolbar-row {
 }
 .mat-horizontal-stepper-header-container {
 
-  width: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  background:#fff;
   margin: 0px auto;
+  padding: 0 20%;
+  width: 60%;
 
   .mat-step-icon {
 
@@ -389,7 +391,8 @@ mat-toolbar-row {
 
 
       &:hover {
-        background: #ABE0F3;
+        // background: #ABE0F3;
+        color: $lb-green;
       }
     }
 

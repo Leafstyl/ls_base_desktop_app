@@ -9,15 +9,16 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
 import { DialogOverviewExample } from './core/modal/dialog-overview-example';
 import { DialogOverviewExampleDialog } from './core/modal/dialog-overview-example';
-import { CoreModule } from './core/core.module';
-import {SharedModule} from './shared/shared.module';
+
 // Modules
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
-import { RecipesModule } from './recipes';
 import { LibModule } from './library';
+import {RecipesModule} from './recipes/recipes.module';
 //import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
@@ -25,7 +26,10 @@ import { LibModule } from './library';
 
 /* Feature Modules */
 @NgModule({
-  entryComponents: [DialogOverviewExample, DialogOverviewExampleDialog],
+  entryComponents: [
+    DialogOverviewExample,
+    DialogOverviewExampleDialog
+  ],
   declarations: [
     AppComponent,
     NavComponent,
@@ -45,16 +49,15 @@ import { LibModule } from './library';
     // Modules
     SetupModule,
     DashboardModule,
-    RecipesModule,
     LibModule,
+    RecipesModule,
     CoreModule,
 
   ],
-
   bootstrap: [
     AppComponent
   ],
-  providers: []
+  // providers: [RecipesService]
 })
 
 export class LsModule {}

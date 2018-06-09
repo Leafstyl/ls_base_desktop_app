@@ -1,58 +1,90 @@
 <div class="bounds">
+  <br><br><br>
+  <h1>Recipes</h1>
 
-  <div class="content"
-       fxLayout="row"
-       fxLayout.xs="column"
-       fxFlexFill>
+  <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
 
-    <!-- Flex 1 -->
 
-     <!--Flex 2-->
-    <div fxFlex="100" class="sec2">
 
-      <p></p>
-      <p></p>
-      <div style="
-    border-radius: 6px;
-    overflow: hidden;
-    height: 400px;
-    width: 400px;
-    margin: 80px 80px 10px 80px;
-    float:left;
-" class="mat-elevation-z24">
-        <img src="http://ghk.h-cdn.co/assets/17/45/480x719/gallery-1510170649-vegan-buffalo-cauliflower-tacos.jpg">
+  <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
+    <!-- Standard Cards -->
+    <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%" *ngFor="let recipe of recipes">
 
+      <div class="card--image feature-1">
+        <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
       </div>
 
-    </div>
+      <mat-card-header>
+        <h3 fxFlexOffset="43%">{{recipe.name}}</h3>
+      </mat-card-header>
+
+
+      <mat-card-content>
+        <!--<img src="{{recipe.image}}">-->
+        <div fxFlexOffset="43%">
+          {{recipe.ingredients}}
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a fxLayout  fxFlexOffset="43%"
+           href="{{recipe.website}}"
+           target="_blank">
+          <button mat-raised-button color="accent">WEBSITE</button>
+        </a>
+      </mat-card-actions>
+
+      <mat-chip-list>
+        <div fxFlexOffset="43%">
+          <mat-chip>{{recipe.prepTime}}</mat-chip>
+          <mat-chip>{{recipe.cookTime}}</mat-chip>
+          <mat-chip>{{recipe.difficulty}}</mat-chip>
+        </div>
+      </mat-chip-list>
+
+
+    </mat-card>
+
+    <!-- Feature Cards -->
+    <mat-card class="feature mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%" *ngFor="let recipe of recipes">
+
+      <mat-card-header>
+        <h3 fxFlexOffset="43%">{{recipe.name}}</h3>
+      </mat-card-header>
+
+
+      <mat-card-content>
+        <!--<img src="{{recipe.image}}">-->
+        <div fxFlexOffset="43%">
+          {{recipe.ingredients}}
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a fxLayout  fxFlexOffset="43%"
+           href="{{recipe.website}}"
+           target="_blank">
+          <button mat-raised-button color="accent">WEBSITE</button>
+        </a>
+      </mat-card-actions>
+
+      <mat-chip-list>
+        <div fxFlexOffset="43%">
+          <mat-chip>{{recipe.prepTime}}</mat-chip>
+          <mat-chip>{{recipe.cookTime}}</mat-chip>
+          <mat-chip>{{recipe.difficulty}}</mat-chip>
+        </div>
+      </mat-chip-list>
+
+
+      <div class="card--image feature-1">
+        <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
+      </div>
+
+    </mat-card>
 
   </div>
 
-
-  <div style="
-border-radius: 6px;
-overflow: hidden;
-height: 200px;
-width: 200px;
-margin: 200px;
-box-shadow: 7px 7px 16px 1px rgba(0,0,0,.3);
-float:left;
-">
-    <img
-      src="https://blog.hubspot.com/hs-fs/hubfs/Fancy_Crave.jpg?t=1513625148314&amp;width=671&amp;height=518&amp;name=Fancy_Crave.jpg">
-
-  </div>
-
-  <div style="
-    border-radius: 6px;
-    overflow: hidden;
-    height: 400px;
-    width: 400px;
-    margin: 100px 200px;
-    box-shadow: 7px 7px 16px 1px rgba(0,0,0,.3);">
-    <img src="http://ghk.h-cdn.co/assets/17/11/480x720/gallery-1489698268-danielle-occhiogrosso-beet-mushroom-avo-salad-0417.jpg">
-
-  </div>
 
 
 </div>

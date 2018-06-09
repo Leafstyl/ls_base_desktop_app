@@ -22,7 +22,7 @@ export class BiometricsService implements OnInit {
       const biometricsPath = `/biometrics/${uid}`
       this._biometricsRef = this._angularFireDatabase.object(biometricsPath);
       this.biometrics = this._biometricsRef.valueChanges();
-    });    
+    });
   }
 
   ngOnInit() {

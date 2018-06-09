@@ -1,37 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { Injectable } from '@angular/core';
-// import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-// import { Observable } from 'rxjs/Observable';
-// import { AuthService } from '../auth';
-// import { IDashboard, Dashboard } from './models';
-//
-// import 'rxjs/add/observable/merge';
-// import 'rxjs/add/operator/switchMap';
-// import { Observer } from 'firebase/app';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import {of} from 'rxjs/observable/of';
+import {catchError, map, tap} from 'rxjs/operators';
+
 
 @Injectable()
-export class RecipesService implements OnInit {
+export class RecipesService {
 
-  constructor(){ }
-  // dashboard: Observable<IDashboard>;
+  private recipesUrl = 'api/recipes'; // url to web api
+
+  constructor(
+
+  ) { }
+
+
+  /** GET recipes from the server */
+  // getRecipes (): Observable<Recipe[]> {
+  //   return this.http.get<Recipe[]>(this.recipesUrl);
   //
-  // private _dashboardRef: AngularFireObject<IDashboard>;
-  //
-  // constructor(private _angularFireDatabase: AngularFireDatabase, private _authService: AuthService) {
-  //   this._authService.uid$
-  //   .take(1)
-  //   .subscribe(uid => {
-  //     const dashboardPath = `/dashboard/${uid}`
-  //     this._dashboardRef = this._angularFireDatabase.object(dashboardPath);
-  //     this.dashboard = this._dashboardRef.valueChanges();
-  //   });
   // }
-  //
-  ngOnInit() {
-    console.log('Initializing RecipesService...');
-  }
-  //
-  // saveDashboard(biometric: IDashboard): void {
-  //   this._dashboardRef.set(biometric);
-  // }
+
+
+  /** GET hero by id. 404 if not found */
+
+
+  /** POST: add a new recipe to the server */
+
+
+  /** PUT: update the recipe on the server */
+
+
+
 }

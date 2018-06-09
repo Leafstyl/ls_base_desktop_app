@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DashboardService implements OnInit {
 
-  constructor(){ }
+  constructor () { }
   // dashboard: Observable<IDashboard>;
   //
   // private _dashboardRef: AngularFireObject<IDashboard>;
