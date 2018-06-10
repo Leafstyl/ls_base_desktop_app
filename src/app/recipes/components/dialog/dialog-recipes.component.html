@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Add a Recipe</h1>
+<i>you can add but a Pro will need to approve..</i>
+<div mat-dialog-content>
+
+  <div class="example-container">
+
+
+    <form #addRecipeForm="ngForm" (ngSubmit)="addRecipe(addRecipeForm)">
+      <!--<header>-->
+        <!--<h3>Create Employee</h3>-->
+      <!--</header>-->
+      <!--<section>-->
+        <!--<p>-->
+          <!--<label for="fullName">Full Name</label></p>-->
+        <!--&lt;!&ndash;-->
+          <!--angular is using the name attribute value as a property in the generated form model-->
+          <!--&ndash;&gt;-->
+        <!--<input id="fullName" type="text" name="fullname" [(ngModel)]="fullName">-->
+        <!--<p><label for="email">Email</label></p>-->
+        <!--<input id="email" type="email" name="email" [(ngModel)]="email">-->
+      <!--</section>-->
+      <!--<footer>-->
+        <!--<p><button type="submit" [disabled]="!employeeForm.dirty">save</button></p>-->
+      <!--</footer>-->
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Recipe Name" [(ngModel)]="recipeName" name="recipeName">
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput  placeholder="Description" [(ngModel)]="recipeDescription" name="recipeDescription"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <p>
+          <button type="submit" mat-button mat-dialog-close>Canel</button>
+        </p>
+        <p>
+          <button type="submit" mat-raised-button
+                  [disabled]="!addRecipeForm.dirty">Add Recipe</button>
+        </p>
+      </div>
+    </form>
+
+
+  </div>
+
+
+
+
+  <!--<label #recipeName>-->
+    <!--<input #recipeName>-->
+    <!--&lt;!&ndash; (click) passes input value to add() and then clears the input &ndash;&gt;-->
+    <!--&lt;!&ndash;<button (click)="add(recipeName.value); recipeName.value=''" mat-button [mat-dialog-close]="true">ADD</button>&ndash;&gt;-->
+    <!--<button mat-button [mat-dialog-close]="true" (click)="addRecipe(recipeName.value)">ADD</button>-->
+  <!--</label>-->
+</div>

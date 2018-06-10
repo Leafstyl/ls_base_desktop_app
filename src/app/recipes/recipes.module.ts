@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // Services
 import {RecipesService} from './recipes.service';
-// Components
-import { RecipesComponent } from './components/recipes';
-// Modules
-import { SharedModule } from '../shared/shared.module';
 import {DialogRecipesComponent} from './components/dialog/dialog-recipes.component';
+// Components
+import {RecipesComponent} from './components/recipes';
+// Modules
+import {SharedModule} from '../shared/shared.module';
 import {RecipesRoutesModule} from './recipes.routes';
 
 @NgModule({
@@ -16,7 +17,9 @@ import {RecipesRoutesModule} from './recipes.routes';
   ],
   imports: [
     SharedModule,
-    RecipesRoutesModule
+    RecipesRoutesModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     RecipesService

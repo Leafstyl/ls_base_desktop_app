@@ -80,13 +80,12 @@ export class RecipesComponent implements OnInit {
   }
 
   addClass(id: any): void {
-    this.id = id;
+    // this.id = id;
   };
 
   openDialog(): void {
-    console.log('==============>');
     const dialogRef = this.dialog.open(DialogRecipesComponent, {
-      width: '250px',
+      width: '650px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -94,6 +93,11 @@ export class RecipesComponent implements OnInit {
       // this.getRecipes();
     });
   }
+
+  //
+  // addRecipe(e, any): void {
+  //   console.log('===============> addRecipe', e);
+  // }
 
   //
   //   this.dashboardService.dashboard.subscribe(dashboard => {
