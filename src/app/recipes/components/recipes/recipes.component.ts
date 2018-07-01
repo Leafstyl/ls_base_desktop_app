@@ -7,8 +7,8 @@ import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
 
 @Component({
   selector: 'ls-recipes',
-  styleUrls: ['./recipes.component.scss'],
-  templateUrl: './recipes.component.html'
+  templateUrl: './recipes.component.html',
+  styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit {
   // dashboard: IDashboard;
@@ -80,7 +80,7 @@ export class RecipesComponent implements OnInit {
   }
 
   addClass(id: any): void {
-    // this.id = id;
+    this.id = id;
   };
 
   openDialog(): void {
