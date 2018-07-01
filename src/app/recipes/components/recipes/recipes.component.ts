@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../recipes.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
@@ -6,6 +6,8 @@ import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
 // import { IDashboard, Dashboard } from '../../models/dashboard';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  moduleId: module.id,
   selector: 'ls-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss']
@@ -75,15 +77,15 @@ export class RecipesComponent implements OnInit {
     public recipesService: RecipesService) {
   }
 
-  ngOnInit() {
+  ngOnInit () {
     console.log('Initializing Recipes Component...');
   }
 
   addClass(id: any): void {
-    this.id = id;
+    // this.id = id;
   };
 
-  openDialog(): void {
+  openDialog (): void {
     const dialogRef = this.dialog.open(DialogRecipesComponent, {
       width: '650px',
     });
@@ -93,6 +95,14 @@ export class RecipesComponent implements OnInit {
       // this.getRecipes();
     });
   }
+
+  // getRecipe (): void {
+  //   debugger;
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //   this.recipesService.getRecipe(id)
+  //     .subscribe(recipe => this.recipe = recipe);
+  // }
+
 
   //
   // addRecipe(e, any): void {

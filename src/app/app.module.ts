@@ -19,6 +19,7 @@ import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
 import { LibModule } from './library';
 import {RecipesModule} from './recipes/recipes.module';
+import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
 //import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
@@ -51,6 +52,7 @@ import {RecipesModule} from './recipes/recipes.module';
     DashboardModule,
     LibModule,
     RecipesModule,
+    RecipesDetailModule,
     CoreModule,
 
   ],

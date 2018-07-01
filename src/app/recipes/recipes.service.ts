@@ -1,8 +1,14 @@
 import {Injectable} from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 import {catchError, map, tap} from 'rxjs/operators';
+import {Recipe} from '../recipe';
 
+// const httpOptions = {
+//   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+// };
 
 @Injectable()
 export class RecipesService {
@@ -22,7 +28,13 @@ export class RecipesService {
 
 
   /** GET hero by id. 404 if not found */
-
+  getRecipe (id: number): Observable<Recipe> {
+    const url = `${this.recipesUrl}/${id}`;
+    return this.http.get<Recipe>(url)
+      .pipe(
+        // error goes here
+      )
+  }
 
   /** POST: add a new recipe to the server */
 

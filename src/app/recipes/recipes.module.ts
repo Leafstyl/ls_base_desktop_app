@@ -9,6 +9,7 @@ import {RecipesComponent} from './components/recipes';
 // Modules
 import {SharedModule} from '../shared/shared.module';
 import {RecipesRoutesModule} from './recipes.routes';
+import {Router, RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,13 @@ import {RecipesRoutesModule} from './recipes.routes';
   ],
   imports: [
     SharedModule,
+    RouterModule,
     RecipesRoutesModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  exports: [
+    RouterModule,
   ],
   providers: [
     RecipesService
