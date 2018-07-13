@@ -1,119 +1,126 @@
-<div class="bounds">
-  <br><br><br>
-  <h1>Recipes</h1>
-  <h3>Connecting Real Food with Real People</h3>
+<article>
+  <aside class="up__large">
+    Test
+  </aside>
+  <section>
+    <div class="bounds">
+      <br><br><br>
+      <h1>Recipes</h1>
+      <h3>Connecting Real Food with Real People</h3>
 
 
-  <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
 
-  <button mat-raised-button (click)="openDialog()">Add</button>
+      <button mat-raised-button (click)="openDialog()">Add</button>
 
-  <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
-    <!-- Standard Cards -->
-    <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
-              *ngFor="let recipe of recipes"
-              id="{{recipe.id}}"
-              [ngClass]="{'active': id === recipe.id }">
+      <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
+        <!-- Standard Cards -->
+        <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
+                  *ngFor="let recipe of recipes"
+                  id="{{recipe.id}}"
+                  [ngClass]="{'active': id === recipe.id }">
 
-      <div class="card--image feature-1">
-        <!--<a routerLink="/details/{{recipe.id}}"-->
-          <!--style="-->
+          <div class="card--image feature-1">
+            <!--<a routerLink="/details/{{recipe.id}}"-->
+            <!--style="-->
             <!--position: absolute;-->
             <!--top: 50%;-->
             <!--left: 30px;-->
             <!--text-decoration: none;-->
             <!--font-size: 2em;-->
             <!--color: cadetblue;">-->
-          <!--Details-->
-        <!--</a>-->
-        <a
-           [routerLink]="recipe.id"
-           style="
+            <!--Details-->
+            <!--</a>-->
+            <a
+              [routerLink]="recipe.id"
+              style="
             position: absolute;
             top: 50%;
             left: 30px;
             text-decoration: none;
             font-size: 2em;
             color: cadetblue;">
-          Details
-        </a>
-        <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
-        <div class="card--bg-color"></div>
+              Details
+            </a>
+            <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
+            <div class="card--bg-color"></div>
+          </div>
+
+          <mat-card-header>
+            <h3>{{recipe.name}}</h3>
+          </mat-card-header>
+
+
+          <mat-card-content>
+            <!--<img src="{{recipe.image}}">-->
+            <!--<div fxFlexOffset="43%">-->
+            <!--{{recipe.ingredients}}-->
+            <!--</div>-->
+          </mat-card-content>
+
+          <mat-card-actions>
+            <!--<a fxLayout  fxFlexOffset="43%"-->
+            <!--href="{{recipe.website}}"-->
+            <!--target="_blank">-->
+            <!--<button mat-raised-button color="accent">WEBSITE</button>-->
+            <!--</a>-->
+          </mat-card-actions>
+
+          <mat-chip-list>
+            <div fxFlexOffset="43%">
+              <!--<mat-chip>{{recipe.prepTime}}</mat-chip>-->
+              <!--<mat-chip>{{recipe.cookTime}}</mat-chip>-->
+              <!--<mat-chip>{{recipe.difficulty}}</mat-chip>-->
+            </div>
+          </mat-chip-list>
+
+
+        </mat-card>
+
+        <!-- Feature Cards -->
+        <mat-card class="feature mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%" *ngFor="let recipe of recipes">
+
+          <mat-card-header>
+            <h3 fxFlexOffset="43%">{{recipe.name}}</h3>
+          </mat-card-header>
+
+
+          <mat-card-content>
+            <!--<img src="{{recipe.image}}">-->
+            <div fxFlexOffset="43%">
+              {{recipe.ingredients}}
+            </div>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <a fxLayout  fxFlexOffset="43%"
+               href="{{recipe.website}}"
+               target="_blank">
+              <button mat-raised-button color="accent">WEBSITE</button>
+            </a>
+          </mat-card-actions>
+
+          <mat-chip-list>
+            <div fxFlexOffset="43%">
+              <mat-chip>{{recipe.prepTime}}</mat-chip>
+              <mat-chip>{{recipe.cookTime}}</mat-chip>
+              <mat-chip>{{recipe.difficulty}}</mat-chip>
+            </div>
+          </mat-chip-list>
+
+
+          <div class="card--image feature-1">
+            <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
+          </div>
+
+        </mat-card>
+
       </div>
 
-      <mat-card-header>
-        <h3>{{recipe.name}}</h3>
-      </mat-card-header>
 
 
-      <mat-card-content>
-        <!--<img src="{{recipe.image}}">-->
-        <!--<div fxFlexOffset="43%">-->
-          <!--{{recipe.ingredients}}-->
-        <!--</div>-->
-      </mat-card-content>
-
-      <mat-card-actions>
-        <!--<a fxLayout  fxFlexOffset="43%"-->
-           <!--href="{{recipe.website}}"-->
-           <!--target="_blank">-->
-          <!--<button mat-raised-button color="accent">WEBSITE</button>-->
-        <!--</a>-->
-      </mat-card-actions>
-
-      <mat-chip-list>
-        <div fxFlexOffset="43%">
-          <!--<mat-chip>{{recipe.prepTime}}</mat-chip>-->
-          <!--<mat-chip>{{recipe.cookTime}}</mat-chip>-->
-          <!--<mat-chip>{{recipe.difficulty}}</mat-chip>-->
-        </div>
-      </mat-chip-list>
-
-
-    </mat-card>
-
-    <!-- Feature Cards -->
-    <mat-card class="feature mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%" *ngFor="let recipe of recipes">
-
-      <mat-card-header>
-        <h3 fxFlexOffset="43%">{{recipe.name}}</h3>
-      </mat-card-header>
-
-
-      <mat-card-content>
-        <!--<img src="{{recipe.image}}">-->
-        <div fxFlexOffset="43%">
-          {{recipe.ingredients}}
-        </div>
-      </mat-card-content>
-
-      <mat-card-actions>
-        <a fxLayout  fxFlexOffset="43%"
-           href="{{recipe.website}}"
-           target="_blank">
-          <button mat-raised-button color="accent">WEBSITE</button>
-        </a>
-      </mat-card-actions>
-
-      <mat-chip-list>
-        <div fxFlexOffset="43%">
-          <mat-chip>{{recipe.prepTime}}</mat-chip>
-          <mat-chip>{{recipe.cookTime}}</mat-chip>
-          <mat-chip>{{recipe.difficulty}}</mat-chip>
-        </div>
-      </mat-chip-list>
-
-
-      <div class="card--image feature-1">
-        <img style="recipe-image-bg" src="{{recipe.image}}" alt="{{recipe.name}}">
-      </div>
-
-    </mat-card>
-
-  </div>
-
-
-
-</div>
+    </div>
+  </section>
+</article>
 
 

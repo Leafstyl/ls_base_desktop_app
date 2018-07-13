@@ -15,9 +15,9 @@ import 'rxjs/add/operator/switchMap';
 import { Observer } from 'firebase/app';
 import {Recipe} from '../../../recipe';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+// const httpOptions = {
+//   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+// };
 
 @Injectable()
 export class RecipesService implements OnInit {
@@ -25,7 +25,7 @@ export class RecipesService implements OnInit {
   private recipesUrl = 'recipes'; // url to the web api
 
   constructor(
-    // private http: HttpClient
+    //private http: HttpClient
   ) { }
 
   /** GET recipes from the server */
@@ -37,10 +37,10 @@ export class RecipesService implements OnInit {
   getRecipe (id: number): Observable<Recipe> {
     debugger;
     const url = `${this.recipesUrl}/${id}`;
-    return this.http.get<Recipe>(url)
-      .pipe(
-        // error goes here
-      );
+    // return this.http.get<Recipe>(url)
+    //   .pipe(
+    //     // error goes here
+    //   );
   }
 
   ngOnInit() {

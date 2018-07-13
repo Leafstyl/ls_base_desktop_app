@@ -1,0 +1,11 @@
+// Gradient Mixins
+/*
+*
+*   g = Gradient
+*
+*/
+@mixin g__main--green {
+  background: #63b059;
+  background: -webkit-linear-gradient(to left, #63b059, #6db62d);
+  background: linear-gradient(to left, #63b059, #6db62d);
+}

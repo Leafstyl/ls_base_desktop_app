@@ -1,3 +1,25 @@
+@import "src/theme/theme-variables";
+@import "src/theme/theme-mixins";
+
+/*
+*
+*   up = utilities panel
+*
+*/
+
+aside {
+
+  &.up__large {
+
+    height: 280px;
+    width: 100%;
+    @include g__main--green;
+    margin: 64px 0 0 0;
+
+  }
+
+}
+
 /** Standard Card */
 .mat-card {
   position: relative;

@@ -7,8 +7,8 @@ import {FormsModule} from '@angular/forms';
 // Components
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
-import { DialogOverviewExample } from './core/modal/dialog-overview-example';
-import { DialogOverviewExampleDialog } from './core/modal/dialog-overview-example';
+// import { DialogOverviewExample } from './core/modal/dialog-overview-example';
+// import { DialogOverviewExampleDialog } from './core/modal/dialog-overview-example';
 
 // Modules
 import { CoreModule } from './core/core.module';
@@ -20,7 +20,8 @@ import { DashboardModule } from './dashboard';
 import { LibModule } from './library';
 import {RecipesModule} from './recipes/recipes.module';
 import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
-//import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+// import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
 // Imported from shared
@@ -28,14 +29,14 @@ import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
 /* Feature Modules */
 @NgModule({
   entryComponents: [
-    DialogOverviewExample,
-    DialogOverviewExampleDialog
+    // DialogOverviewExample,
+    // DialogOverviewExampleDialog
   ],
   declarations: [
     AppComponent,
     NavComponent,
-    DialogOverviewExample,
-    DialogOverviewExampleDialog
+    // DialogOverviewExample,
+    // DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
     RouterModule.forRoot([], { useHash: false }),
     AuthModule,
     FirebaseModule,
+    HttpClientModule,
     FormsModule,
     SharedModule,
     // Modal
