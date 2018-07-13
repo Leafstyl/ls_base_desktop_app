@@ -1,10 +1,8 @@
 body {
-  margin: 0 !important;
-  font-family: 'Open Sans', sans-serif;
-  //background: #fff;
-  background-size: 100vw !important;
-  background-attachment: fixed;
-  //background: #FAFAFA url("./../assets/background-angle-gradient-01.jpg") no-repeat 50% 0;
+
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+
 }
 
 h1,
@@ -13,27 +11,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Poppins', sans-serif;
 
-}
-
-h1 {
-  font-size: 5em;
-  color: #1fd947;
-  font-family: 'Poppins', sans-serif;
-  /* Rainbow Blue */
-  background: #00F260;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00b09b 3%, #00F260 30%);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00b09b 3%, #00F260 30%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* Lush */
-  background: #56ab2f;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 
 }
 
@@ -41,8 +21,9 @@ p,
 a,
 span,
 .mat-card {
-  // font-family: 'Open Sans', sans-serif;
-  font-family: 'Montserrat', sans-serif;
+
+  font-family: 'Lato', sans-serif;
+
 }
 
 

@@ -22,10 +22,10 @@ import {Recipe} from '../../../recipe';
 @Injectable()
 export class RecipesService implements OnInit {
 
-  private recipesUrl = 'recipes'; // url to the web api
+  // private recipesUrl = 'recipes'; // url to the web api
 
   constructor(
-    //private http: HttpClient
+    // private http: HttpClient
   ) { }
 
   /** GET recipes from the server */
@@ -35,8 +35,7 @@ export class RecipesService implements OnInit {
 
   /** GET hero by id. 404 if not found */
   getRecipe (id: number): Observable<Recipe> {
-    debugger;
-    const url = `${this.recipesUrl}/${id}`;
+    // const url = `${this.recipesUrl}/${id}`;
     // return this.http.get<Recipe>(url)
     //   .pipe(
     //     // error goes here

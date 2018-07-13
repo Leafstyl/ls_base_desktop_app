@@ -2,7 +2,7 @@
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~@angular/material/theming';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700');
 
 // Plus imports for other components in your app.
 
@@ -105,3 +105,5 @@ $ls-purple: #9956B2;
 
 // LB Colors
 $lb-green: #8BC34A;
+
+$f--white: #f3f3f3;

@@ -1,11 +1,61 @@
-// Gradient Mixins
-/*
+/** Gradients
 *
 *   g = Gradient
 *
 */
+
 @mixin g__main--green {
   background: #63b059;
   background: -webkit-linear-gradient(to left, #63b059, #6db62d);
   background: linear-gradient(to left, #63b059, #6db62d);
+}
+
+
+@mixin g__sample--rainbow-blue {
+  /* Rainbow Blue */
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00b09b 3%, #00F260 30%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00b09b 3%, #00F260 30%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@mixin g__sample--lush {
+  /* Lush */
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/** Font
+*
+*
+*
+*/
+
+@mixin f__clip-background-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/** Headers
+*
+*   h = Header
+*
+*/
+@mixin h__h1--large-thin-white {
+
+  color: $f--white;
+  font-size: 5em;
+  font-weight: 100;
+
+}
+
+
+@mixin h__h1--large-fat-lush {
+  font-size: 5em;
+  color: #1fd947;
+  @include g__sample--lush;
+  @include f__clip-background-gradient;
+
 }
