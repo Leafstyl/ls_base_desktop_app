@@ -23,8 +23,43 @@ header {
     margin: 4.02em 0 0 0;
     padding: 1em 1.5em;
 
+    ul {
+
+      margin: 0;
+      padding: 0;
+
+      li {
+
+        margin: .5em .4em;
+        display: inline-block;
+
+        a {
+
+          color: $f--white;
+          text-decoration: none;
+
+        }
+
+      }
+
+    }
+
   }
 
+}
+
+.temp-btn {
+  position: fixed;
+  bottom: 1.0em;
+  left: calc(50% - 150px);
+  z-index: 200;
+  width: 300px;
+  height: 59px;
+  border-radius: 2em;
+  @include g__main--green;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 /** Standard Card */
