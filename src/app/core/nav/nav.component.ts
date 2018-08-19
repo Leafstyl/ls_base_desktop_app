@@ -20,10 +20,11 @@ export class NavComponent implements OnInit {
   @Output() signOut = new EventEmitter(false);
 
   ngOnInit() {
-    // this.menuItems = [
-    //   { caption: 'Recipes', link: ['/recipes'] },
-    //   { caption: 'Library', link: ['/library'] },
-    // ];
+    this.menuItems = [
+      { caption: 'Recipes', link: ['/recipes'] },
+      { caption: 'Social', link: ['/social'] },
+      { caption: 'Profile', link: ['/dashboard'] },
+    ];
   }
 
   // constructor(

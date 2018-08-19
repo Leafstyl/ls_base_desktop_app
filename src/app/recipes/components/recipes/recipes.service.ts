@@ -29,17 +29,17 @@ export class RecipesService implements OnInit {
   ) { }
 
   /** GET recipes from the server */
-  // getRecipes (): Observable<Recipe[]> {
-  //   return this.http.get<Recipe[]>(this.recipesUrl);
-  // }
+  getRecipes (): Observable<Recipe[]> {
+    //return this.http.get<Recipe[]>(this.recipesUrl);
+  }
 
   /** GET hero by id. 404 if not found */
   getRecipe (id: number): Observable<Recipe> {
-    // const url = `${this.recipesUrl}/${id}`;
-    // return this.http.get<Recipe>(url)
-    //   .pipe(
-    //     // error goes here
-    //   );
+    //const url = `${this.recipesUrl}/${id}`;
+    return this.http.get<Recipe>(url)
+      .pipe(
+        // error goes here
+      );
   }
 
   ngOnInit() {
