@@ -1,3 +1,46 @@
+@import "src/theme/theme-variables";
+@import "src/theme/theme-mixins";
+header {
+
+  h1 {
+
+    @include h__h1--large-thin-white;
+
+  }
+
+  &.up__large {
+
+    height: 280px;
+    width: 100%;
+    @include g__main--green;
+    margin: 4.02em 0 0 0;
+    padding: 1em 1.5em;
+
+    ul {
+
+      margin: 0;
+      padding: 0;
+
+      li {
+
+        margin: .5em .4em;
+        display: inline-block;
+
+        a {
+
+          color: $f--white;
+          text-decoration: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
 
 .dashboard-form {
   min-width: 150px;
