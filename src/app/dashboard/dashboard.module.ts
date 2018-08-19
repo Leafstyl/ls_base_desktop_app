@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // Components
 import { DashboardComponent } from './components/dashboard';
@@ -17,7 +18,10 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     DashboardRoutesModule,
     SharedModule,
-    BiometricsModule
+    BiometricsModule,
+    ReactiveFormsModule,
+    FormsModule,
+
 
   ],
   providers: [

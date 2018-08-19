@@ -16,6 +16,8 @@ class MenuItem {
 
 export class NavComponent implements OnInit {
 
+  menuItems;
+
   @Input() authenticated: boolean;
   @Output() signOut = new EventEmitter(false);
 

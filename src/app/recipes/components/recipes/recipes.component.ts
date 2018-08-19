@@ -16,7 +16,7 @@ export class RecipesComponent implements OnInit {
   // dashboard: IDashboard;
   editing: boolean = false;
 
-  //menuItems: MenuItem[];
+  // menuItems: MenuItem[];
 
   recipes = [
     {

@@ -5,12 +5,6 @@ mat-horizontal-stepper {
   max-width: 100%;
   margin: .3rem auto 0 auto;
 
-  &.mat-stepper-horizontal {
-    background: #00F260;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #52a8ff, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #52a8ff, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
   form {
 
     max-width: 70vw;

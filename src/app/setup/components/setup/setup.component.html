@@ -1,12 +1,12 @@
-<nav mat-tab-nav-bar>
-  <a mat-tab-link
-     *ngFor="let item of menuItems"
-     [routerLink]="item.link"
-     routerLinkActive #rla="routerLinkActive"
-     [active]="rla.isActive">
-    {{item.caption}}
-  </a>
-</nav>
+<!--<nav mat-tab-nav-bar>-->
+  <!--<a mat-tab-link-->
+     <!--*ngFor="let item of menuItems"-->
+     <!--[routerLink]="item.link"-->
+     <!--routerLinkActive #rla="routerLinkActive"-->
+     <!--[active]="rla.isActive">-->
+    <!--{{item.caption}}-->
+  <!--</a>-->
+<!--</nav>-->
 <mat-horizontal-stepper [linear]="isLinear">
 
   <mat-step [stepControl]="firstFormGroup">

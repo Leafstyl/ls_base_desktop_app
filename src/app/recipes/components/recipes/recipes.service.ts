@@ -12,8 +12,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/switchMap';
-import { Observer } from 'firebase/app';
-import {Recipe} from '../../../recipe';
+// import { Observer } from 'firebase/app';
+// import {Recipe} from '../../../recipe';
 
 // const httpOptions = {
 //   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -29,18 +29,18 @@ export class RecipesService implements OnInit {
   ) { }
 
   /** GET recipes from the server */
-  getRecipes (): Observable<Recipe[]> {
-    //return this.http.get<Recipe[]>(this.recipesUrl);
-  }
+  // getRecipes (): Observable<Recipe[]> {
+    // return this.http.get<Recipe[]>(this.recipesUrl);
+  // }
 
   /** GET hero by id. 404 if not found */
-  getRecipe (id: number): Observable<Recipe> {
-    //const url = `${this.recipesUrl}/${id}`;
-    return this.http.get<Recipe>(url)
-      .pipe(
+  // getRecipe (id: number): Observable<Recipe> {
+    // const url = `${this.recipesUrl}/${id}`;
+    // return this.http.get<Recipe>(url)
+      // .pipe(
         // error goes here
-      );
-  }
+      // );
+  // }
 
   ngOnInit() {
     console.log('Initializing ...');
