@@ -9,6 +9,8 @@ import { BiometricsModule } from '../biometrics';
 // Services
 import { DashboardService } from './dashboard.service';
 import { SharedModule } from '../shared/shared.module';
+import {CdkTableModule} from '@angular/cdk/table';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   entryComponents: [ DashboardComponent ],
@@ -21,6 +23,8 @@ import { SharedModule } from '../shared/shared.module';
     BiometricsModule,
     ReactiveFormsModule,
     FormsModule,
+    CdkTableModule,
+    HttpModule
 
 
   ],
