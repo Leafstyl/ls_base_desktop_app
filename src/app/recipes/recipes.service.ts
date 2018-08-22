@@ -6,9 +6,9 @@ import {of} from 'rxjs/observable/of';
 import {catchError, map, tap} from 'rxjs/operators';
 import {Recipe} from '../recipe';
 
-// const httpOptions = {
-//   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-// };
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable()
 export class RecipesService {
@@ -16,7 +16,7 @@ export class RecipesService {
   private recipesUrl = 'api/recipes'; // url to web api
 
   constructor(
-
+    private http: HttpClient
   ) { }
 
 
