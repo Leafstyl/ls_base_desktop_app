@@ -1,101 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
-// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700');
+//@import '~@angular/material/theming';
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+//@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700');
+//
+//@include mat-core();
 
-// Plus imports for other components in your app.
+// Primary Color
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
+// Secondary Color
 
-$ls-grey: (
-  50: #eceff1,
-  100: #cfd8dc,
-  200: #b0bec5,
-  300: #90a4ae,
-  400: #78909c,
-  500: #6E7D78, // ls-grey
-  600: #546e7a,
-  700: #455a64,
-  800: #37474f,
-  900: #263238,
-  A100: #cfd8dc,
-  A200: #b0bec5,
-  A400: #78909c,
-  A700: #455a64,
-  contrast: (
-    50: $black-87-opacity,
-    100: $black-87-opacity,
-    200: $black-87-opacity,
-    300: $black-87-opacity,
-    400: white,
-    500: white,
-    600: $white-87-opacity,
-    700: $white-87-opacity,
-    800: $white-87-opacity,
-    900: $white-87-opacity,
-    A100: $black-87-opacity,
-    A200: $black-87-opacity,
-    A400: white,
-    A700: $white-87-opacity,
-  )
-);
+// Tertiary Color
 
-$ls-lime: (
-  50: #eceff1,
-  100: #cfd8dc,
-  200: #b0bec5,
-  300: #90a4ae,
-  400: #78909c,
-  500: #C9F02E, // ls-lime
-  600: #546e7a,
-  700: #455a64,
-  800: #37474f,
-  900: #263238,
-  A100: #cfd8dc,
-  A200: #b0bec5,
-  A400: #78909c,
-  A700: #455a64,
-  contrast: (
-    50: $black-87-opacity,
-    100: $black-87-opacity,
-    200: $black-87-opacity,
-    300: $black-87-opacity,
-    400: white,
-    500: white,
-    600: $white-87-opacity,
-    700: $white-87-opacity,
-    800: $white-87-opacity,
-    900: $white-87-opacity,
-    A100: $black-87-opacity,
-    A200: $black-87-opacity,
-    A400: white,
-    A700: $white-87-opacity,
-  )
-);
+// Danger Color
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue.
-//$candy-app-primary: mat-palette($mat-blue-grey, 500);
-// $candy-app-primary: mat-palette($ls-grey, 500);
-$candy-app-primary: mat-palette($mat-light-green, 50, 50, 50);
-//$candy-app-accent:  mat-palette($mat-light-green, A700, A700, A700);
-$candy-app-accent: mat-palette($mat-light-green, 500, 500, 500);
+// Warning Color
 
-// The warn palette is optional (defaults to red).
-$candy-app-warn: mat-palette($mat-red);
+// Gray Colors
 
-// Create the theme object (a Sass map containing all of the palettes).
-$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+// Font Colors
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($candy-app-theme);
+// Typography
+//$general-typography: mat-typography-config(
+//  $font-family: '"Open Sans", sans-serif',
+//  $body-2: mat-typography-level(15px, 24px, 400)
+//);
+//
+//$secondary-typography: mat-typography-config(
+//  $font-family: '"Lato", sans-serif;'
+//);
+
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+//$my-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
+//$my-theme-accent: mat-palette($mat-light-blue);
+//$my-theme-warn: mat-palette($mat-deep-orange, A200);
+//
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+//$my-theme: mat-light-theme(
+//    $my-theme-primary,
+//    $my-theme-accent,
+//    $my-theme-warn
+//);
+
+
+/* Pallet Generator --> http://mcg.mbitson.com/#!?mcgpalette0=%236db62d&mcgpalette1=%23e5773c&mcgpalette2=%23edad43&themename=dopefranais*/
 
 // LS Colors
 $ls-red: #AD0202;
@@ -107,3 +55,11 @@ $ls-purple: #9956B2;
 $lb-green: #8BC34A;
 
 $f--white: #f3f3f3;
+
+
+
+
+
+
+
+

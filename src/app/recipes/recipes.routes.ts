@@ -15,6 +15,6 @@ export const RecipesRoutesModule: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'recipes/:id',
     component: RecipesDetailComponent,
-    // canActivate: [RequireAuthGuard]
+    canActivate: [RequireAuthGuard]
   }
 ]);

@@ -15,7 +15,10 @@ export class BiometricsService implements OnInit {
 
   private _biometricsRef: AngularFireObject<IBiometrics>;
 
-  constructor(private _angularFireDatabase: AngularFireDatabase, private _authService: AuthService) {
+  constructor(
+    private _angularFireDatabase: AngularFireDatabase,
+    private _authService: AuthService
+  ) {
     this._authService.uid$
     .take(1)
     .subscribe(uid => {

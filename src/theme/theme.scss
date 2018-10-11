@@ -1,3 +1,53 @@
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700');
+
+@include mat-core();
+
+// Both required
+// 1) pallet (required) 2) default color 3) light color 4) dark color
+//$custom-primary: mat-palette($mat-light-green, 600);
+//$custom-accent:  mat-palette($mat-amber, 100);
+$custom-primary: mat-palette($mat-light-green);
+$custom-accent:  mat-palette($mat-amber, 100);
+
+// Warning goes here
+
+$custom-theme: mat-dark-theme($custom-primary, $custom-accent);
+
+@include angular-material-theme($custom-theme);
+
+// Multiple Theme
+// ALTERNATIVE THEME
+
+$alt-primary: mat-palette($mat-yellow);
+$alt-accent:  mat-palette($mat-red, 900);
+
+$alt-theme: mat-dark-theme($alt-primary, $alt-accent);
+
+// Have to specify a class
+// - This is only ever included if the .alternative is attached to a parent template/container
+.alternative {
+  @include angular-material-theme($alt-theme);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
 
   margin: 0;
@@ -55,7 +105,7 @@ mat-card {
 .mat-toolbar.mat-primary {
   background: #fff;
   background: #575757;
-  color: mat-color($candy-app-primary);
+  // color: mat-color($candy-app-primary);
   //background-color: none;
   //box-shadow: none;
 }

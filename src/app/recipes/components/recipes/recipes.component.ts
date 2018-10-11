@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../recipes.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
-// import { IDashboard, Dashboard } from '../../models/dashboard';
+import {IRecipes} from "../../models/recipes";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,12 +13,17 @@ import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit {
-  // dashboard: IDashboard;
+
+  recipes: IRecipes;
   editing: boolean = false;
+
+  private lastRecipes: IRecipes;
+
+  // dashboard: IDashboard;
 
   // menuItems: MenuItem[];
 
-  recipes = [
+  /*recipes = [
     {
       id: 1,
       name: 'Tortilla Soup',
@@ -211,7 +216,7 @@ export class RecipesComponent implements OnInit {
       difficulty: 5,
 
     }
-    ];
+    ];*/
 
   // private lastDashboard: IDashboard;
 
@@ -223,11 +228,37 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit () {
     console.log('Initializing Recipes Component...');
+    //this.loadData();
+    this.recipesService.recipes.subscribe(recipes => {
+
+      this.recipes = <IRecipes>recipes;
+      if (!this.recipes) {
+        // this.saveBiometrics(new Biometrics());
+      } else {
+        this.lastRecipes = Object.assign({}, this.recipes);
+      }
+      debugger;
+      console.log(`this.recipes: ${this.recipes}`);
+    });
   }
 
   addClass(id: any): void {
     // this.id = id;
   };
+
+  loadData (): any {
+    // this.recipesService.recipes.subscribe(recipes => {
+    //
+    //   this.recipes = <IRecipes>recipes;
+    //   if (!this.recipes) {
+    //     // this.saveBiometrics(new Biometrics());
+    //   } else {
+    //     this.lastRecipes = Object.assign({}, this.recipes);
+    //   }
+    //  debugger;
+    //   console.log(`this.recipes: ${this.recipes}`);
+    // });
+  }
 
   openDialog (): void {
     const dialogRef = this.dialog.open(DialogRecipesComponent, {
