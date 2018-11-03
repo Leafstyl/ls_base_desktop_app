@@ -1,3 +1,4 @@
+/*
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -28,12 +29,12 @@ export class RecipesService implements OnInit {
     // private http: HttpClient
   ) { }
 
-  /** GET recipes from the server */
+  /!** GET recipes from the server *!/
   // getRecipes (): Observable<Recipe[]> {
     // return this.http.get<Recipe[]>(this.recipesUrl);
   // }
 
-  /** GET hero by id. 404 if not found */
+  /!** GET hero by id. 404 if not found *!/
   // getRecipe (id: number): Observable<Recipe> {
     // const url = `${this.recipesUrl}/${id}`;
     // return this.http.get<Recipe>(url)
@@ -47,3 +48,4 @@ export class RecipesService implements OnInit {
   }
 
 }
+*/

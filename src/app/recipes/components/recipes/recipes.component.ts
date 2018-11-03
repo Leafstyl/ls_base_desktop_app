@@ -1,9 +1,10 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../recipes.service';
+import {IRecipes} from '../../models/recipes';
+
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
-import {IRecipes} from "../../models/recipes";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,6 +16,10 @@ import {IRecipes} from "../../models/recipes";
 export class RecipesComponent implements OnInit {
 
   recipes: IRecipes;
+  recipesArray: any[] = [];
+
+  objectKeys = Object.keys;
+
   editing: boolean = false;
 
   private lastRecipes: IRecipes;
@@ -223,42 +228,24 @@ export class RecipesComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     public route: ActivatedRoute,
-    public recipesService: RecipesService) {
+    public recipesService: RecipesService,
+    private ref: ChangeDetectorRef) {
   }
 
   ngOnInit () {
     console.log('Initializing Recipes Component...');
-    //this.loadData();
-    this.recipesService.recipes.subscribe(recipes => {
-
-      this.recipes = <IRecipes>recipes;
-      if (!this.recipes) {
-        // this.saveBiometrics(new Biometrics());
-      } else {
-        this.lastRecipes = Object.assign({}, this.recipes);
-      }
-      debugger;
-      console.log(`this.recipes: ${this.recipes}`);
-    });
+    this.loadData();
   }
+
+  loadData () {
+    this.recipesService.recipes.subscribe(recipes => {
+      this.recipes = <IRecipes>recipes;
+    });
+  };
 
   addClass(id: any): void {
     // this.id = id;
   };
-
-  loadData (): any {
-    // this.recipesService.recipes.subscribe(recipes => {
-    //
-    //   this.recipes = <IRecipes>recipes;
-    //   if (!this.recipes) {
-    //     // this.saveBiometrics(new Biometrics());
-    //   } else {
-    //     this.lastRecipes = Object.assign({}, this.recipes);
-    //   }
-    //  debugger;
-    //   console.log(`this.recipes: ${this.recipes}`);
-    // });
-  }
 
   openDialog (): void {
     const dialogRef = this.dialog.open(DialogRecipesComponent, {

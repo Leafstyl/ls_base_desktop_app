@@ -55,7 +55,9 @@ import {SocialModule} from './social/social.module';
     DashboardModule,
     LibModule,
     RecipesModule,
+/*
     RecipesDetailModule,
+*/
     SocialModule,
     CoreModule,
 

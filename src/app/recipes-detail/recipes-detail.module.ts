@@ -7,14 +7,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // import {RecipesComponent} from './components/recipes';
 // Modules
 import {SharedModule} from '../shared/shared.module';
+/*
 import {RecipesDetailComponent} from './components/recipes-detail/recipes-detail.component';
+*/
 import {RecipesDetailService} from './recipes-detail.service';
 import {RecipesDetailRoutesModule} from './recipes-detail.routes';
-import {RecipesService} from '../recipes/components/recipes/recipes.service';
+// import {RecipesService} from '../recipes/components/recipes/recipes.service';
 
 @NgModule({
   declarations: [
-    RecipesDetailComponent,
+    // RecipesDetailComponent,
     // DialogRecipesComponent
   ],
   imports: [
@@ -25,7 +27,7 @@ import {RecipesService} from '../recipes/components/recipes/recipes.service';
   ],
   providers: [
     RecipesDetailService,
-    RecipesService
+    // RecipesService
   ],
   entryComponents: [
     // DialogRecipesComponent

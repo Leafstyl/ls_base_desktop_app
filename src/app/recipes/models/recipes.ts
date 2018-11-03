@@ -3,35 +3,25 @@ import { firebase } from '../../firebase';
 export interface IRecipes {
   $key?: string;
   id: string;
-  name: string;
-  aScore: number;
+  createdAt: Object;
   cookMethod: string;
   cookTime: number;
-  eScore: number;
-  fScore: number;
-  lScore: number;
   longName: string;
   preTime: number;
   shortName: string;
   website: string;
-  // id: string;
-  // createdAt: Object;
-  // gender: string;
-  // age: number;
-  // height: string;
-  // weight: number;
-  // bmi: number;
-  // cholesteral: number;
-  // bloodPressure: string;
+  lScore: number;
+  eScore: number;
+  aScore: number;
+  fScore: number;
 }
 
 export class Recipes implements IRecipes {
   id;
-  name: string;
+  createdAt = firebase.database.ServerValue.TIMESTAMP;
   aScore: number;
   cookMethod: string;
   cookTime: number;
-  createdAt = firebase.database.ServerValue.TIMESTAMP;
   eScore: number;
   fScore: number;
   lScore: number;
@@ -39,15 +29,6 @@ export class Recipes implements IRecipes {
   preTime: number;
   shortName: string;
   website: string;
-
-  // createdAt = firebase.database.ServerValue.TIMESTAMP;
-  // gender: string;
-  // age: number;
-  // height: string;
-  // weight: number;
-  // bmi: number;
-  // cholesteral: number;
-  // bloodPressure: string;
 
   constructor() {
   }
