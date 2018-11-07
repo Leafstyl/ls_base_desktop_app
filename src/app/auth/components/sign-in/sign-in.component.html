@@ -1,3 +1,54 @@
+<section class="wrapper">
+  <div fxLayout="column" class="fixVertical">
+    <!--<header class="up__large">-->
+
+    <!--</header>-->
+    <nav class="flex-container"
+         fxLayoutAlign="space-around center"
+         fxFlex.lt-sm="auto" fxFlexFill>
+      <mat-card class="mat-elevation-z10">
+        <header>
+        <!--
+          <img alt="Leafstyl Logo" height="auto" src="../assets/logo.svg" width="70%">
+        -->
+        </header>
+
+        <section class="social" fxLayout="column" fxLayoutAlign="space-evenly">
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithGoogle()">
+            <img src="../assets/signin-google-icon.svg" alt="Sign in with Google"> Sign in with Google
+          </button>
+          <!--
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithFacebook()">
+            <img src="../assets/signin-facebook-icon.svg" alt="Sign in with Facebook"> Sign in with Facebook
+          </button>
+          <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithTwitter()">
+            <img src="../assets/signin-twitter-icon.svg" alt="Sign in with Twi  asdf asdftter"> Sign in with Twitter
+          </button>
+           <button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>
+           <button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button>
+           -->
+        </section>
+        <!--
+        <section fxLayout="column" fxLayoutAlign="space-around">
+          <mat-form-field>
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password">
+          </mat-form-field>
+          <button mat-button class="mat-button"> Submit </button>
+        </section>
+        -->
+
+      </mat-card>
+    </nav>
+    <footer class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+      © 2019 Leaf Based
+    </footer>
+  </div>
+</section>
+
+<!--
 <section class="signin-wrappper">
 
   <header
@@ -26,8 +77,8 @@
             <button mat-button class="ls-sign-in-button mat-raised-button mat-primary" (click)="signInWithTwitter()">
               <img src="../assets/signin-twitter-icon.svg" alt="Sign in with Twi  asdf asdftter"> Sign in with Twitter
             </button>
-            <!--<button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>-->
-            <!--<button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> -->
+            &lt;!&ndash;<button mat-button class="ls-sign-in-button" (click)="signInAnonymously()">Anonymously</button>&ndash;&gt;
+            &lt;!&ndash;<button mat-button class="ls-sign-in-button" (click)="signInWithGithub()">GitHub</button> &ndash;&gt;
           </section>
           <p> - or - </p>
           <p> Sign In Personally</p>
@@ -55,3 +106,4 @@
 
 
 </section>
+-->

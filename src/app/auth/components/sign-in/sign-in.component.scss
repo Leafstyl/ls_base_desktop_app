@@ -1,59 +1,84 @@
+@import "src/theme/theme-variables";
+@import "src/theme/theme-mixins";
 
-.ls-sign-in-button {
-  display: block;
-}
+section {
 
-.blocks {
-  //min-height: 2vh !important;
-}
-
-header {
-  overflow: auto;
-}
-
-section.signin-wrappper {
-  //background: url(https://firebase.google.com/images/backslant-home-top.svg);
-  //background: url("https://firebase.google.com/images/backslant-home-top.svg") no-repeat 50% 0;
-  //background: #fafafa url("../../../../assets/background-angle-01.svg") repeat-y 50% 0;
-
-  background-size: 100vw;
+  &.wrapper {
+    &:after {
+      content: '';
+      @include g__main--green;
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: 10;
+      height:30vh;
+      width: 100vw;
+    }
+  }
 
   nav {
-    overflow: auto;
-    min-height:700px;
 
     .mat-card {
-      width: 22rem;
+      z-index: 100;
+      width: 50vw;
+      // max-width: 30vw;
+      min-height: 60vh;
       padding: 20px 64px;
       border-radius: 10px;
       background: #fff;
+      transition: .1s ease-in;
 
-      header {
-        height: 6rem;
-      }
-
-      .social {
-
-        height: 14rem;
-
-        button {
-          background: #fff;
-          height: 3.4rem;
-        }
-      }
+      // Animate In
+      -webkit-animation-name: mat-card ;
+      animation-name: mat-card ;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-delay: 0.8s;
+      animation-delay: 0.8s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
 
     }
+
+    @media  only screen and (max-width:400px) {
+      .mat-card {
+        width: 90vw;
+        min-height: 100vh;
+        border-radius: 0;
+      }
+    }
+
+    // Animation
+    @-webkit-keyframes mat-card  {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
   }
 
 }
 
 .fixVertical {
-  flex: 1 1 100%;
   min-height: 100vh;
 }
+
 
 footer {
   padding: 20px;
 }
+
+
+
+
 
 
