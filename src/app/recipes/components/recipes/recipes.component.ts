@@ -15,12 +15,15 @@ import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
 })
 export class RecipesComponent implements OnInit {
 
-  recipes: IRecipes;
+  recipes: IRecipes; // init to empty map instead of null
   recipesArray: any[] = [];
+
+  hasRecipes: boolean = false;
 
   objectKeys = Object.keys;
 
   editing: boolean = false;
+
 
   private lastRecipes: IRecipes;
 
@@ -32,13 +35,14 @@ export class RecipesComponent implements OnInit {
   }
 
   ngOnInit () {
-    console.log('Initializing Recipes Component...');
+    // console.log('Initializing Recipes Component...');
     this.loadData();
   }
 
   loadData () {
     this.recipesService.recipes.subscribe(recipes => {
       this.recipes = <IRecipes>recipes;
+      this.hasRecipes = true;
     });
   };
 

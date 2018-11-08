@@ -28,7 +28,7 @@ $alt-theme: mat-dark-theme($alt-primary, $alt-accent);
 // Have to specify a class
 // - This is only ever included if the .alternative is attached to a parent template/container
 .alternative {
-  @include angular-material-theme($alt-theme);
+  //@include angular-material-theme($alt-theme);
 }
 
 

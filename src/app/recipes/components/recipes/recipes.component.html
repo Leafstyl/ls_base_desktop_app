@@ -19,9 +19,11 @@
 
       <div class="recipes" fxLayout="row wrap" fxLayout.xs="column">
 
-        <mat-card class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
-                  *ngFor="let key of objectKeys(this.recipes)"
-                  id="{{this.recipes[key].longName}}">
+
+<!--<span *ngIf="true">-->
+          <mat-card  class="mat-elevation-z4" fxFlex.xs="80%" fxFlex.sm="40%" fxFlex.md="28%" fxFlex.lg="22%"
+                     *ngFor="let key of objectKeys(this.recipes)"
+                     id="{{this.recipes[key].longName}}">
 
           <!--<img src="{{this.recipes[key]}}" alt="">-->
 
@@ -46,15 +48,15 @@
 
           <mat-card-actions>
             <!--<a routerLink="/detail/{{this.recipes[key].id}}">-->
-              <!--<a routerLink="/detail/">-->
-              <!--Details-->
+            <!--<a routerLink="/detail/">-->
+            <!--Details-->
             <!--</a>-->
             <!--<a fxLayout href="{{this.recipes[key].website}}" target="_blank">-->
-              <!--<button mat-raised-button color="accent">WEBSITE</button>-->
+            <!--<button mat-raised-button color="accent">WEBSITE</button>-->
             <!--</a>-->
             <!--&lt;!&ndash;<a fxLayout routerLink="/detail/{{this.recipes[key].id}}">&ndash;&gt;-->
             <!--<a fxLayout routerLink="/detail/{{this.recipes}}">-->
-              <!--<button mat-raised-button color="accent">Details</button>-->
+            <!--<button mat-raised-button color="accent">Details</button>-->
             <!--</a>-->
 
           </mat-card-actions>
@@ -75,6 +77,7 @@
           </mat-chip-list>
         </mat-card>
 
+<!--</span>-->
 
       </div>
 
