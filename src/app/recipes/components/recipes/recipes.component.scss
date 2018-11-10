@@ -74,6 +74,7 @@ header {
   z-index: 200;
   width: 300px;
   height: 59px;
+  padding: .5em 1em 1.6em 1em !important;
   border-radius: 2em;
   @include g__main--green;
   color: #fff;

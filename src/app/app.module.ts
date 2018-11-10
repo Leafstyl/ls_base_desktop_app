@@ -22,6 +22,7 @@ import {RecipesModule} from './recipes/recipes.module';
 import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SocialModule} from './social/social.module';
+import {LibPatternModule} from './_lib-pattern/lib-pattern.module';
 // import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
@@ -59,6 +60,8 @@ import {SocialModule} from './social/social.module';
     RecipesDetailModule,
 */
     SocialModule,
+    /* Library Modules -- Not For Production */
+    LibPatternModule,
     CoreModule,
 
   ],

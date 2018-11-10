@@ -38,6 +38,6 @@ export class SignInComponent {
   // }
 
   private postSignIn(): void {
-    this.router.navigate(['/setup']);
+    this.router.navigate(['/recipes']);
   }
 }

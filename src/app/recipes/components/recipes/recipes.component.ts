@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RecipesService} from '../../recipes.service';
 import {IRecipes} from '../../models/recipes';
@@ -7,7 +7,6 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {DialogRecipesComponent} from '../dialog/dialog-recipes.component';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   moduleId: module.id,
   selector: 'ls-recipes',
   templateUrl: './recipes.component.html',
@@ -35,7 +34,6 @@ export class RecipesComponent implements OnInit {
   }
 
   ngOnInit () {
-    // console.log('Initializing Recipes Component...');
     this.loadData();
   }
 

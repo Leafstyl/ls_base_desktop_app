@@ -12,7 +12,11 @@ section {
   &.wrapper {
     &:after {
       content: '';
-      @include g__main--green;
+      // @include g__main--green;
+      background: #63b059;
+      background: -webkit-linear-gradient(to left, #e8e8e8, #f9f9f9);
+      background: linear-gradient(to left, #e8e8e8, #f9f9f9);
+
       position: absolute;
       top:0;
       left:0;
@@ -30,7 +34,7 @@ section {
       // max-width: 30vw;
       min-height: 60vh;
       padding: 20px 64px;
-      border-radius: 10px;
+      border-radius: 0px;
       background: #fff;
       transition: .1s ease-in;
 
