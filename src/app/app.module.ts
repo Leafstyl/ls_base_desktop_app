@@ -17,12 +17,11 @@ import { AuthModule } from './auth';
 import { FirebaseModule } from './firebase';
 import { SetupModule } from './setup';
 import { DashboardModule } from './dashboard';
-import { LibModule } from './library';
 import {RecipesModule} from './recipes/recipes.module';
 import {RecipesDetailModule} from './recipes-detail/recipes-detail.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SocialModule} from './social/social.module';
-import {LibPatternModule} from './_lib-pattern/lib-pattern.module';
+import {LibraryModule} from './_library/library.module';
 // import {DialogOverviewExampleDialog} from './dashboard/components/dashboard/dashboard.component';
 
 // Material UI
@@ -54,14 +53,13 @@ import {LibPatternModule} from './_lib-pattern/lib-pattern.module';
     // Modules
     SetupModule,
     DashboardModule,
-    LibModule,
     RecipesModule,
 /*
     RecipesDetailModule,
 */
     SocialModule,
     /* Library Modules -- Not For Production */
-    LibPatternModule,
+    LibraryModule,
     CoreModule,
 
   ],

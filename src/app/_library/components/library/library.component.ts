@@ -2,11 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'ls-lib-pattern',
-  styleUrls: ['./lib-pattern.component.scss'],
-  templateUrl: './lib-pattern.component.html'
+  selector: 'ls-library',
+  styleUrls: ['./library.component.scss'],
+  templateUrl: './library.component.html'
 })
-export class LibPatternComponent {
+export class LibraryComponent {
 
   constructor(public route: ActivatedRoute) {
   }

@@ -1,14 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // Components
-import { LibPatternComponent } from './components/lib-pattern';
+import { LibraryComponent } from './components/library';
 // Guards
 import { RequireAuthGuard } from '../auth';
 
-export const LibPatternRoutesModule: ModuleWithProviders = RouterModule.forChild([
+export const LibraryRoutesModule: ModuleWithProviders = RouterModule.forChild([
   {
-    path: 'pattern-library',
-    component: LibPatternComponent,
+    path: 'library',
+    component: LibraryComponent,
     canActivate: [RequireAuthGuard]
   }
 ]);

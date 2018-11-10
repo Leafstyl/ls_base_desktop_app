@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 // import { Observer } from 'firebase/app';
 
 @Injectable()
-export class LibPatternService implements OnInit {
+export class LibraryService implements OnInit {
 
   constructor () { }
   // dashboard: Observable<IDashboard>;
